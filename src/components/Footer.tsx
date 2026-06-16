@@ -19,7 +19,7 @@ const emails = ["bankingbackend.indiagreen@gmail.com", "bd2@igogroups.com"];
 
 const socials = [
   { Icon: Facebook,  href: "https://www.facebook.com/IGOAgriTechfarms/",          label: "Facebook" },
-  { Icon: Instagram, href: "https://www.instagram.com/igoagritechfarms/",         label: "Instagram" },
+  { Icon: Instagram, href: "https://www.instagram.com/igoagri_techfarms?igsh=MTA3YTYxMHpxNHp3",         label: "Instagram" },
   { Icon: Linkedin,  href: "https://www.linkedin.com/company/igo-agritechfarms/", label: "LinkedIn" },
   { Icon: Youtube,   href: "https://www.youtube.com/@IGOAgriTechfarms",            label: "YouTube" },
 ];
