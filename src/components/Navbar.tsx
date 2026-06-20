@@ -340,7 +340,26 @@ const Navbar = () => {
       >
         Skip to main content
       </a>
-    <nav aria-label="Main navigation" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${navClasses}`}>
+
+      {/* Top Scrolling Announcement Bar */}
+      <div className="fixed top-0 left-0 right-0 z-[60] h-7 lg:h-8 bg-agri-green-800 text-white overflow-hidden flex items-center select-none" aria-hidden="true">
+        <motion.div
+          className="flex whitespace-nowrap"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        >
+          {[0, 1, 2, 3].map((i) => (
+            <span
+              key={i}
+              className="px-8 text-[10px] lg:text-[11px] font-semibold uppercase tracking-[0.15em] shrink-0"
+            >
+              IGO Agritech Farms <span className="text-agri-gold-500 mx-2">•</span> Powered by IGO Precision Farming Pvt. Ltd
+            </span>
+          ))}
+        </motion.div>
+      </div>
+
+    <nav aria-label="Main navigation" className={`fixed top-7 lg:top-8 left-0 right-0 z-50 transition-all duration-500 ${navClasses}`}>
       <div className="container mx-auto px-4 lg:px-5 xl:px-6 flex items-center justify-between h-[88px] lg:h-[104px] xl:h-[120px] max-w-full overflow-visible">
         <Link to="/" className="flex items-center gap-2 lg:gap-3 group z-50 shrink-0">
           <img src={companyInfo.logo} alt="IGO Agritech Farms Official Company Logo" loading="eager" className={`h-[80px] lg:h-[96px] xl:h-[112px] w-auto group-hover:scale-105 transition-transform mix-blend-multiply contrast-125 brightness-105 ${logoInvertClass}`} />

@@ -110,7 +110,7 @@ const Contact = () => {
     });
     if (dbError) console.error("Supabase insert error:", dbError.message);
 
-    // 2. Auto-send email to bankingbackend.indiagreen@gmail.com
+    // 2. Auto-send email to precisionfarming152@gmail.com
     const { success } = await sendFormEmail({
       formType:     "Contact Enquiry",
       name:         formData.name,
@@ -203,7 +203,7 @@ const Contact = () => {
                 <MessageCircle className="w-4 h-4" /> WhatsApp
               </a>
               <a
-                href="mailto:bankingbackend.indiagreen@gmail.com"
+                href="mailto:precisionfarming152@gmail.com"
                 className="inline-flex items-center gap-3 px-8 py-3.5 bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-bold rounded-full uppercase tracking-widest hover:bg-white/20 transition-all"
               >
                 <Mail className="w-4 h-4" /> Email Us
@@ -242,8 +242,8 @@ const Contact = () => {
               {
                 icon: <Mail className="w-5 h-5" />,
                 label: "Email Us",
-                lines: ["bankingbackend.indiagreen@gmail.com", "bd2@igogroups.com"],
-                href: "mailto:bankingbackend.indiagreen@gmail.com",
+                lines: ["precisionfarming152@gmail.com", "bd2@igogroups.com"],
+                href: "mailto:precisionfarming152@gmail.com",
               },
               {
                 icon: <MapPin className="w-5 h-5" />,

@@ -14,7 +14,7 @@
  *   Contact / Project Enquiry  → bd2@igogroups.com           (BD Team)
  *   Career Application         → hr.admin@igogroups.com      (HR Team)
  *   IGO Academy Enrollment     → igoacademy2026@gmail.com    (Academy Team)
- *   Agri Startup Enquiry       → bankingbackend.indiagreen@gmail.com (Startup Cell)
+ *   Agri Startup Enquiry       → precisionfarming152@gmail.com (Startup Cell)
  *
  * Formsubmit AJAX docs: https://formsubmit.co/ajax-documentation
  * ─────────────────────────────────────────────────────────────────────────────
@@ -25,7 +25,7 @@ const FORM_RECIPIENTS: Record<string, string> = {
   "Contact Enquiry":       "bd2@igogroups.com",
   "Career Application":    "hr.admin@igogroups.com",
   "IGO Academy Enrollment":"igoacademy2026@gmail.com",
-  "Agri Startup Enquiry":  "bankingbackend.indiagreen@gmail.com",
+  "Agri Startup Enquiry":  "precisionfarming152@gmail.com",
 };
 
 export type FormType =
@@ -50,7 +50,7 @@ export interface EmailPayload {
 }
 
 /**
- * Sends a formatted email to bankingbackend.indiagreen@gmail.com via Formsubmit.co.
+ * Sends a formatted email to precisionfarming152@gmail.com via Formsubmit.co.
  * Returns { success: boolean, error?: string }
  */
 export async function sendFormEmail(payload: EmailPayload): Promise<{ success: boolean; error?: string }> {
@@ -58,7 +58,7 @@ export async function sendFormEmail(payload: EmailPayload): Promise<{ success: b
     const subject = buildSubject(payload);
     const messageBody = buildMessageBody(payload);
 
-    const recipientEmail = FORM_RECIPIENTS[payload.formType] ?? "bankingbackend.indiagreen@gmail.com";
+    const recipientEmail = FORM_RECIPIENTS[payload.formType] ?? "precisionfarming152@gmail.com";
     const endpoint = `https://formsubmit.co/ajax/${recipientEmail}`;
 
     const response = await fetch(endpoint, {

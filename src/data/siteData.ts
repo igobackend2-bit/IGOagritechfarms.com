@@ -20,7 +20,7 @@ export const companyInfo = {
   mission: "To win lifetime loyal customers across pan-India by farming every square meter of land/space using high-tech engineering, professional consulting, and smart livestock ecosystems.",
   description: "IGO Agritech Farms is a leading agricultural solutions provider that has made a significant impact in the industry. Over the years, the company has received numerous awards and recognition for its excellence in the field of agriculture.",
   phone: "+91 73977 89803",
-  email: "bankingbackend.indiagreen@gmail.com",
+  email: "precisionfarming152@gmail.com",
   website: "https://www.igoagritechfarms.com",
   address: "No 17, Kovalan street, 2nd main road, Uthandi kanathur, Chennai 600119",
   whatsapp: "https://wa.me/917397789803",
@@ -575,6 +575,11 @@ export const faqs = [
   { question: "What is the investment required for a polyhouse project?", answer: "The investment varies based on the size, location, and crop selection. Our team provides detailed project reports with cost analysis, ROI projections, and subsidy information tailored to your requirements." },
   { question: "Do you offer joint venture partnerships?", answer: "Yes, we offer joint venture models where investors can partner with us. We provide end-to-end management including technology, operations, marketing, and assured returns." },
   { question: "How can I enroll in a training course?", answer: "You can enroll through our website's course enquiry form, call us at +91 7397789803, or visit our facility in Chennai. We conduct regular batches and also offer customized training sessions." },
+  { question: "What crops are best suited for polyhouse farming in India?", answer: "Crops such as cucumber, capsicum, tomato, strawberry, lettuce, gerbera, rose, and exotic vegetables perform exceptionally well under polyhouse conditions." },
+  { question: "What crops are cultivated under Joint Venture projects?", answer: "Depending on location and project type." },
+  { question: "Is open cultivation profitable?", answer: "Yes, when proper crop planning and management practices are followed." },
+  { question: "What are the key benefits for mushroom?", answer: "Quick returns, low space requirements, and year-round production." },
+  { question: "What services are included in landscaping?", answer: "Garden design, lawn installation, irrigation, plant selection, and maintenance." },
 ];
 
 export const navLinks = [

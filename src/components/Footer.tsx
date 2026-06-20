@@ -15,7 +15,7 @@ const serviceLinks = [
 ];
 
 const phones = ["+91 73977 89803", "+91 73977 89804", "+91 73977 89805"];
-const emails = ["bankingbackend.indiagreen@gmail.com", "bd2@igogroups.com"];
+const emails = ["precisionfarming152@gmail.com", "bd2@igogroups.com"];
 
 const socials = [
   { Icon: Facebook,  href: "https://www.facebook.com/IGOAgriTechfarms/",          label: "Facebook" },
@@ -148,7 +148,6 @@ const Footer = () => (
                 </div>
               </div>
 
-              {/* Quick CTA */}
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 mt-3 px-5 py-2.5 rounded-full bg-agri-mint-400 text-agri-green-950 text-xs font-black uppercase tracking-[0.2em] hover:bg-white transition-all"
