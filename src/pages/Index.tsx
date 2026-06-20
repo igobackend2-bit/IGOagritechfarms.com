@@ -256,8 +256,8 @@ const CeoPhotoCarousel = () => {
       <AnimatePresence mode="sync">
         <motion.img
           key={current}
-          src={CEO_PHOTOS[current]}
-          alt={`IGO CEO photo ${current + 1}`}
+          src={CEO_PHOTOS[current].src}
+          alt={CEO_PHOTOS[current].alt || `IGO CEO photo ${current + 1}`}
           initial={{ opacity: 0, scale: 1.08 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
