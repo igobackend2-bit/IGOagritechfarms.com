@@ -11,7 +11,7 @@ const fader: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
 };
 
-const LOCAL_FALLBACK = "/assets/compressed/home page image .png";
+const LOCAL_FALLBACK = "/assets/compressed/home-page-image-.jpg";
 
 const getServiceCategory = (categorySlug: string) => {
   const services = navLinks.find(l => l.label === "Services")?.children || [];

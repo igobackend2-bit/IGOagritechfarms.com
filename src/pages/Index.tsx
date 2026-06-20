@@ -22,12 +22,12 @@ const HERO_SLIDES = [PERMANENT_SLIDE, ...CHANGEABLE_SLIDES];
 
 // CEO photo carousel images
 const CEO_PHOTOS = [
-  { src: "/assets/ceo page image/about-copy.webp", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
-  { src: "/assets/ceo page image/award2-jpg.jpeg", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
-  { src: "/assets/ceo page image/award3-jpg.jpeg", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
-  { src: "/assets/ceo page image/award4-jpg.jpeg", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
-  { src: "/assets/ceo page image/most-trustwd-agri-brand-in-india-2026.jpg", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
-  { src: "/assets/ceo page image/new image foe the 2nd page .webp", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
+  { src: "/assets/ceo-page-image/about-copy.webp", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
+  { src: "/assets/ceo-page-image/award2-jpg.jpeg", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
+  { src: "/assets/ceo-page-image/award3-jpg.jpeg", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
+  { src: "/assets/ceo-page-image/award4-jpg.jpeg", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
+  { src: "/assets/ceo-page-image/most-trustwd-agri-brand-in-india-2026.jpg", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
+  { src: "/assets/ceo-page-image/ceo-photo-6.webp", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
 ];
 
 const fader: Variants = {
@@ -663,7 +663,7 @@ const FeatureSection = () => {
                 {/* Overlapping Bottom Image - CLEAR, NO MIST */}
                 <div className="absolute bottom-0 left-0 right-0 h-[28%] sm:h-[32%] md:h-[35%] pointer-events-none rounded-t-[2rem] overflow-hidden border-t border-black/5 shadow-[0_-10px_30px_rgba(0,0,0,0.03)]">
                   <motion.img
-                    src={s.icon && typeof s.icon === 'string' ? s.icon : "/assets/compressed/projects/agri_farming.jpg"}
+                    src={s.icon && typeof s.icon === 'string' ? s.icon : "/assets/compressed/projects/main-page/agri-farming-project.jpg"}
                     alt={s.label}
                     loading="lazy"
                     decoding="async"
@@ -734,7 +734,7 @@ const ProductEcosystem = () => {
             >
               <Link to={(cat as any).href} className="absolute inset-0 z-20" />
               <img
-                src={(cat as any).cardImage || (cat.icon && typeof cat.icon === "string" ? cat.icon : "/assets/compressed/projects/agri_farming.jpg")}
+                src={(cat as any).cardImage || (cat.icon && typeof cat.icon === "string" ? cat.icon : "/assets/compressed/projects/main-page/agri-farming-project.jpg")}
                 alt={cat.label}
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"

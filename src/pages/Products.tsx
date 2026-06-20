@@ -158,7 +158,7 @@ const Products = () => {
                     <OptimizedImage 
                       src={(category as any).cardImage || (category.icon && typeof category.icon === 'string' && category.icon.startsWith('/') 
                         ? category.icon 
-                        : "/assets/compressed/projects/agri_farming.jpg")
+                        : "/assets/compressed/projects/main-page/agri-farming-project.jpg")
                       } 
                       alt={category.label}
                       className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2s]"

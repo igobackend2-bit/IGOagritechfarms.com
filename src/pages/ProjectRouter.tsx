@@ -54,7 +54,7 @@ const TYPE_IMG: Record<string, string> = {
   "Indoor Hydroponic Units": "/assets/new project images/indoor hydroponic .png",
   "Indoor Vertical Farms": "/assets/new project images/vertical hydroponic toers .png",
   "Commercial Vertical Farming Units": "/assets/new project images/vertical hydroponic toers .png",
-  "Compact Indoor Hydroponic Setup": "/assets/new project images/compact indoor hydroponic setup .png",
+  "Compact Indoor Hydroponic Setup": "/assets/new project images/compact  indoor hydroponic '.jpeg",
   "Dragon Fruit Plantation": "/assets/new project images/dragon furit farming .png",
   "Guava Plantation": "/assets/new project images/gova fruit farming .png",
   "Mango Plantation": "/assets/new project images/mango cultivaion .png",
@@ -83,7 +83,7 @@ const TYPE_IMG: Record<string, string> = {
   "Kitchen Garden Projects": "/assets/new project images/kitchen garden .png",
   "Microgreens Production Units": "/assets/new project images/microgreens .png",
   "Commercial Plant Nursery": "/assets/new project images/commercial plan nursery .png",
-  "Seedling Production Units": "/assets/new project images/project-subcategories/types/seedling-productu.webp",
+  "Seedling Production Units": "/assets/compressed/projects/project-subcategories/types/seedling-productu.webp",
   "Tissue Culture Plant Nursery": "/assets/new project images/tissue culture plant nursery .png",
   "Blueberry Plantation": "/assets/new project images/blueberry plantation .png",
   "Exotic Farming": "/assets/new project images/exotic farming .png",
@@ -114,7 +114,7 @@ const TYPE_IMG: Record<string, string> = {
   "Layer Chicken Farms": "/assets/new project images/layer chicken farming .png",
 
   // Engineering Projects
-  "Cold Storage": "/assets/new project images/project-subcategories/types/cold-storage.jpg",
+  "Cold Storage": "/assets/compressed/projects/project-subcategories/types/cold-storage.jpg",
   "Pack House": "/assets/new project images/packing house .png",
   "Farm Buildings": "/assets/new project images/farm buildings .png",
   "Rainwater Harvesting": "/assets/new project images/rain water harwesting .png",
@@ -133,10 +133,10 @@ const TYPE_IMG: Record<string, string> = {
 };
 
 const CATEGORY_FALLBACK: Record<string, string> = {
-  agri: "/assets/new project images/project-subcategories/subcategories/protected-farming.webp",
-  aquaculture: "/assets/new project images/project-subcategories/subcategories/fish-farming.webp",
-  livestock: "/assets/new project images/project-subcategories/subcategories/goat-farming.webp",
-  engineering: "/assets/new project images/project-subcategories/subcategories/farm-infrastructure.webp",
+  agri: "/assets/compressed/projects/project-subcategories/subcategories/protected-farming.webp",
+  aquaculture: "/assets/compressed/projects/project-subcategories/subcategories/fish-farming.webp",
+  livestock: "/assets/compressed/projects/project-subcategories/subcategories/goat-farming.webp",
+  engineering: "/assets/compressed/projects/project-subcategories/subcategories/farm-infrastructure.webp",
 };
 
 
@@ -721,7 +721,7 @@ const DetailView: React.FC<{ category: string; subcategory: string; feature: str
                 alt={featItem.label}
                 loading="eager"
                 decoding="async"
-                fallbackSrc={CATEGORY_FALLBACK[category] ?? "/assets/compressed/projects/main-page/agri farming project .jpg"}
+                fallbackSrc={CATEGORY_FALLBACK[category] ?? "/assets/compressed/projects/main-page/agri-farming-project.jpg"}
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent pointer-events-none" />

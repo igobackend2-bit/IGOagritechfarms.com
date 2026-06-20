@@ -120,7 +120,7 @@ const Projects = () => {
                   className="group relative block aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl hover:shadow-[0_40px_80px_rgba(0,0,0,0.25)] transition-all duration-700"
                 >
                   <img
-                    src={category.cardImage || "/assets/compressed/projects/main-page/agri farming project .jpg"}
+                    src={category.cardImage || "/assets/compressed/projects/main-page/agri-farming-project.jpg"}
                     alt={category.label}
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s]"
                   />

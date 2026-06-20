@@ -49,21 +49,21 @@ export const stats = [
 ];
 
 export const projects = [
-  { id: "joint-venture", title: "IGO Joint Venture Projects", category: "Infrastructure", image: "/assets/new project images/joint-venture-premium-1773750685382.webp", description: "Strategic partnerships for large-scale agricultural infrastructure development." },
-  { id: "floriculture", title: "IGO Floriculture Projects", category: "Specialized", image: "/assets/new project images/floriculture-high-tech-1773750708446.webp", description: "High-tech commercial flower cultivation systems with automated climate control." },
-  { id: "horticulture", title: "IGO Horticulture Projects", category: "Specialized", image: "/assets/new project images/horticulture-enterprise-1773750728597.webp", description: "Industrial orchard management and fruit production systems." },
-  { id: "microgreens", title: "IGO Microgreens Projects", category: "High-Tech", image: "/assets/new project images/microgreens-lab-style-1773750748522.webp", description: "Scientific indoor cultivation of nutrient-dense microgreens." },
-  { id: "vertical-farming", title: "IGO Vertical Farming Projects", category: "High-Tech", image: "/assets/new project images/vertical-farming-futuristic-1773750768705.webp", description: "Futuristic multi-layer growing systems maximizing yield per square meter." },
-  { id: "mushroom", title: "IGO Mushroom Farming Projects", category: "Specialized", image: "/assets/new project images/igo-mushroom-farming-1774957443125.webp", description: "Climate-controlled mushroom production with medical-grade precision." },
-  { id: "polyhouse", title: "IGO Polyhouse Farming Projects", category: "Engineering", image: "/assets/new project images/igo-polyhouse-farming-1774957390686.webp", description: "State-of-the-art protected cultivation structures for optimal growth." },
-  { id: "hydroponic", title: "IGO Hydroponic Farming Projects", category: "Engineering", image: "/assets/new project images/igo-hydroponic-farming-1774957407427.webp", description: "Advanced soil-less cultivation systems using NFT and DWC technologies." },
-  { id: "rooftop", title: "IGO Rooftop Projects", category: "Urban", image: "/assets/new project images/rooftop-farming-corporate-1773750857107.webp", description: "Transforming urban spaces into productive, sustainable green ecosystems." },
-  { id: "pond-liner", title: "IGO Pond Liner Projects", category: "Engineering", image: "/assets/new project images/pond-liner-engineering-1773750874112.webp", description: "High-precision reservoir engineering and water management solutions." },
-  { id: "multi-tier", title: "IGO Multi-tier Farming Projects", category: "High-Tech", image: "/assets/new project images/multi-tier-farming-sleek-1773750910232.webp", description: "Innovative multi-layer soil-based and soil-less farming systems." },
-  { id: "solar", title: "IGO Solar Powered Projects", category: "Energy", image: "/assets/new project images/solar-agri-premium-1773750927133.webp", description: "Renewable energy integration for self-sustaining agricultural ecosystems." },
-  { id: "nursery", title: "IGO Nursery Projects", category: "Specialized", image: "/assets/new project images/nursery-modern-minimalist-1773750946194.webp", description: "Industrial-scale plant propagation and tissue culture facilities." },
+  { id: "joint-venture", title: "IGO Joint Venture Projects", category: "Infrastructure", image: "/assets/compressed/projects/joint-venture-premium-1773750685382.webp", description: "Strategic partnerships for large-scale agricultural infrastructure development." },
+  { id: "floriculture", title: "IGO Floriculture Projects", category: "Specialized", image: "/assets/compressed/projects/floriculture-high-tech-1773750708446.webp", description: "High-tech commercial flower cultivation systems with automated climate control." },
+  { id: "horticulture", title: "IGO Horticulture Projects", category: "Specialized", image: "/assets/compressed/projects/horticulture-enterprise-1773750728597.webp", description: "Industrial orchard management and fruit production systems." },
+  { id: "microgreens", title: "IGO Microgreens Projects", category: "High-Tech", image: "/assets/compressed/projects/microgreens-lab-style-1773750748522.webp", description: "Scientific indoor cultivation of nutrient-dense microgreens." },
+  { id: "vertical-farming", title: "IGO Vertical Farming Projects", category: "High-Tech", image: "/assets/compressed/projects/vertical-farming-futuristic-1773750768705.webp", description: "Futuristic multi-layer growing systems maximizing yield per square meter." },
+  { id: "mushroom", title: "IGO Mushroom Farming Projects", category: "Specialized", image: "/assets/compressed/projects/igo-mushroom-farming-1774957443125.webp", description: "Climate-controlled mushroom production with medical-grade precision." },
+  { id: "polyhouse", title: "IGO Polyhouse Farming Projects", category: "Engineering", image: "/assets/compressed/projects/igo-polyhouse-farming-1774957390686.webp", description: "State-of-the-art protected cultivation structures for optimal growth." },
+  { id: "hydroponic", title: "IGO Hydroponic Farming Projects", category: "Engineering", image: "/assets/compressed/projects/igo-hydroponic-farming-1774957407427.webp", description: "Advanced soil-less cultivation systems using NFT and DWC technologies." },
+  { id: "rooftop", title: "IGO Rooftop Projects", category: "Urban", image: "/assets/compressed/projects/rooftop-farming-corporate-1773750857107.webp", description: "Transforming urban spaces into productive, sustainable green ecosystems." },
+  { id: "pond-liner", title: "IGO Pond Liner Projects", category: "Engineering", image: "/assets/compressed/projects/pond-liner-engineering-1773750874112.webp", description: "High-precision reservoir engineering and water management solutions." },
+  { id: "multi-tier", title: "IGO Multi-tier Farming Projects", category: "High-Tech", image: "/assets/compressed/projects/multi-tier-farming-sleek-1773750910232.webp", description: "Innovative multi-layer soil-based and soil-less farming systems." },
+  { id: "solar", title: "IGO Solar Powered Projects", category: "Energy", image: "/assets/compressed/projects/solar-agri-premium-1773750927133.webp", description: "Renewable energy integration for self-sustaining agricultural ecosystems." },
+  { id: "nursery", title: "IGO Nursery Projects", category: "Specialized", image: "/assets/compressed/projects/nursery-modern-minimalist-1773750946194.webp", description: "Industrial-scale plant propagation and tissue culture facilities." },
   { id: "net-house", title: "IGO Net-house Projects", category: "Infrastructure", image: "/assets/new project images/net-house-premium-1773750966052.png", description: "Cost-effective insect-protected cultivation for a variety of crops." },
-  { id: "open-cultivation", title: "IGO Open Cultivation Projects", category: "Precision", image: "/assets/new project images/igo-open-field-farming-1774957423553.webp", description: "Large-scale field cultivation optimized with precision irrigation." },
+  { id: "open-cultivation", title: "IGO Open Cultivation Projects", category: "Precision", image: "/assets/compressed/projects/igo-open-field-farming-1774957423553.webp", description: "Large-scale field cultivation optimized with precision irrigation." },
 ];
 
 export const services = [
@@ -71,7 +71,7 @@ export const services = [
     title: "Polyhouse Projects",
     description: "Controlled environment farming with precision climate management.",
     icon: Tent,
-    image: "/assets/new project images/igo-polyhouse-farming-1774957390686.webp",
+    image: "/assets/compressed/projects/igo-polyhouse-farming-1774957390686.webp",
     path: "/projects/agri/polyhouse"
   },
   {
@@ -85,7 +85,7 @@ export const services = [
     title: "IGO AgriMart",
     description: "Premium marketplace for high-quality seeds, fertilizers, and tools.",
     icon: Package,
-    image: "/assets/product-images/npk-fertilizer.png",
+    image: "/assets/compressed/product/types/npk-fertilizers-.jpg",
     path: "/products"
   },
   {
@@ -93,35 +93,35 @@ export const services = [
     cardImage: "/assets/compressed/projects/main-page/hydroponic-mart.webp",
     description: "NFT and DWC systems designed for maximum rapid growth.",
     icon: Droplets,
-    image: "/assets/new project images/igo-hydroponic-farming-1774957407427.webp",
+    image: "/assets/compressed/projects/igo-hydroponic-farming-1774957407427.webp",
     path: "/projects/agri/hydroponic"
   },
   {
     title: "Open Cultivation Projects",
     description: "Tailored outdoors projects for high-value fruit and medicinal crops.",
     icon: Tractor,
-    image: "/assets/new project images/igo-open-field-farming-1774957423553.webp",
+    image: "/assets/compressed/projects/igo-open-field-farming-1774957423553.webp",
     path: "/projects/agri-farming"
   },
   {
     title: "IGO AMC Service",
     description: "Dedicated partner in farm maintenance and reliable support.",
     icon: Settings,
-    image: "/assets/new project images/pond-liner-engineering-1773750874112.webp",
+    image: "/assets/compressed/projects/pond-liner-engineering-1773750874112.webp",
     path: "/services/engineering/maintenance"
   },
   {
     title: "IGO Buyback Service",
     description: "Beacon of trust for farmers in agricultural buyback programs.",
     icon: Heart,
-    image: "/assets/new project images/joint-venture-premium-1773750685382.webp",
+    image: "/assets/compressed/projects/joint-venture-premium-1773750685382.webp",
     path: "/contact"
   },
   {
     title: "IGO Gardening",
     description: "Rooftop Garden Services designed to inspire sustainable lifestyles.",
     icon: Sprout,
-    image: "/assets/new project images/rooftop-farming-corporate-1773750857107.webp",
+    image: "/assets/compressed/projects/rooftop-farming-corporate-1773750857107.webp",
     path: "/projects/urban/rooftop"
   },
 ];
@@ -847,7 +847,7 @@ export const navLinks = [
             icon: Factory,
             cardImage: "/assets/new project images/project-subcategories/subcategories/farm infrastructure project .png",
             children: [
-              { label: "Cold Storage", href: "/projects/engineering/infrastructure/cold-storage", image: "/assets/new project images/project-subcategories/types/cold-storage.jpg" },
+              { label: "Cold Storage", href: "/projects/engineering/infrastructure/cold-storage", image: "/assets/compressed/projects/project-subcategories/types/cold-storage.jpg" },
               { label: "Pack House", href: "/projects/engineering/infrastructure/pack-house", image: "/assets/new project images/packing house .png" },
               { label: "Farm Buildings", href: "/projects/engineering/infrastructure/buildings", image: "/assets/new project images/farm buildings .png" },
               { label: "Farm Roads", href: "/projects/engineering/infrastructure/roads", image: "/assets/new project images/farm roads .png" },
