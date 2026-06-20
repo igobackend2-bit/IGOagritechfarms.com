@@ -22,7 +22,7 @@
 
 // Per-form recipient routing
 const FORM_RECIPIENTS: Record<string, string> = {
-  "Contact Enquiry":       "bd2@igogroups.com",
+  "Contact Enquiry":       "precisionfarming152@gmail.com",
   "Career Application":    "hr.admin@igogroups.com",
   "IGO Academy Enrollment":"igoacademy2026@gmail.com",
   "Agri Startup Enquiry":  "precisionfarming152@gmail.com",
