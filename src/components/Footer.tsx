@@ -149,7 +149,7 @@ const Footer = () => (
               </div>
 
               <a
-                href="/contact"
+                href="mailto:precisionfarming152@gmail.com"
                 className="inline-flex items-center gap-2 mt-3 px-5 py-2.5 rounded-full bg-agri-mint-400 text-agri-green-950 text-xs font-black uppercase tracking-[0.2em] hover:bg-white transition-all"
               >
                 Get in Touch <ArrowRight className="w-3.5 h-3.5" />
