@@ -148,12 +148,12 @@ const Footer = () => (
                 </div>
               </div>
 
-              <Link
-                to="/contact"
+              <a
+                href="/contact"
                 className="inline-flex items-center gap-2 mt-3 px-5 py-2.5 rounded-full bg-agri-mint-400 text-agri-green-950 text-xs font-black uppercase tracking-[0.2em] hover:bg-white transition-all"
               >
                 Get in Touch <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
+              </a>
 
               {/* Mission — fills the remaining space on the right */}
               <div className="pt-4 border-t border-white/10">

@@ -69,7 +69,7 @@ const AdsDashboard = () => {
         <div className="flex items-center justify-between px-6 h-14">
           <div className="flex items-center gap-3">
             <img
-              src="https://www.igoagritechfarms.com/images/logo.png"
+              src="/assets/compressed/logo-igo.webp"
               alt="IGO Agritech Farms Brand Iconography"
               className="h-7 object-contain invert brightness-0 invert opacity-70"
             />
