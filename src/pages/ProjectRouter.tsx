@@ -190,6 +190,163 @@ const SUBCATEGORY_DESC: Record<string, string> = {
   "Farm Development Projects": "Land surveying, topographic & contour mapping, and precision land leveling for farm development.",
 };
 
+// Long-form SEO article content shown on select subcategory pages
+const SUBCATEGORY_ARTICLE: Record<string, string> = {
+  "Mushroom Farming Projects": `
+<p>The demand for fresh, hygienically grown mushrooms is increasing rapidly across India. From restaurants and supermarkets to food processing industries and export markets, mushrooms have become one of the fastest-growing agricultural products due to their high nutritional value and commercial demand.</p>
+<p>If you are looking for the top mushroom farming company in India, reliable mushroom farming companies in Tamil Nadu, or want to understand the mushroom farming project ROI, IGO Agri Techfarms provides complete turnkey mushroom farming solutions designed for farmers, entrepreneurs, professionals, and investors.</p>
+<p>With years of expertise in modern agriculture, controlled environment farming, and commercial farm development, IGO Agri Techfarms helps clients establish profitable mushroom farming projects with complete technical support, infrastructure development, production guidance, and post-harvest assistance.</p>
+
+<h2>Why Mushroom Farming is One of India's Fastest Growing Agricultural Businesses</h2>
+<p>Mushroom farming has become one of the most profitable segments in modern agriculture. Unlike conventional farming, mushroom cultivation requires less land, utilizes vertical growing techniques, and offers multiple production cycles throughout the year.</p>
+<ul style="margin-left:2rem;margin-bottom:2rem;">
+  <li style="margin-bottom:0.75rem;">High market demand throughout the year</li>
+  <li style="margin-bottom:0.75rem;">Short cultivation cycle</li>
+  <li style="margin-bottom:0.75rem;">Less land requirement</li>
+  <li style="margin-bottom:0.75rem;">Controlled indoor production</li>
+  <li style="margin-bottom:0.75rem;">High production per square foot</li>
+  <li style="margin-bottom:0.75rem;">Premium selling price</li>
+  <li style="margin-bottom:0.75rem;">Suitable for commercial farming</li>
+  <li style="margin-bottom:0.75rem;">Growing export opportunities</li>
+  <li style="margin-bottom:0.75rem;">Rising demand from hotels, restaurants, supermarkets, and food processing companies</li>
+</ul>
+<p>These advantages make mushroom cultivation an excellent business opportunity for both first-time entrepreneurs and experienced agricultural investors.</p>
+
+<h2>Why Choose IGO Agri Techfarms?</h2>
+<p>IGO Agri Techfarms is recognized as one of the top mushroom farming companies in India, delivering professionally designed mushroom cultivation projects using modern farming technology.</p>
+<p>Our expert team manages every stage of your project — from planning and construction to production and technical guidance — ensuring your farm operates efficiently and sustainably.</p>
+<p>Our services include:</p>
+<ul style="margin-left:2rem;margin-bottom:2rem;">
+  <li style="margin-bottom:0.75rem;">Complete project planning</li>
+  <li style="margin-bottom:0.75rem;">Mushroom farm design</li>
+  <li style="margin-bottom:0.75rem;">Environmental control systems</li>
+  <li style="margin-bottom:0.75rem;">Growing room construction</li>
+  <li style="margin-bottom:0.75rem;">Climate management solutions</li>
+  <li style="margin-bottom:0.75rem;">Humidity control systems</li>
+  <li style="margin-bottom:0.75rem;">Ventilation systems</li>
+  <li style="margin-bottom:0.75rem;">Growing rack installation</li>
+  <li style="margin-bottom:0.75rem;">Water management</li>
+  <li style="margin-bottom:0.75rem;">Technical cultivation training</li>
+  <li style="margin-bottom:0.75rem;">Production monitoring</li>
+  <li style="margin-bottom:0.75rem;">Harvest management</li>
+  <li style="margin-bottom:0.75rem;">Business consultation</li>
+</ul>
+<p>Whether you are starting a small commercial unit or planning a large-scale production facility, we provide end-to-end project execution.</p>
+`,
+  "Hydroponic Farming Projects": `
+<p>Agriculture is rapidly evolving with the adoption of advanced technologies that improve productivity, conserve natural resources, and ensure year-round cultivation. Among these innovations, the best hydroponic farming projects have become one of the most profitable and sustainable farming solutions for farmers, entrepreneurs, investors, educational institutions, and agribusiness companies.</p>
+<p>Hydroponics is a modern farming method where crops are grown without soil by supplying nutrient-rich water directly to plant roots. This technology allows farmers to achieve higher yields using less water, less space, and fewer resources compared to traditional farming.</p>
+<p>IGO Agritech Farms specializes in designing, constructing, and managing complete hydroponic farming projects across India. From project planning and greenhouse construction to irrigation systems, crop management, technical support, and market linkage, we provide complete turnkey hydroponic solutions tailored to your farming goals.</p>
+<p>Whether you are looking for the best hydroponic farming projects, searching for reliable hydroponic companies in India, or planning to install a low-cost hydroponic farming system, IGO Agritech Farms offers professional solutions backed by modern agricultural expertise.</p>
+
+<h2>What is Hydroponic Farming?</h2>
+<p>Hydroponics is a soil-free cultivation technique where plants grow in water enriched with essential nutrients. Instead of obtaining nutrients from soil, plants receive balanced nutrition directly through specially designed irrigation systems.</p>
+<p>This innovative method creates an ideal growing environment where plants develop faster, healthier, and with higher productivity. Hydroponic farming is suitable for growing:</p>
+<ul style="margin-left:2rem;margin-bottom:2rem;">
+  <li style="margin-bottom:0.75rem;">Leafy vegetables — lettuce, spinach, kale</li>
+  <li style="margin-bottom:0.75rem;">Herbs — mint, coriander, basil</li>
+  <li style="margin-bottom:0.75rem;">Tomatoes, cucumbers, capsicum</li>
+  <li style="margin-bottom:0.75rem;">Strawberries and exotic vegetables</li>
+  <li style="margin-bottom:0.75rem;">Medicinal plants and microgreens</li>
+</ul>
+<p>Because environmental conditions are carefully controlled, hydroponic farming delivers consistent production throughout the year.</p>
+
+<h2>Why Choose the Best Hydroponic Farming Projects?</h2>
+<p>Modern hydroponic systems provide several advantages over conventional farming methods.</p>
+<ul style="margin-left:2rem;margin-bottom:2rem;">
+  <li style="margin-bottom:0.75rem;"><strong>Higher Crop Productivity</strong> — Plants receive balanced nutrients continuously, resulting in faster growth and higher yields.</li>
+  <li style="margin-bottom:0.75rem;"><strong>Water Conservation</strong> — Hydroponics uses up to 90% less water than traditional farming because water is recycled within the system.</li>
+  <li style="margin-bottom:0.75rem;"><strong>Faster Plant Growth</strong> — Controlled nutrient delivery promotes quicker crop development and earlier harvesting.</li>
+  <li style="margin-bottom:0.75rem;"><strong>Better Crop Quality</strong> — Hydroponically grown vegetables are cleaner, healthier, and more uniform in size and appearance.</li>
+  <li style="margin-bottom:0.75rem;"><strong>Reduced Pest Problems</strong> — Since crops are grown without soil, many soil-borne diseases and pests are significantly reduced.</li>
+  <li style="margin-bottom:0.75rem;"><strong>Efficient Land Utilization</strong> — Hydroponics allows maximum production even in limited spaces, making it suitable for urban and semi-urban farming.</li>
+  <li style="margin-bottom:0.75rem;"><strong>Year-Round Production</strong> — Protected cultivation enables farming regardless of seasonal weather conditions.</li>
+</ul>
+
+<h2>Hydroponic Companies in India — Why IGO Agritech Farms?</h2>
+<p>When selecting among the many hydroponic companies in India, choosing an experienced project partner is essential. A successful hydroponic farm requires more than just equipment — it needs proper planning, installation, training, and ongoing technical support.</p>
+<p>IGO Agritech Farms offers complete end-to-end hydroponic project solutions, ensuring that every stage of your farming journey is professionally managed. Our services include:</p>
+<ul style="margin-left:2rem;margin-bottom:2rem;">
+  <li style="margin-bottom:0.75rem;">Site inspection and feasibility study</li>
+  <li style="margin-bottom:0.75rem;">Customized project planning</li>
+  <li style="margin-bottom:0.75rem;">Greenhouse and shade-net construction</li>
+  <li style="margin-bottom:0.75rem;">Hydroponic system installation</li>
+  <li style="margin-bottom:0.75rem;">Nutrient and irrigation management</li>
+  <li style="margin-bottom:0.75rem;">Climate control solutions</li>
+  <li style="margin-bottom:0.75rem;">Crop selection guidance</li>
+  <li style="margin-bottom:0.75rem;">Technical training</li>
+  <li style="margin-bottom:0.75rem;">Farm maintenance support</li>
+  <li style="margin-bottom:0.75rem;">Harvest planning</li>
+  <li style="margin-bottom:0.75rem;">Market linkage assistance</li>
+  <li style="margin-bottom:0.75rem;">Buyback support for selected projects</li>
+</ul>
+<p>Our experienced agricultural engineers and project specialists ensure that each hydroponic system is designed for maximum efficiency and long-term profitability.</p>
+
+<h2>Types of Hydroponic Systems</h2>
+<p>Different hydroponic techniques are suitable for different crops and farming objectives.</p>
+<ul style="margin-left:2rem;margin-bottom:2rem;">
+  <li style="margin-bottom:0.75rem;"><strong>NFT (Nutrient Film Technique)</strong> — Ideal for leafy vegetables and herbs. A thin film of nutrient solution continuously flows over plant roots.</li>
+  <li style="margin-bottom:0.75rem;"><strong>Deep Water Culture (DWC)</strong> — Plants are suspended above oxygen-rich nutrient water, promoting rapid root development.</li>
+  <li style="margin-bottom:0.75rem;"><strong>Dutch Bucket System</strong> — Suitable for large fruiting crops such as tomatoes, cucumbers, and capsicum.</li>
+  <li style="margin-bottom:0.75rem;"><strong>Vertical Hydroponics</strong> — Maximizes production by utilizing vertical growing space, making it ideal for urban farming.</li>
+  <li style="margin-bottom:0.75rem;"><strong>Drip Hydroponic System</strong> — Provides precise nutrient delivery for commercial crop production.</li>
+</ul>
+<p>IGO Agritech Farms recommends the most suitable hydroponic technology based on your land availability and crop selection.</p>
+`,
+  "Protected Farming Projects": `
+<p>Modern agriculture is transforming rapidly with innovative technologies that help farmers achieve higher productivity, better crop quality, and sustainable profits. Among these advancements, polyhouse farming has become one of the most effective methods of protected cultivation. If you are looking for the top polyhouse farming in India, IGO Agritech Farms provides professionally managed Polyhouse Farming Projects that combine advanced infrastructure, expert guidance, and modern farming techniques.</p>
+<p>Polyhouse farming enables crops to grow in a controlled environment where temperature, humidity, ventilation, and irrigation are carefully managed. This system protects plants from unpredictable weather, excessive rainfall, pests, diseases, and extreme temperatures while ensuring healthy crop growth throughout the year.</p>
+<p>IGO Agritech Farms specializes in delivering customized Polyhouse Farming Projects for farmers across India. From project planning and polyhouse construction to irrigation systems, crop selection, and technical support, our experienced professionals help clients establish successful protected cultivation projects that are productive, sustainable, and profitable.</p>
+
+<h2>What is Polyhouse Farming?</h2>
+<p>Polyhouse farming is a protected cultivation technique in which crops are grown inside specially designed structures covered with UV-stabilized polyethylene sheets. These structures regulate environmental conditions such as temperature, humidity, light intensity, and ventilation, creating an ideal climate for crop growth.</p>
+<p>Unlike conventional farming, polyhouse cultivation protects crops from harsh climatic conditions, heavy rainfall, frost, strong winds, and pest infestations. Farmers can produce premium-quality vegetables, fruits, flowers, herbs, and nursery plants throughout the year while maintaining consistent yield and quality.</p>
+
+<h2>Benefits of Polyhouse Farming</h2>
+<p>By creating a controlled growing environment, farmers can maximize production while reducing cultivation risks. Some of the key benefits include:</p>
+<ul style="margin-left:2rem;margin-bottom:2rem;">
+  <li style="margin-bottom:0.75rem;">Higher crop productivity throughout the year</li>
+  <li style="margin-bottom:0.75rem;">Protection against changing weather conditions</li>
+  <li style="margin-bottom:0.75rem;">Better crop quality and uniform growth</li>
+  <li style="margin-bottom:0.75rem;">Reduced pest and disease incidence</li>
+  <li style="margin-bottom:0.75rem;">Efficient water management through drip irrigation</li>
+  <li style="margin-bottom:0.75rem;">Improved nutrient absorption with fertigation</li>
+  <li style="margin-bottom:0.75rem;">Lower production losses</li>
+  <li style="margin-bottom:0.75rem;">Higher market value for premium-quality produce</li>
+  <li style="margin-bottom:0.75rem;">Sustainable and environmentally friendly farming</li>
+</ul>
+
+<h2>Why Choose IGO Agritech Farms?</h2>
+<p>IGO Agritech Farms is dedicated to promoting advanced protected cultivation technologies across India. We provide complete project solutions, including:</p>
+<ul style="margin-left:2rem;margin-bottom:2rem;">
+  <li style="margin-bottom:0.75rem;">Project consultation and planning</li>
+  <li style="margin-bottom:0.75rem;">Site inspection and feasibility analysis</li>
+  <li style="margin-bottom:0.75rem;">Polyhouse design and construction</li>
+  <li style="margin-bottom:0.75rem;">Drip irrigation and fertigation systems</li>
+  <li style="margin-bottom:0.75rem;">Crop planning and selection</li>
+  <li style="margin-bottom:0.75rem;">Farm management support</li>
+  <li style="margin-bottom:0.75rem;">Technical training and advisory services</li>
+  <li style="margin-bottom:0.75rem;">Harvest planning and marketing assistance</li>
+</ul>
+
+<h2>Low-Cost Polyhouse Farming Ideas</h2>
+<p>Many farmers believe protected cultivation requires a large investment. However, starting with naturally ventilated polyhouses, using drip irrigation, selecting high-demand vegetable crops, and expanding gradually are practical low-cost ideas that help reduce investment while delivering excellent productivity. IGO Agritech Farms guides farmers in selecting the right project model based on their land, budget, and production goals.</p>
+
+<h2>How to Start a Polyhouse Farming Business</h2>
+<p>A well-structured approach helps reduce risk and improves the chances of long-term success.</p>
+<ol style="margin-left:2rem;margin-bottom:2rem;">
+  <li style="margin-bottom:0.75rem;"><strong>Select Suitable Land</strong> — Choose land with good sunlight, proper drainage, reliable water availability, and easy transportation access.</li>
+  <li style="margin-bottom:0.75rem;"><strong>Decide the Polyhouse Type</strong> — Naturally ventilated, climate-controlled, shade net houses, or polycarbonate greenhouses, based on investment capacity and crop requirements.</li>
+  <li style="margin-bottom:0.75rem;"><strong>Prepare a Detailed Project Plan</strong> — Including construction cost, irrigation setup, crop selection, labour requirements, maintenance expenses, and expected returns.</li>
+  <li style="margin-bottom:0.75rem;"><strong>Install Irrigation and Fertigation Systems</strong> — Drip irrigation and fertigation deliver water and nutrients efficiently, improving crop health and reducing wastage.</li>
+  <li style="margin-bottom:0.75rem;"><strong>Choose Profitable Crops</strong> — Tomatoes, capsicum, cucumbers, strawberries, roses, gerbera, herbs, and leafy vegetables offer strong market demand.</li>
+  <li style="margin-bottom:0.75rem;"><strong>Manage the Crop Carefully</strong> — Monitor temperature, humidity, pest control, and nutrient levels regularly for healthy, consistent yield.</li>
+  <li style="margin-bottom:0.75rem;"><strong>Market Your Produce Effectively</strong> — Sell through wholesale markets, supermarkets, exporters, retail outlets, and online platforms to maximize profits.</li>
+</ol>
+<p>By working with IGO Agritech Farms, farmers can receive complete support from planning and construction to crop management and marketing — making protected cultivation a practical and profitable agricultural opportunity.</p>
+`,
+};
+
 // Key highlights per project type — the most important content for client conversion
 const PROJECT_HIGHLIGHTS: Record<string, string[]> = {
   // Protected Farming
@@ -562,6 +719,18 @@ const SubcategoryView: React.FC<{ category: string; subcategory: string }> = ({ 
           })}
         </div>
       </section>
+
+      {/* Long-form article */}
+      {SUBCATEGORY_ARTICLE[subItem.label] && (
+        <section className="py-20 bg-white border-t border-black/5">
+          <div className="container mx-auto px-6 max-w-4xl">
+            <div
+              className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-agri-green-800 prose-a:text-agri-green-800"
+              dangerouslySetInnerHTML={{ __html: SUBCATEGORY_ARTICLE[subItem.label] }}
+            />
+          </div>
+        </section>
+      )}
 
       {/* CTA strip */}
       <section className="py-20 bg-agri-green-800 text-white">

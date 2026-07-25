@@ -15,6 +15,7 @@ const Index = lazy(() => import("./pages/Index"));
 const About = lazy(() => import("./pages/About"));
 const Projects = lazy(() => import("./pages/Projects"));
 const ProjectRouter = lazy(() => import("./pages/ProjectRouter"));
+const JointVenture = lazy(() => import("./pages/JointVenture"));
 const ServiceRouter = lazy(() => import("./pages/ServiceRouter"));
 const ProductRouter = lazy(() => import("./pages/ProductRouter"));
 const Services = lazy(() => import("./pages/Services"));
@@ -115,6 +116,7 @@ const AppRoutes = () => {
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/joint-venture" element={<JointVenture />} />
           <Route path="/projects/legacy/:id" element={<Projects />} />
           <Route path="/projects/:category" element={<ProjectRouter />} />
           <Route path="/projects/:category/:subcategory" element={<ProjectRouter />} />

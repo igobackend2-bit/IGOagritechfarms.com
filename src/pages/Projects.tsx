@@ -160,6 +160,40 @@ const Projects = () => {
         </div>
       </section>
 
+      {/* ── Joint Venture Banner ── */}
+      <section className="container mx-auto px-6 pb-32">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <Link
+            to="/projects/joint-venture"
+            className="group relative flex flex-col md:flex-row items-center justify-between gap-8 rounded-[2.5rem] overflow-hidden bg-agri-green-900 px-10 py-14 md:px-16 shadow-2xl hover:shadow-[0_40px_80px_rgba(0,0,0,0.25)] transition-all duration-700"
+          >
+            <img
+              src="/assets/compressed/projects/joint-venture-premium-1773750685382.webp"
+              alt="Joint Venture Farming Projects"
+              className="absolute inset-0 w-full h-full object-cover opacity-25 group-hover:opacity-35 group-hover:scale-105 transition-all duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-agri-green-900 via-agri-green-900/80 to-transparent" />
+            <div className="relative z-10 max-w-xl">
+              <span className="px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-[9px] text-white font-bold uppercase tracking-[0.25em]">
+                Partnership Model
+              </span>
+              <h3 className="text-3xl md:text-4xl font-serif text-white mt-5 mb-3">Joint Venture Farming Projects</h3>
+              <p className="text-white/60 font-light leading-relaxed">
+                Quarter, Half & One Acre partnership models with complete project execution, technical guidance, and market linkage — a smarter way to participate in modern farming.
+              </p>
+            </div>
+            <div className="relative z-10 shrink-0 inline-flex items-center gap-3 px-8 py-4 bg-agri-gold-500 text-white text-[10px] font-bold rounded-full uppercase tracking-widest group-hover:bg-white group-hover:text-agri-green-800 transition-all">
+              Explore Joint Venture <ArrowRight className="w-4 h-4" />
+            </div>
+          </Link>
+        </motion.div>
+      </section>
+
       {/* ── Stats Banner ── */}
       <section className="py-28 bg-agri-green-900">
         <div className="container mx-auto px-6">
