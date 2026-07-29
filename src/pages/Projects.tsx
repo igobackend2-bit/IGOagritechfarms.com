@@ -176,7 +176,7 @@ const Projects = () => {
           {[
             {
               href: "/projects/joint-venture",
-              image: "/assets/compressed/projects/joint-venture-premium-1773750685382.webp",
+              image: "/assets/compressed/projects/joint-venture-handshake.webp",
               badge: "Partnership Model",
               title: "Joint Venture Farming Projects",
               desc: "Quarter, Half & One Acre partnership models with complete project execution, technical guidance, and market linkage.",

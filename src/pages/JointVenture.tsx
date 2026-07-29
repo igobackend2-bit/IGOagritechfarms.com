@@ -93,7 +93,7 @@ const JointVenture = () => (
         className="absolute inset-0"
       >
         <OptimizedImage
-          src="/assets/compressed/projects/joint-venture-premium-1773750685382.webp"
+          src="/assets/compressed/projects/joint-venture-handshake.jpg"
           alt="Joint Venture Farming Projects in India"
           loading="eager"
           decoding="async"
@@ -209,21 +209,21 @@ const JointVenture = () => (
             <h3 className={`text-2xl font-serif mb-6 ${p.featured ? "text-white" : "text-agri-green-800"}`}>{p.name}</h3>
             <div className="space-y-4 mb-8">
               <div className="flex items-center justify-between">
-                <span className={`text-xs uppercase tracking-widest ${p.featured ? "text-white/50" : "text-black/40"}`}>Project Size</span>
+                <span className={`text-xs uppercase tracking-widest ${p.featured ? "text-white/70" : "text-black/40"}`}>Project Size</span>
                 <span className="font-semibold">{p.size}</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className={`text-xs uppercase tracking-widest ${p.featured ? "text-white/50" : "text-black/40"}`}>Project Cost</span>
+                <span className={`text-xs uppercase tracking-widest ${p.featured ? "text-white/70" : "text-black/40"}`}>Project Cost</span>
                 <span className="font-semibold">{p.cost}</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className={`text-xs uppercase tracking-widest ${p.featured ? "text-white/50" : "text-black/40"}`}>Est. Income</span>
+                <span className={`text-xs uppercase tracking-widest ${p.featured ? "text-white/70" : "text-black/40"}`}>Est. Income</span>
                 <span className={`font-semibold flex items-center gap-1 ${p.featured ? "text-agri-gold-400" : "text-agri-green-800"}`}>
                   <TrendingUp className="w-3.5 h-3.5" /> {p.income}
                 </span>
               </div>
             </div>
-            <p className={`text-[10px] font-bold uppercase tracking-widest mb-3 ${p.featured ? "text-white/50" : "text-black/40"}`}>Suitable for</p>
+            <p className={`text-[10px] font-bold uppercase tracking-widest mb-3 ${p.featured ? "text-white/70" : "text-black/40"}`}>Suitable for</p>
             <ul className="space-y-2 mb-8 flex-1">
               {p.suitableFor.map((s) => (
                 <li key={s} className="flex items-start gap-2 text-sm font-light">
@@ -258,15 +258,15 @@ const JointVenture = () => (
             <span className="text-agri-gold-500 font-bold text-[10px] uppercase tracking-[0.3em]">Why IGO</span>
             <div className="h-px w-8 bg-agri-gold-500/60" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-serif tracking-tight mb-4">Why Choose IGO Agritech Farms?</h2>
-          <p className="text-white/50 font-light">One of India's leading agri-engineering companies, offering comprehensive farming solutions across multiple agricultural sectors.</p>
+          <h2 className="text-4xl md:text-5xl font-serif text-white tracking-tight mb-4">Why Choose IGO Agritech Farms?</h2>
+          <p className="text-white/70 font-light">One of India's leading agri-engineering companies, offering comprehensive farming solutions across multiple agricultural sectors.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {WHY.map((w) => (
             <div key={w.title} className="bg-white/5 border border-white/10 rounded-[1.75rem] p-8">
               <div className="w-11 h-11 rounded-full bg-agri-gold-500/15 text-agri-gold-500 flex items-center justify-center mb-5">{w.icon}</div>
-              <h3 className="text-lg font-serif mb-2">{w.title}</h3>
-              <p className="text-white/50 font-light text-sm leading-relaxed">{w.desc}</p>
+              <h3 className="text-lg font-serif text-white mb-2">{w.title}</h3>
+              <p className="text-white/70 font-light text-sm leading-relaxed">{w.desc}</p>
             </div>
           ))}
         </div>
@@ -298,7 +298,7 @@ const JointVenture = () => (
     <section className="py-24 bg-agri-green-800 text-white">
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
         <div>
-          <h2 className="text-3xl md:text-4xl font-serif mb-3 flex items-center gap-3"><Handshake className="w-8 h-8 text-agri-gold-500" /> Start your Joint Venture journey</h2>
+          <h2 className="text-3xl md:text-4xl font-serif text-white mb-3 flex items-center gap-3"><Handshake className="w-8 h-8 text-agri-gold-500" /> Start your Joint Venture journey</h2>
           <p className="text-white/60 font-light">Connect with our team to explore the right Joint Venture Farming Project for your goals.</p>
         </div>
         <Link

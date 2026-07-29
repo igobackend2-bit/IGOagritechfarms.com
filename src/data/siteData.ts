@@ -49,7 +49,7 @@ export const stats = [
 ];
 
 export const projects = [
-  { id: "joint-venture", title: "IGO Joint Venture Projects", category: "Infrastructure", image: "/assets/compressed/projects/joint-venture-premium-1773750685382.webp", description: "Strategic partnerships for large-scale agricultural infrastructure development." },
+  { id: "joint-venture", title: "IGO Joint Venture Projects", category: "Infrastructure", image: "/assets/compressed/projects/joint-venture-handshake.webp", description: "Strategic partnerships for large-scale agricultural infrastructure development." },
   { id: "floriculture", title: "IGO Floriculture Projects", category: "Specialized", image: "/assets/compressed/projects/floriculture-high-tech-1773750708446.webp", description: "High-tech commercial flower cultivation systems with automated climate control." },
   { id: "horticulture", title: "IGO Horticulture Projects", category: "Specialized", image: "/assets/compressed/projects/horticulture-enterprise-1773750728597.webp", description: "Industrial orchard management and fruit production systems." },
   { id: "microgreens", title: "IGO Microgreens Projects", category: "High-Tech", image: "/assets/compressed/projects/microgreens-lab-style-1773750748522.webp", description: "Scientific indoor cultivation of nutrient-dense microgreens." },
@@ -114,7 +114,7 @@ export const services = [
     title: "IGO Buyback Service",
     description: "Beacon of trust for farmers in agricultural buyback programs.",
     icon: Heart,
-    image: "/assets/compressed/projects/joint-venture-premium-1773750685382.webp",
+    image: "/assets/compressed/projects/joint-venture-handshake.webp",
     path: "/contact"
   },
   {
@@ -722,7 +722,7 @@ export const navLinks = [
             label: "Joint Venture Projects",
             href: "/projects/joint-venture",
             icon: Handshake,
-            cardImage: "/assets/compressed/projects/joint-venture-premium-1773750685382.webp",
+            cardImage: "/assets/compressed/projects/joint-venture-handshake.webp",
           }
         ]
       },

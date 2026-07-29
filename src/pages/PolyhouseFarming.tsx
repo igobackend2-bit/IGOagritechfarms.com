@@ -202,22 +202,22 @@ const PolyhouseFarming = () => (
             <span className="text-agri-gold-500 font-bold text-[10px] uppercase tracking-[0.3em]">Why IGO</span>
             <div className="h-px w-8 bg-agri-gold-500/60" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-serif tracking-tight mb-4">Why Choose IGO Agritech Farms?</h2>
-          <p className="text-white/50 font-light">Complete project solutions designed to meet the specific needs of farmers, investors, and agribusiness entrepreneurs.</p>
+          <h2 className="text-4xl md:text-5xl font-serif text-white tracking-tight mb-4">Why Choose IGO Agritech Farms?</h2>
+          <p className="text-white/70 font-light">Complete project solutions designed to meet the specific needs of farmers, investors, and agribusiness entrepreneurs.</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-14">
           {SERVICES.map((s) => (
             <div key={s.title} className="bg-white/5 border border-white/10 rounded-[1.75rem] p-8">
               <div className="w-11 h-11 rounded-full bg-agri-gold-500/15 text-agri-gold-500 flex items-center justify-center mb-5">{s.icon}</div>
-              <h3 className="text-lg font-serif mb-2">{s.title}</h3>
-              <p className="text-white/50 font-light text-sm leading-relaxed">{s.desc}</p>
+              <h3 className="text-lg font-serif text-white mb-2">{s.title}</h3>
+              <p className="text-white/70 font-light text-sm leading-relaxed">{s.desc}</p>
             </div>
           ))}
         </div>
         <div className="max-w-3xl mx-auto flex items-start gap-4 bg-white/5 border border-white/10 rounded-[1.75rem] p-8">
           <Wrench className="w-6 h-6 shrink-0 text-agri-gold-500 mt-1" />
           <div>
-            <h3 className="text-lg font-serif mb-2">Low-Cost Polyhouse Farming Ideas</h3>
+            <h3 className="text-lg font-serif text-white mb-2">Low-Cost Polyhouse Farming Ideas</h3>
             <p className="text-white/60 font-light text-sm leading-relaxed">Starting with naturally ventilated polyhouses, using drip irrigation, selecting high-demand vegetable crops, and expanding gradually are practical ways to reduce investment while delivering excellent productivity. We guide farmers in selecting the right project model based on their land, budget, and production goals.</p>
           </div>
         </div>
@@ -228,7 +228,7 @@ const PolyhouseFarming = () => (
     <section className="py-24 bg-agri-green-800 text-white">
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
         <div>
-          <h2 className="text-3xl md:text-4xl font-serif mb-3 flex items-center gap-3"><Warehouse className="w-8 h-8 text-agri-gold-500" /> Start your polyhouse farming journey</h2>
+          <h2 className="text-3xl md:text-4xl font-serif text-white mb-3 flex items-center gap-3"><Warehouse className="w-8 h-8 text-agri-gold-500" /> Start your polyhouse farming journey</h2>
           <p className="text-white/60 font-light">Connect with our team for complete support from planning and construction to crop management and marketing.</p>
         </div>
         <Link

@@ -206,8 +206,8 @@ const HydroponicFarming = () => (
             <span className="text-agri-gold-500 font-bold text-[10px] uppercase tracking-[0.3em]">Our Services</span>
             <div className="h-px w-8 bg-agri-gold-500/60" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-serif tracking-tight mb-4">Hydroponic Companies in India — Why IGO Agritech Farms?</h2>
-          <p className="text-white/50 font-light max-w-2xl mx-auto">A successful hydroponic farm requires more than just equipment — it needs proper planning, installation, training, and ongoing technical support.</p>
+          <h2 className="text-4xl md:text-5xl font-serif text-white tracking-tight mb-4">Hydroponic Companies in India — Why IGO Agritech Farms?</h2>
+          <p className="text-white/70 font-light max-w-2xl mx-auto">A successful hydroponic farm requires more than just equipment — it needs proper planning, installation, training, and ongoing technical support.</p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {SERVICES.map((s) => (
@@ -224,7 +224,7 @@ const HydroponicFarming = () => (
     <section className="py-24 bg-agri-green-800 text-white">
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
         <div>
-          <h2 className="text-3xl md:text-4xl font-serif mb-3 flex items-center gap-3"><Droplets className="w-8 h-8 text-agri-gold-500" /> Start your hydroponic farming journey</h2>
+          <h2 className="text-3xl md:text-4xl font-serif text-white mb-3 flex items-center gap-3"><Droplets className="w-8 h-8 text-agri-gold-500" /> Start your hydroponic farming journey</h2>
           <p className="text-white/60 font-light">Connect with our team to design a hydroponic system tailored to your crop and space.</p>
         </div>
         <Link

@@ -23,7 +23,7 @@ const SUBCATEGORY_IMG: Record<string, string> = {
   "Mushroom Farming Projects": "/assets/new project images/project-subcategories/subcategories/mushroom  farming projects  .webp",
   "Urban Farming Projects": "/assets/new project images/project-subcategories/subcategories/urban farming project .webp",
   "Nursery Projects": "/assets/new project images/project-subcategories/subcategories/nursery project .webp",
-  "Joint Venture Projects": "/assets/compressed/projects/joint-venture-premium-1773750685382.webp",
+  "Joint Venture Projects": "/assets/compressed/projects/joint-venture-handshake.webp",
   "Fish Farming Projects": "/assets/new project images/project-subcategories/subcategories/frish farming .webp",
   "Biofloc Farming Projects": "/assets/new project images/project-subcategories/subcategories/biofloc  farming project .webp",
   "Shrimp Farming Projects": "/assets/new project images/project-subcategories/subcategories/shrimp farming .webp",
