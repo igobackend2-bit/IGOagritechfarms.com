@@ -82,7 +82,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className="relative w-full h-[85vh] lg:h-[95vh] overflow-hidden bg-black text-white"
+      className="relative w-full aspect-[4/3] sm:aspect-video overflow-hidden bg-black text-white"
       style={{ marginTop: navH }}
     >
       <div className="relative w-full h-full">
@@ -100,11 +100,11 @@ const HeroSection = () => {
             }}
             className="absolute inset-0 w-full h-full flex items-center justify-center"
           >
-            {/* Background Image - Always full size */}
+            {/* Background Image - contain for posters (never crop baked-in text), cover for photo slides */}
             <img
               src={s.src}
               alt={s.alt}
-              className="absolute inset-0 w-full h-full object-cover"
+              className={`absolute inset-0 w-full h-full ${s.isPoster ? "object-contain" : "object-cover"}`}
               style={{ filter: s.isPoster ? "none" : "brightness(0.6)" }}
             />
 

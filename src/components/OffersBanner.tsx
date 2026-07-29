@@ -279,14 +279,14 @@ const OffersBanner = ({ heroMode = false }: OffersBannerProps) => {
         <>
           <button
             onClick={goPrev}
-            className="absolute left-3 md:left-5 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-black/40 border border-white/25 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all backdrop-blur-sm shadow-lg"
+            className="hidden sm:flex absolute left-3 md:left-5 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-black/40 border border-white/25 items-center justify-center text-white hover:bg-white hover:text-black transition-all backdrop-blur-sm shadow-lg"
             aria-label="Previous"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
           <button
             onClick={goNext}
-            className="absolute right-3 md:right-5 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-black/40 border border-white/25 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all backdrop-blur-sm shadow-lg"
+            className="hidden sm:flex absolute right-3 md:right-5 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-black/40 border border-white/25 items-center justify-center text-white hover:bg-white hover:text-black transition-all backdrop-blur-sm shadow-lg"
             aria-label="Next"
           >
             <ChevronRight className="w-5 h-5" />

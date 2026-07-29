@@ -160,38 +160,80 @@ const Projects = () => {
         </div>
       </section>
 
-      {/* ── Joint Venture Banner ── */}
+      {/* ── Featured Project Guides ── */}
       <section className="container mx-auto px-6 pb-32">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center mb-14"
         >
-          <Link
-            to="/projects/joint-venture"
-            className="group relative flex flex-col md:flex-row items-center justify-between gap-8 rounded-[2.5rem] overflow-hidden bg-agri-green-900 px-10 py-14 md:px-16 shadow-2xl hover:shadow-[0_40px_80px_rgba(0,0,0,0.25)] transition-all duration-700"
-          >
-            <img
-              src="/assets/compressed/projects/joint-venture-premium-1773750685382.webp"
-              alt="Joint Venture Farming Projects"
-              className="absolute inset-0 w-full h-full object-cover opacity-25 group-hover:opacity-35 group-hover:scale-105 transition-all duration-700"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-agri-green-900 via-agri-green-900/80 to-transparent" />
-            <div className="relative z-10 max-w-xl">
-              <span className="px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-[9px] text-white font-bold uppercase tracking-[0.25em]">
-                Partnership Model
-              </span>
-              <h3 className="text-3xl md:text-4xl font-serif text-white mt-5 mb-3">Joint Venture Farming Projects</h3>
-              <p className="text-white/60 font-light leading-relaxed">
-                Quarter, Half & One Acre partnership models with complete project execution, technical guidance, and market linkage — a smarter way to participate in modern farming.
-              </p>
-            </div>
-            <div className="relative z-10 shrink-0 inline-flex items-center gap-3 px-8 py-4 bg-agri-gold-500 text-white text-[10px] font-bold rounded-full uppercase tracking-widest group-hover:bg-white group-hover:text-agri-green-800 transition-all">
-              Explore Joint Venture <ArrowRight className="w-4 h-4" />
-            </div>
-          </Link>
+          <p className="text-agri-gold-500 font-bold text-[10px] uppercase tracking-[0.35em] mb-4">Featured Guides</p>
+          <h2 className="text-4xl md:text-5xl font-serif text-agri-earth-900">In-Depth Project Playbooks</h2>
         </motion.div>
+
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+          {[
+            {
+              href: "/projects/joint-venture",
+              image: "/assets/compressed/projects/joint-venture-premium-1773750685382.webp",
+              badge: "Partnership Model",
+              title: "Joint Venture Farming Projects",
+              desc: "Quarter, Half & One Acre partnership models with complete project execution, technical guidance, and market linkage.",
+            },
+            {
+              href: "/projects/mushroom",
+              image: "/assets/compressed/projects/igo-mushroom-farming-1774957443125.webp",
+              badge: "Specialized Farming",
+              title: "Mushroom Farming Projects",
+              desc: "Turnkey mushroom farming solutions with climate-controlled infrastructure, technical training, and production guidance.",
+            },
+            {
+              href: "/projects/hydroponic",
+              image: "/assets/compressed/projects/igo-hydroponic-farming-1774957407427.webp",
+              badge: "Soilless Farming",
+              title: "Hydroponic Farming Projects",
+              desc: "Complete hydroponic project solutions — NFT, DWC, and vertical systems with irrigation, crop management, and market linkage.",
+            },
+            {
+              href: "/projects/polyhouse",
+              image: "/assets/compressed/projects/igo-polyhouse-farming-1774957390686.webp",
+              badge: "Protected Cultivation",
+              title: "Polyhouse Farming Projects",
+              desc: "Customized polyhouse construction, drip irrigation, crop planning, and technical support for year-round production.",
+            },
+          ].map((p, i) => (
+            <motion.div
+              key={p.href}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <Link
+                to={p.href}
+                className="group relative flex flex-col items-start justify-end gap-3 rounded-[2.5rem] overflow-hidden bg-agri-green-900 px-10 py-12 min-h-[19rem] shadow-2xl hover:shadow-[0_40px_80px_rgba(0,0,0,0.25)] transition-all duration-700"
+              >
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-agri-green-900 via-agri-green-900/70 to-agri-green-900/20" />
+                <div className="relative z-10">
+                  <span className="px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-[9px] text-white font-bold uppercase tracking-[0.25em]">
+                    {p.badge}
+                  </span>
+                  <h3 className="text-2xl md:text-3xl font-serif text-white mt-5 mb-3">{p.title}</h3>
+                  <p className="text-white/60 font-light leading-relaxed text-sm max-w-md">{p.desc}</p>
+                  <div className="flex items-center gap-2 text-agri-gold-500 text-[10px] font-bold uppercase tracking-widest mt-5">
+                    Explore <ArrowRight className="w-3.5 h-3.5" />
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
       </section>
 
       {/* ── Stats Banner ── */}

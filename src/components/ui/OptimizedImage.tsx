@@ -5,36 +5,28 @@ interface OptimizedImageProps extends React.ImgHTMLAttributes<HTMLImageElement> 
   fallbackSrc?: string;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({ 
-  src, 
-  fallbackSrc, 
-  className, 
-  loading = "lazy", 
-  ...props 
+const toWebp = (src: string) => src.replace(/\.(png|jpg|jpeg|JPG)$/i, ".webp");
+
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+  src,
+  fallbackSrc,
+  className,
+  loading = "lazy",
+  ...props
 }) => {
-  const [currentSrc, setCurrentSrc] = useState<string>(src);
+  const hasWebpCandidate = /\.(png|jpg|jpeg|JPG)$/.test(src);
+  const [currentSrc, setCurrentSrc] = useState(hasWebpCandidate ? toWebp(src) : src);
+  const [triedWebp, setTriedWebp] = useState(hasWebpCandidate);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [error, setError] = useState(false);
 
-  // Attempt to use WebP if the original starts with assets/ and is png/jpg/jpeg
-  const webpSrc = src.replace(/\.(png|jpg|jpeg|JPG)$/i, ".webp");
-  const hasWebP = webpSrc !== src;
-
+  // Request the WebP directly on first paint instead of fetching the heavy
+  // original and swapping later — avoids downloading both files.
   useEffect(() => {
-    if (hasWebP) {
-      const img = new Image();
-      img.src = webpSrc;
-      img.onload = () => {
-        if (!error) setCurrentSrc(webpSrc);
-      };
-      img.onerror = () => {
-        // WebP failed or doesn't exist, stick with original
-        setCurrentSrc(src);
-      };
-    } else {
-      setCurrentSrc(src);
-    }
-  }, [src, hasWebP]);
+    const candidate = /\.(png|jpg|jpeg|JPG)$/.test(src);
+    setCurrentSrc(candidate ? toWebp(src) : src);
+    setTriedWebp(candidate);
+    setIsLoaded(false);
+  }, [src]);
 
   return (
     <img
@@ -43,9 +35,12 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       loading={loading}
       onLoad={() => setIsLoaded(true)}
       onError={() => {
-        if (!error && fallbackSrc) {
+        if (triedWebp) {
+          // WebP doesn't exist on the server — fall back to the original.
+          setTriedWebp(false);
+          setCurrentSrc(src);
+        } else if (fallbackSrc && currentSrc !== fallbackSrc) {
           setCurrentSrc(fallbackSrc);
-          setError(true);
         }
       }}
       {...props}
