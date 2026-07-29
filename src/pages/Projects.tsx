@@ -217,9 +217,9 @@ const Projects = () => {
                 <img
                   src={p.image}
                   alt={p.title}
-                  className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-agri-green-900 via-agri-green-900/70 to-agri-green-900/20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-agri-green-900 via-agri-green-900/50 to-transparent" />
                 <div className="relative z-10">
                   <span className="px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-[9px] text-white font-bold uppercase tracking-[0.25em]">
                     {p.badge}
