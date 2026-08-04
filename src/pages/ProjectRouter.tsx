@@ -13,7 +13,7 @@ const fader: Variants = {
 
 // ─── Image maps (corrected paths) ─────────────────────────────────────────────
 const SUBCATEGORY_IMG: Record<string, string> = {
-  "Protected Farming Projects": "/assets/new project images/project-subcategories/subcategories/protected farming project.webp",
+  "Polyhouse Farming Projects": "/assets/new project images/project-subcategories/subcategories/protected farming project.webp",
   "Hydroponic Farming Projects": "/assets/new project images/project-subcategories/subcategories/hydroponic farming projects.webp",
   "Vertical Farming Projects": "/assets/new project images/project-subcategories/subcategories/verticall farming projects.webp",
   "Open Field Cultivation Projects": "/assets/new project images/project-subcategories/subcategories/open cultivation project .webp",
@@ -165,7 +165,7 @@ const LazyCardImage: React.FC<{
 
 // ─── Rich content data ────────────────────────────────────────────────────────
 const SUBCATEGORY_DESC: Record<string, string> = {
-  "Protected Farming Projects": "Climate-controlled polyhouses, shade nets, mist chambers & greenhouses for high-value crop production year-round.",
+  "Polyhouse Farming Projects": "Climate-controlled polyhouses, shade nets, mist chambers & greenhouses for high-value crop production year-round.",
   "Hydroponic Farming Projects": "Soil-less NFT, DWC & vertical hydroponic systems for high-yield, water-efficient cultivation.",
   "Vertical Farming Projects": "Multi-tier indoor farms and smart grow rooms maximising yield per square metre with LED lighting.",
   "Open Field Cultivation Projects": "Dragon fruit, guava, mango, papaya, fig & blueberry plantation projects with precision irrigation.",
@@ -295,7 +295,7 @@ const SUBCATEGORY_ARTICLE: Record<string, string> = {
 </ul>
 <p>IGO Agritech Farms recommends the most suitable hydroponic technology based on your land availability and crop selection.</p>
 `,
-  "Protected Farming Projects": `
+  "Polyhouse Farming Projects": `
 <p>Modern agriculture is transforming rapidly with innovative technologies that help farmers achieve higher productivity, better crop quality, and sustainable profits. Among these advancements, polyhouse farming has become one of the most effective methods of protected cultivation. If you are looking for the top polyhouse farming in India, IGO Agritech Farms provides professionally managed Polyhouse Farming Projects that combine advanced infrastructure, expert guidance, and modern farming techniques.</p>
 <p>Polyhouse farming enables crops to grow in a controlled environment where temperature, humidity, ventilation, and irrigation are carefully managed. This system protects plants from unpredictable weather, excessive rainfall, pests, diseases, and extreme temperatures while ensuring healthy crop growth throughout the year.</p>
 <p>IGO Agritech Farms specializes in delivering customized Polyhouse Farming Projects for farmers across India. From project planning and polyhouse construction to irrigation systems, crop selection, and technical support, our experienced professionals help clients establish successful protected cultivation projects that are productive, sustainable, and profitable.</p>

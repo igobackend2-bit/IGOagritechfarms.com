@@ -595,16 +595,16 @@ export const navLinks = [
         cardImage: "/assets/new project images/main-page/agri farming projects .webp",
         children: [
           {
-            label: "Protected Farming Projects",
-            href: "/projects/agri/protected",
+            label: "Polyhouse Farming Projects",
+            href: "/projects/agri/polyhouse",
             icon: Tent,
             cardImage: "/assets/new project images/project-subcategories/subcategories/protected farming project.webp",
             children: [
-              { label: "Naturally Ventilated Polyhouse", href: "/projects/agri/protected/naturally-ventilated", image: "/assets/new project images/naturally ventilated polyuhouse .webp" },
-              { label: "Climate Controlled Polyhouse", href: "/projects/agri/protected/climate-controlled", image: "/assets/new project images/climate controlled polyhouse .webp" },
-              { label: "Polycarbonate Greenhouse", href: "/projects/agri/protected/polycarbonate", image: "/assets/new project images/polycarboate green house .webp" },
-              { label: "Shade Net House", href: "/projects/agri/protected/shade-net", image: "/assets/new project images/shade net new .webp" },
-              { label: "Mist Chamber", href: "/projects/agri/protected/mist-chamber", image: "/assets/new project images/mist chamber .webp" },
+              { label: "Naturally Ventilated Polyhouse", href: "/projects/agri/polyhouse/naturally-ventilated", image: "/assets/new project images/naturally ventilated polyuhouse .webp" },
+              { label: "Climate Controlled Polyhouse", href: "/projects/agri/polyhouse/climate-controlled", image: "/assets/new project images/climate controlled polyhouse .webp" },
+              { label: "Polycarbonate Greenhouse", href: "/projects/agri/polyhouse/polycarbonate", image: "/assets/new project images/polycarboate green house .webp" },
+              { label: "Shade Net House", href: "/projects/agri/polyhouse/shade-net", image: "/assets/new project images/shade net new .webp" },
+              { label: "Mist Chamber", href: "/projects/agri/polyhouse/mist-chamber", image: "/assets/new project images/mist chamber .webp" },
             ]
           },
           {
