@@ -1099,8 +1099,8 @@ const Index = () => {
     <div className="bg-white min-h-screen selection:bg-agri-green-50 selection:text-agri-green-800 overflow-x-hidden">
       <h1 className="sr-only">Best Agri farming Company</h1>
       <SEO
-        title="IGO AgritechFarms | best Agri farming Company | India"
-        description="IGO Agritech Farms — India's leading Agri Engineering & Agri Consulting brand. 10+ years, 15,000+ projects in precision farming, polyhouse, hydroponics, vertical farming & agri infrastructure across India."
+        title="Top Precision farming Company india"
+        description="Top Precision Farming Company India – IGO Agritech Farms provides polyhouse, hydroponics, vertical farming, open cultivation, and complete agri engineering solutions."
         keywords="agri engineering, agri consulting, precision farming, polyhouse farming, hydroponics, vertical farming, mushroom farming, biofloc, agri startup India, IGO Agritech, farm infrastructure Chennai"
         url="/"
       />
