@@ -20,7 +20,7 @@ export const companyInfo = {
   mission: "To win lifetime loyal customers across pan-India by farming every square meter of land/space using high-tech engineering, professional consulting, and smart livestock ecosystems.",
   description: "IGO Agritech Farms is a leading agricultural solutions provider that has made a significant impact in the industry. Over the years, the company has received numerous awards and recognition for its excellence in the field of agriculture.",
   phone: "+91 73977 89803",
-  email: "precisionfarming152@gmail.com",
+  email: "bd1@igogroups.com",
   website: "https://www.igoagritechfarms.com",
   address: "No 17, Kovalan street, 2nd main road, Uthandi kanathur, Chennai 600119",
   whatsapp: "https://wa.me/917397789803",
