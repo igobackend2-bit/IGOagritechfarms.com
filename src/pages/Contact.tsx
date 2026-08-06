@@ -236,14 +236,14 @@ const Contact = () => {
               {
                 icon: <Phone className="w-5 h-5" />,
                 label: "Call Us",
-                lines: ["+91 73977 89803", "+91 73977 89804"],
+                lines: ["+91 73977 89803", "+91 73977 89804", "+91 73977 89805"],
                 href: "tel:+917397789803",
               },
               {
                 icon: <Mail className="w-5 h-5" />,
                 label: "Email Us",
-                lines: ["precisionfarming152@gmail.com", "bd2@igogroups.com"],
-                href: "mailto:precisionfarming152@gmail.com",
+                lines: ["bd1@igogroups.com", "bd2@igogroups.com"],
+                href: "mailto:bd1@igogroups.com",
               },
               {
                 icon: <MapPin className="w-5 h-5" />,
@@ -254,7 +254,7 @@ const Contact = () => {
               {
                 icon: <Clock className="w-5 h-5" />,
                 label: "Business Hours",
-                lines: ["Mon – Sat: 9:00 AM – 6:00 PM", "Sunday: By Appointment"],
+                lines: ["Mon – Sat: 10:00 AM – 7:30 PM", "Sunday: By Appointment"],
                 href: null,
               },
             ].map((card, i) => (
