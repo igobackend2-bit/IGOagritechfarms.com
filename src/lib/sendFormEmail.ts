@@ -11,10 +11,16 @@
  *   4. Done — all future submissions to that address arrive automatically.
  *
  * Email routing:
- *   Contact / Project Enquiry  → bd2@igogroups.com           (BD Team)
- *   Career Application         → hr.admin@igogroups.com      (HR Team)
- *   IGO Academy Enrollment     → igoacademy2026@gmail.com    (Academy Team)
- *   Agri Startup Enquiry       → precisionfarming152@gmail.com (Startup Cell)
+ *   Contact / Project Enquiry  → bd2@igogroups.com           (BD Team, via Formsubmit)
+ *   Career Application         → hr.admin@igogroups.com      (HR Team, via Formsubmit)
+ *   IGO Academy Enrollment     → igoacademy2026@gmail.com    (Academy Team, via Formsubmit)
+ *   Agri Startup Enquiry       → precisionfarming152@gmail.com (Startup Cell, via Formsubmit)
+ *   Homepage Enquiry           → igoagritechfarms@gmail.com  (Front Desk, via mail-service — real Gmail SMTP)
+ *
+ * Homepage Enquiry is sent through our own mail-service (see /mail-service in
+ * this repo) instead of Formsubmit, so it's delivered via real Gmail SMTP.
+ * Set VITE_MAIL_SERVICE_URL to that service's deployed URL. If it's unset
+ * (e.g. not deployed yet), this falls back to Formsubmit so nothing breaks.
  *
  * Formsubmit AJAX docs: https://formsubmit.co/ajax-documentation
  * ─────────────────────────────────────────────────────────────────────────────
@@ -26,13 +32,15 @@ const FORM_RECIPIENTS: Record<string, string> = {
   "Career Application":    "hr.admin@igogroups.com",
   "IGO Academy Enrollment":"igoacademy2026@gmail.com",
   "Agri Startup Enquiry":  "precisionfarming152@gmail.com",
+  "Homepage Enquiry":      "igoagritechfarms@gmail.com",
 };
 
 export type FormType =
   | "Contact Enquiry"
   | "Agri Startup Enquiry"
   | "IGO Academy Enrollment"
-  | "Career Application";
+  | "Career Application"
+  | "Homepage Enquiry";
 
 export interface EmailPayload {
   formType: FormType;
@@ -46,14 +54,58 @@ export interface EmailPayload {
   course?: string;          // Academy enrollment
   department?: string;      // Career application
   position?: string;        // Career application
+  project?: string;         // Homepage enquiry
+  service?: string;         // Homepage enquiry
   message?: string;
 }
 
 /**
- * Sends a formatted email to precisionfarming152@gmail.com via Formsubmit.co.
- * Returns { success: boolean, error?: string }
+ * Sends a formatted email for the given form. Returns { success: boolean, error?: string }
  */
 export async function sendFormEmail(payload: EmailPayload): Promise<{ success: boolean; error?: string }> {
+  const mailServiceUrl = import.meta.env.VITE_MAIL_SERVICE_URL as string | undefined;
+
+  if (payload.formType === "Homepage Enquiry" && mailServiceUrl) {
+    return sendViaMailService(payload, mailServiceUrl);
+  }
+  return sendViaFormsubmit(payload);
+}
+
+/**
+ * Sends via our own mail-service (real Gmail SMTP, see /mail-service).
+ */
+async function sendViaMailService(
+  payload: EmailPayload,
+  mailServiceUrl: string
+): Promise<{ success: boolean; error?: string }> {
+  try {
+    const subject = buildSubject(payload);
+    const messageBody = buildMessageBody(payload);
+
+    const response = await fetch(`${mailServiceUrl.replace(/\/$/, "")}/send`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        subject,
+        text: messageBody,
+        replyTo: payload.email || undefined,
+      }),
+    });
+
+    const result = await response.json();
+    if (response.ok && result.success) {
+      return { success: true };
+    }
+    return { success: false, error: result.error || "Unknown error from mail service" };
+  } catch (err) {
+    return { success: false, error: err instanceof Error ? err.message : "Network error" };
+  }
+}
+
+/**
+ * Sends a formatted email via Formsubmit.co.
+ */
+async function sendViaFormsubmit(payload: EmailPayload): Promise<{ success: boolean; error?: string }> {
   try {
     const subject = buildSubject(payload);
     const messageBody = buildMessageBody(payload);
@@ -102,6 +154,7 @@ const FORM_HEADERS: Record<FormType, { tag: string; heading: string; icon: strin
   "Agri Startup Enquiry": { tag: "AGRI STARTUP ENQUIRY",  heading: "New Agri Startup Enquiry",           icon: "🚀" },
   "IGO Academy Enrollment":{ tag: "IGO ACADEMY ENROLLMENT",heading: "New Course Enrollment / Enquiry",   icon: "🎓" },
   "Career Application":   { tag: "CAREER APPLICATION",    heading: "New Job Application",                icon: "💼" },
+  "Homepage Enquiry":     { tag: "HOMEPAGE ENQUIRY",       heading: "New Homepage Enquiry",               icon: "🌾" },
 };
 
 // ─── Subject line ─────────────────────────────────────────────────────────────
@@ -117,6 +170,8 @@ function buildSubject(p: EmailPayload): string {
       return `[${tag}] ${p.course || "Course Enquiry"} — ${p.name}`;
     case "Career Application":
       return `[${tag}] ${p.department || "General"} — ${p.name}`;
+    case "Homepage Enquiry":
+      return `[${tag}] ${p.project || "General"} — ${p.name}`;
     default:
       return `[IGO WEBSITE] New Submission — ${p.name}`;
   }
@@ -146,6 +201,8 @@ function buildMessageBody(p: EmailPayload): string {
     line("Course",        p.course),
     line("Department",    p.department),
     line("Position",      p.position),
+    line("Project",       p.project),
+    line("Service",       p.service),
     ``,
     `----------------------------------------------------`,
     // ── Message ──

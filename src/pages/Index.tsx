@@ -3,11 +3,14 @@ import { useImagePreloader } from "@/hooks/useImagePreloader";
 import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import SEO from "@/components/SEO";
-import { ArrowRight, Wheat, Fish, Tractor, Droplets, Leaf, Shield, Hammer, Microscope, Cog, Database, Zap, Binary, PencilRuler, Box, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, Wheat, Fish, Tractor, Droplets, Leaf, Shield, Hammer, Microscope, Cog, Database, Zap, Binary, PencilRuler, Box, ChevronLeft, ChevronRight, ChevronDown, CheckCircle2 } from "lucide-react";
 import { stats, projects, services, navLinks, igoBrands } from "@/data/siteData";
 import { motion, AnimatePresence, Variants, useScroll, useTransform } from "framer-motion";
 import OffersBanner from "@/components/OffersBanner";
 import { getActiveOffers, initDefaultOffers } from "@/data/offersData";
+import { supabase } from "@/integrations/supabase/client";
+import { sendFormEmail } from "@/lib/sendFormEmail";
+import { toast } from "sonner";
 
 // Changeable slides — add, remove, or reorder freely
 const CHANGEABLE_SLIDES = [
@@ -1083,6 +1086,277 @@ const BarleyBannerSection = () => (
   </section>
 );
 
+const HOME_FAQS = [
+  { question: "What crops are best suited for polyhouse farming in India?", answer: "Crops such as cucumber, capsicum, tomato, strawberry, lettuce, gerbera, rose, and exotic vegetables perform exceptionally well under polyhouse conditions." },
+  { question: "What crops are cultivated under Joint Venture projects?", answer: "Depending on location and project type." },
+  { question: "Is open cultivation profitable?", answer: "Yes, when proper crop planning and management practices are followed." },
+  { question: "What are the key benefits for mushroom?", answer: "Quick returns, low space requirements, and year-round production." },
+  { question: "What services are included in landscaping?", answer: "Garden design, lawn installation, irrigation, plant selection, and maintenance." },
+];
+
+const HOME_PROJECT_OPTIONS = [
+  "Polyhouse / Protected Farming",
+  "Hydroponic Farming",
+  "Vertical Farming",
+  "Open Field Cultivation",
+  "Aquaculture / Fish Farming",
+  "Livestock Farming",
+  "Farm Engineering / Infrastructure",
+  "Joint Venture",
+  "Other",
+];
+
+const HOME_SERVICE_OPTIONS = [
+  "Farm Planning & Consulting",
+  "Farming Project Setup",
+  "Farm Infrastructure",
+  "Maintenance & Support",
+  "Other",
+];
+
+const FaqContactSection = () => {
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [formData, setFormData] = useState({ name: "", phone: "", project: "", service: "", email: "", message: "" });
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.name.trim()) { toast.error("Please enter your name."); return; }
+    if (!formData.phone.trim()) { toast.error("Please enter your contact number."); return; }
+    if (!formData.message.trim()) { toast.error("Please enter your message."); return; }
+    setLoading(true);
+
+    const { error: dbError } = await supabase.from("contacts").insert({
+      name: formData.name.trim(),
+      email: formData.email.trim(),
+      phone: formData.phone.trim() || null,
+      subject: [formData.project, formData.service].filter(Boolean).join(" / ") || null,
+      message: formData.message.trim(),
+    });
+    if (dbError) console.error("Supabase insert error:", dbError.message);
+
+    const { success } = await sendFormEmail({
+      formType: "Homepage Enquiry",
+      name: formData.name,
+      email: formData.email.trim() || "Not provided",
+      phone: formData.phone,
+      project: formData.project || undefined,
+      service: formData.service || undefined,
+      message: formData.message,
+    });
+
+    setLoading(false);
+    setSubmitted(true);
+
+    if (success) {
+      toast.success("Enquiry submitted! We'll respond within 24 hours.");
+    } else {
+      toast.warning("Enquiry saved, but email notification failed. Our team will still see your request.");
+    }
+  };
+
+  return (
+    <section className="py-24 md:py-32 bg-agri-earth-15">
+      <div className="container mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          {/* ── Left: FAQ ── */}
+          <div>
+            <div className="mb-10">
+              <span className="text-agri-gold-500 font-bold text-[10px] uppercase tracking-[0.4em]">Got Questions?</span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-agri-earth-900 mt-4 leading-[1.1]">
+                Frequently Asked <span className="italic text-agri-gold-500">Questions</span>
+              </h2>
+            </div>
+            <div className="space-y-4">
+              {HOME_FAQS.map((faq, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.06 }}
+                  className="bg-white rounded-[1.5rem] border border-black/5 overflow-hidden shadow-sm"
+                >
+                  <button
+                    type="button"
+                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                    className="w-full flex items-center justify-between px-6 sm:px-8 py-6 text-left group"
+                  >
+                    <span className="text-base font-bold text-agri-earth-900 group-hover:text-agri-green-800 transition-colors pr-6 leading-snug">
+                      {faq.question}
+                    </span>
+                    <motion.div
+                      animate={{ rotate: openFaq === i ? 180 : 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="shrink-0 w-9 h-9 rounded-full bg-black/4 flex items-center justify-center"
+                    >
+                      <ChevronDown className="w-4 h-4 text-black/40" />
+                    </motion.div>
+                  </button>
+                  <AnimatePresence initial={false}>
+                    {openFaq === i && (
+                      <motion.div
+                        key="answer"
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                        className="overflow-hidden"
+                      >
+                        <div className="px-6 sm:px-8 pb-7 border-t border-black/5">
+                          <p className="text-black/60 text-sm leading-relaxed pt-5 font-light">{faq.answer}</p>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* ── Right: Contact form ── */}
+          <div>
+            <div className="mb-10">
+              <span className="text-agri-gold-500 font-bold text-[10px] uppercase tracking-[0.4em]">Start Your Project</span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-agri-earth-900 mt-4 leading-[1.1]">
+                Get in <span className="italic text-agri-gold-500">Touch</span>
+              </h2>
+            </div>
+
+            {submitted ? (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.96 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="flex flex-col items-center justify-center py-20 bg-white rounded-[2.5rem] text-center border border-black/5 shadow-sm"
+              >
+                <div className="w-16 h-16 rounded-full bg-agri-green-50 text-agri-green-800 flex items-center justify-center mb-6">
+                  <CheckCircle2 className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-serif text-agri-earth-900 mb-3">Enquiry Received!</h3>
+                <p className="text-black/50 text-sm font-light mb-8 max-w-xs leading-relaxed">
+                  A specialist will contact you within 24 hours.
+                </p>
+                <button
+                  onClick={() => {
+                    setSubmitted(false);
+                    setFormData({ name: "", phone: "", project: "", service: "", email: "", message: "" });
+                  }}
+                  className="px-8 py-3.5 border-2 border-agri-green-800 text-agri-green-800 text-xs font-bold rounded-full hover:bg-agri-green-800 hover:text-white transition-all uppercase tracking-widest"
+                >
+                  Send Another Enquiry
+                </button>
+              </motion.div>
+            ) : (
+              <form onSubmit={handleSubmit} className="bg-white rounded-[2.5rem] p-8 md:p-10 shadow-sm border border-black/5 space-y-6">
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <div className="space-y-2">
+                    <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/40">Name *</label>
+                    <input
+                      type="text" required
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      placeholder="Your full name"
+                      className="w-full bg-agri-earth-50 border border-black/8 rounded-2xl px-5 py-4 text-sm text-black placeholder:text-black/25 focus:ring-2 focus:ring-agri-green-800/15 focus:border-agri-green-800/30 outline-none transition-all"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/40">Contact Number *</label>
+                    <input
+                      type="tel" required
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      placeholder="+91 98765 43210"
+                      className="w-full bg-agri-earth-50 border border-black/8 rounded-2xl px-5 py-4 text-sm text-black placeholder:text-black/25 focus:ring-2 focus:ring-agri-green-800/15 focus:border-agri-green-800/30 outline-none transition-all"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <div className="space-y-2">
+                    <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/40">Project</label>
+                    <div className="relative">
+                      <select
+                        value={formData.project}
+                        onChange={(e) => setFormData({ ...formData, project: e.target.value })}
+                        className="w-full bg-agri-earth-50 border border-black/8 rounded-2xl px-5 py-4 text-sm text-black focus:ring-2 focus:ring-agri-green-800/15 focus:border-agri-green-800/30 outline-none transition-all appearance-none cursor-pointer"
+                      >
+                        <option value="">Select a project</option>
+                        {HOME_PROJECT_OPTIONS.map((opt) => (
+                          <option key={opt} value={opt}>{opt}</option>
+                        ))}
+                      </select>
+                      <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 w-4 h-4 text-black/30 pointer-events-none" />
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/40">Service</label>
+                    <div className="relative">
+                      <select
+                        value={formData.service}
+                        onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                        className="w-full bg-agri-earth-50 border border-black/8 rounded-2xl px-5 py-4 text-sm text-black focus:ring-2 focus:ring-agri-green-800/15 focus:border-agri-green-800/30 outline-none transition-all appearance-none cursor-pointer"
+                      >
+                        <option value="">Select a service</option>
+                        {HOME_SERVICE_OPTIONS.map((opt) => (
+                          <option key={opt} value={opt}>{opt}</option>
+                        ))}
+                      </select>
+                      <ChevronDown className="absolute right-5 top-1/2 -translate-y-1/2 w-4 h-4 text-black/30 pointer-events-none" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/40">
+                    Email <span className="normal-case font-normal text-black/30">(optional)</span>
+                  </label>
+                  <input
+                    type="email"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    placeholder="your@email.com"
+                    className="w-full bg-agri-earth-50 border border-black/8 rounded-2xl px-5 py-4 text-sm text-black placeholder:text-black/25 focus:ring-2 focus:ring-agri-green-800/15 focus:border-agri-green-800/30 outline-none transition-all"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/40">Message *</label>
+                  <textarea
+                    rows={4} required
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    placeholder="Tell us about your land size, location, budget, or requirements..."
+                    className="w-full bg-agri-earth-50 border border-black/8 rounded-2xl px-5 py-4 text-sm text-black placeholder:text-black/25 focus:ring-2 focus:ring-agri-green-800/15 focus:border-agri-green-800/30 outline-none transition-all resize-none"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="w-full py-5 bg-agri-green-800 text-white text-xs font-bold rounded-2xl hover:bg-black transition-all flex items-center justify-center gap-3 group disabled:opacity-60 uppercase tracking-widest shadow-xl shadow-agri-green-800/20"
+                >
+                  {loading ? (
+                    <span className="flex items-center gap-3">
+                      <svg className="animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"/>
+                      </svg>
+                      Sending...
+                    </span>
+                  ) : (
+                    <>Submit <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /></>
+                  )}
+                </button>
+              </form>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const Index = () => {
   // Show offer posters as the full-screen hero when active posters exist,
   // otherwise fall back to the original HeroSection.
@@ -1117,6 +1391,7 @@ const Index = () => {
       <EngineeringDNA />
 
       <BrandsSection />
+      <FaqContactSection />
     </div>
   );
 };
