@@ -10,8 +10,8 @@ import { getActiveOffers, initDefaultOffers } from "@/data/offersData";
 
 // Changeable slides — add, remove, or reorder freely
 const CHANGEABLE_SLIDES = [
-  { src: "/assets/hero-banners/active/bakrid-banner-1.png", label: "Bakrid Offer", alt: "Exclusive Bakrid Special Agricultural Project Offer", isPoster: true },
-  { src: "/assets/hero-banners/active/bakrid-banner-2.png", label: "Special Offer", alt: "Exclusive Bakrid Day Special Agricultural Project Offer", isPoster: true },
+  { src: "/assets/hero-banners/active/independence-day-banner-1.png", label: "Independence Day Offer", alt: "Independence Day Special Offer — Franchise and Joint Venture Project Offer from IGO Agritech Farms", isPoster: true },
+  { src: "/assets/hero-banners/active/independence-day-banner-2.png", label: "Independence Day Offer", alt: "80th Independence Day Special Offer — Freedom to Grow, Freedom to Earn with IGO Agritech Farms", isPoster: true },
 ];
 
 // PERMANENT first slide — Now restored to IGO Peoples as Slide 1
