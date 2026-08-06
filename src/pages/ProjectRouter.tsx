@@ -13,7 +13,7 @@ const fader: Variants = {
 
 // ─── Image maps (corrected paths) ─────────────────────────────────────────────
 const SUBCATEGORY_IMG: Record<string, string> = {
-  "Polyhouse Farming Projects": "/assets/new project images/project-subcategories/subcategories/protected farming project.webp",
+  "Protected Farming Projects": "/assets/new project images/project-subcategories/subcategories/protected farming project.webp",
   "Hydroponic Farming Projects": "/assets/new project images/project-subcategories/subcategories/hydroponic farming projects.webp",
   "Vertical Farming Projects": "/assets/new project images/project-subcategories/subcategories/verticall farming projects.webp",
   "Open Field Cultivation Projects": "/assets/new project images/project-subcategories/subcategories/open cultivation project .webp",
@@ -165,7 +165,7 @@ const LazyCardImage: React.FC<{
 
 // ─── Rich content data ────────────────────────────────────────────────────────
 const SUBCATEGORY_DESC: Record<string, string> = {
-  "Polyhouse Farming Projects": "Climate-controlled polyhouses, shade nets, mist chambers & greenhouses for high-value crop production year-round.",
+  "Protected Farming Projects": "Climate-controlled polyhouses, shade nets, mist chambers & greenhouses for high-value crop production year-round.",
   "Hydroponic Farming Projects": "Soil-less NFT, DWC & vertical hydroponic systems for high-yield, water-efficient cultivation.",
   "Vertical Farming Projects": "Multi-tier indoor farms and smart grow rooms maximising yield per square metre with LED lighting.",
   "Open Field Cultivation Projects": "Dragon fruit, guava, mango, papaya, fig & blueberry plantation projects with precision irrigation.",
@@ -190,6 +190,93 @@ const SUBCATEGORY_DESC: Record<string, string> = {
   "Water Management Projects": "Rainwater harvesting, pond liners, drip & sprinkler irrigation, and borewell installations.",
   "Solar Agriculture Projects": "Solar crop dryers, heaters, fencing & lighting for sustainable, off-grid farm energy.",
   "Farm Development Projects": "Land surveying, topographic & contour mapping, and precision land leveling for farm development.",
+};
+
+// Client-supplied SEO title/description overrides, keyed by page path.
+// When a path has an entry here, it takes priority over the auto-generated
+// title/description in CategoryView / SubcategoryView / DetailView below.
+// Source: "IGO Meta Title and Description.docx" (client-provided copy).
+const SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
+  "/projects/agri/polyhouse": {
+    title: "Best Agriculture Projects in India | IGO Agritech Farms",
+    description: "Discover the best agriculture projects in India with IGO Agritech Farms. We offer polyhouse, hydroponics, vertical farming, open cultivation, livestock, and turnkey agri engineering solutions.",
+  },
+  "/projects/aquaculture": {
+    title: "Aquaculture Projects in India | Fish Farming Company | IGO Agritech Farms",
+    description: "Explore aquaculture projects in India with IGO Agritech Farms. We provide fish farming solutions, pond construction, farm setup, expert consulting, and end-to-end aquaculture project development.",
+  },
+  "/projects/livestock": {
+    title: "Livestock Farming Projects in India | Goat, Dairy & Poultry | IGO Agritech Farms",
+    description: "Explore livestock farming projects in India with IGO Agritech Farms. We provide goat, dairy, and poultry farming solutions, turnkey project execution, and expert farm management services.",
+  },
+  "/projects/engineering": {
+    title: "Top Agricultural Engineering Projects in India | IGO Agritech Farms",
+    description: "Top Agricultural Engineering Projects in India by IGO Agritech Farms. Explore polyhouse, hydroponics, open cultivation, vertical farming, goat farming, and complete agri engineering solutions.",
+  },
+  "/projects/agri/polyhouse/naturally-ventilated": {
+    title: "Naturally Ventilated Polyhouse Company in India | IGO",
+    description: "Looking for naturally ventilated polyhouse solutions? IGO Agritech Farms provides turnkey polyhouse construction, precision farming, and complete project execution across India",
+  },
+  "/projects/agri/polyhouse/climate-controlled": {
+    title: "Climate Controlled Farming Projects in India | IGO Agritech Farms",
+    description: "Explore climate-controlled farming projects by IGO Agritech Farms. We design and build advanced protected cultivation, greenhouse, and precision farming solutions across India.",
+  },
+  "/projects/agri/polyhouse/polycarbonate": {
+    title: "Polycarbonate Polyhouse Solutions & Installation | IGO Agritech Farms",
+    description: "IGO Agritech Farms specializes in polycarbonate polyhouse solutions, installation, and precision farming services to improve crop quality, yield, and farm productivity",
+  },
+  "/projects/agri/polyhouse/shade-net": {
+    title: "Polycarbonate Polyhouse Solutions & Installation | IGO Agritech Farms",
+    description: "IGO Agritech Farms specializes in polycarbonate polyhouse solutions, installation, and precision farming services to improve crop quality, yield, and farm productivity.",
+  },
+  "/projects/agri/polyhouse/mist-chamber": {
+    title: "Mist Chamber Polyhouse | Plant Nursery Mist Chamber Solutions | IGO Agritech Farms",
+    description: "IGO Agritech Farms offers advanced mist chamber polyhouse solutions for plant propagation, nursery development, and healthy seedling production with expert turnkey installation.",
+  },
+  "/projects/agri/hydroponic": {
+    title: "Hydroponic Farming Projects | Hydroponic Company in India | IGO Agritech Farms",
+    description: "Looking for hydroponic farming projects in India? IGO Agritech Farms provides complete hydroponic system design, installation, greenhouse setup, and consultancy.",
+  },
+  "/projects/agri/hydroponic/nft": {
+    title: "NFT Hydroponic Farming Solutions & Projects | IGO Agritech Farms",
+    description: "IGO Agritech Farms offers advanced NFT Hydroponic Farming Solutions, turnkey project execution, expert consultation, training, and end-to-end farm support.",
+  },
+  "/projects/agri/hydroponic/dwc": {
+    title: "Deep Water Culture (DWC) Hydroponic Farming Projects | IGO Agritech Farms",
+    description: "Start a profitable DWC hydroponic farming project with IGO Agritech Farms. We provide complete design, installation, technical support, and project management.",
+  },
+  "/projects/agri/hydroponic/towers": {
+    title: "Hydroponic Tower Farming | Vertical Hydroponic Project Experts | IGO Agritech Farms",
+    description: "Start your hydroponic tower farming project with IGO Agritech Farms. We deliver advanced vertical hydroponic systems, complete project execution, expert consultation, and ongoing support across India.",
+  },
+  "/projects/agri/hydroponic/commercial": {
+    title: "Best Commercial Hydroponic Farming Projects | IGO Agritech Farms",
+    description: "Explore the best commercial hydroponic farming projects with IGO Agritech Farms. We provide turnkey hydroponic solutions, expert support, project execution, and sustainable high-yield farming across India.",
+  },
+  "/projects/agri/hydroponic/indoor": {
+    title: "Top Indoor Hydroponic Farming Company in India | IGO Agritech Farms",
+    description: "IGO Agritech Farms delivers advanced indoor hydroponic farming solutions across India with customized farm design, installation, training, maintenance, and end-to-end project support.",
+  },
+  "/projects/agri/vertical": {
+    title: "Top Vertical Farming Projects in India | End-to-End Setup | IGO Agritech Farms",
+    description: "Looking for vertical farming projects in India? IGO Agritech Farms offers complete vertical farming setup, consultancy, project execution, and farm management.",
+  },
+  "/projects/agri/vertical/indoor": {
+    title: "Top Vertical Start an Indoor Vertical Farming Project | IGO Agritech",
+    description: "Build a successful indoor vertical farming project with IGO Agritech Farms. From design and setup to maintenance and expert support, we handle it all.",
+  },
+  "/projects/agri/vertical/commercial": {
+    title: "Best Commercial Vertical Farming Company | IGO Agritech Farms",
+    description: "Start your commercial vertical farming project with IGO Agritech Farms. We offer turnkey solutions, expert consultancy, modern systems, and ongoing technical support.",
+  },
+  "/projects/agri/vertical/smart-grow": {
+    title: "Smart Grow Vertical Farming Setup | IGO Agritech Farms",
+    description: "IGO Agritech Farms specializes in Smart Grow vertical farming projects with innovative growing systems, turnkey installation, expert consultation, and ongoing support.",
+  },
+  "/projects/agri/open-field": {
+    title: "Best Open Cultivation Company in India | IGO Agritech Farms",
+    description: "Start a successful open cultivation project with IGO Agritech Farms. We provide complete farm setup, crop planning, maintenance, and technical support across India.",
+  },
 };
 
 // Long-form SEO article content shown on select subcategory pages
@@ -295,7 +382,7 @@ const SUBCATEGORY_ARTICLE: Record<string, string> = {
 </ul>
 <p>IGO Agritech Farms recommends the most suitable hydroponic technology based on your land availability and crop selection.</p>
 `,
-  "Polyhouse Farming Projects": `
+  "Protected Farming Projects": `
 <p>Modern agriculture is transforming rapidly with innovative technologies that help farmers achieve higher productivity, better crop quality, and sustainable profits. Among these advancements, polyhouse farming has become one of the most effective methods of protected cultivation. If you are looking for the top polyhouse farming in India, IGO Agritech Farms provides professionally managed Polyhouse Farming Projects that combine advanced infrastructure, expert guidance, and modern farming techniques.</p>
 <p>Polyhouse farming enables crops to grow in a controlled environment where temperature, humidity, ventilation, and irrigation are carefully managed. This system protects plants from unpredictable weather, excessive rainfall, pests, diseases, and extreme temperatures while ensuring healthy crop growth throughout the year.</p>
 <p>IGO Agritech Farms specializes in delivering customized Polyhouse Farming Projects for farmers across India. From project planning and polyhouse construction to irrigation systems, crop selection, and technical support, our experienced professionals help clients establish successful protected cultivation projects that are productive, sustainable, and profitable.</p>
@@ -496,8 +583,8 @@ const CategoryView: React.FC<{ category: string }> = ({ category }) => {
   return (
     <div className="bg-agri-earth-15 min-h-screen selection:bg-agri-green-50 selection:text-agri-green-800">
       <SEO
-        title={`${catItem.label} Projects`}
-        description={`Explore ${catItem.label} projects by IGO Agritech Farms. Turnkey agricultural project setup with expert engineering, site survey, and operational training across India.`}
+        title={SEO_OVERRIDES[`/projects/${category}`]?.title || `${catItem.label} Projects`}
+        description={SEO_OVERRIDES[`/projects/${category}`]?.description || `Explore ${catItem.label} projects by IGO Agritech Farms. Turnkey agricultural project setup with expert engineering, site survey, and operational training across India.`}
         keywords={`${catItem.label}, agricultural projects India, IGO Agritech Farms, farming projects`}
         url={`/projects/${category}`}
         image={heroImg || undefined}
@@ -640,8 +727,8 @@ const SubcategoryView: React.FC<{ category: string; subcategory: string }> = ({ 
   return (
     <div className="bg-agri-earth-15 min-h-screen selection:bg-agri-green-50 selection:text-agri-green-800">
       <SEO
-        title={subItem.label}
-        description={SUBCATEGORY_DESC[subItem.label] || `${subItem.label} projects by IGO Agritech Farms. Precision-engineered solutions with turnkey installation, training, and AMC support across India.`}
+        title={SEO_OVERRIDES[`/projects/${category}/${subcategory}`]?.title || subItem.label}
+        description={SEO_OVERRIDES[`/projects/${category}/${subcategory}`]?.description || SUBCATEGORY_DESC[subItem.label] || `${subItem.label} projects by IGO Agritech Farms. Precision-engineered solutions with turnkey installation, training, and AMC support across India.`}
         keywords={`${subItem.label}, ${catItem.label}, agricultural projects India, IGO Agritech Farms`}
         url={`/projects/${category}/${subcategory}`}
         image={heroImg || undefined}
@@ -799,8 +886,8 @@ const DetailView: React.FC<{ category: string; subcategory: string; feature: str
   return (
     <div className="bg-white min-h-screen selection:bg-agri-green-50 selection:text-agri-green-800 pt-28">
       <SEO
-        title={featItem.label}
-        description={`${featItem.label} projects by IGO Agritech Farms. ${contextDesc.slice(0, 120)} Get a free site assessment and project report.`}
+        title={SEO_OVERRIDES[`/projects/${category}/${subcategory}/${feature}`]?.title || featItem.label}
+        description={SEO_OVERRIDES[`/projects/${category}/${subcategory}/${feature}`]?.description || `${featItem.label} projects by IGO Agritech Farms. ${contextDesc.slice(0, 120)} Get a free site assessment and project report.`}
         keywords={`${featItem.label}, ${subItem.label}, ${catItem.label}, IGO Agritech Farms${isSubsidy ? ", government subsidy" : ""}`}
         url={`/projects/${category}/${subcategory}/${feature}`}
         image={heroImg || undefined}

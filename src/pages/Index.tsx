@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useMemo, useRef, useCallback } from "react";
 import { useImagePreloader } from "@/hooks/useImagePreloader";
 import { Link, useNavigate } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import SEO from "@/components/SEO";
 import { ArrowRight, Wheat, Fish, Tractor, Droplets, Leaf, Shield, Hammer, Microscope, Cog, Database, Zap, Binary, PencilRuler, Box, ChevronLeft, ChevronRight, ChevronDown, CheckCircle2 } from "lucide-react";
 import { stats, projects, services, navLinks, igoBrands } from "@/data/siteData";
@@ -1373,14 +1372,11 @@ const Index = () => {
     <div className="bg-white min-h-screen selection:bg-agri-green-50 selection:text-agri-green-800 overflow-x-hidden">
       <h1 className="sr-only">Best Agri farming Company</h1>
       <SEO
-        title="IGO AgritechFarms | best Agri farming Company | India"
-        description="IGO Agritech Farms — India's leading Agri Engineering & Agri Consulting brand. 10+ years, 15,000+ projects in precision farming, polyhouse, hydroponics, vertical farming & agri infrastructure across India."
+        title="Top Precision farming Company india"
+        description="Top Precision Farming Company India – IGO Agritech Farms provides polyhouse, hydroponics, vertical farming, open cultivation, and complete agri engineering solutions."
         keywords="agri engineering, agri consulting, precision farming, polyhouse farming, hydroponics, vertical farming, mushroom farming, biofloc, agri startup India, IGO Agritech, farm infrastructure Chennai"
         url="/"
       />
-      <Helmet>
-        <meta name="description" content="IGO Agritech Farms best agri farming company offering best Polyhouse, JV, Hydroponic,, goat  Farming Projects, and more projects across India." />
-      </Helmet>
       <HeroSection />
       <WhyChooseSection />
       <VisionSection />
