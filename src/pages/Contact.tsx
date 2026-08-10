@@ -203,7 +203,7 @@ const Contact = () => {
                 <MessageCircle className="w-4 h-4" /> WhatsApp
               </a>
               <a
-                href="mailto:precisionfarming152@gmail.com"
+                href="mailto:bd1@igogroups.com"
                 className="inline-flex items-center gap-3 px-8 py-3.5 bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-bold rounded-full uppercase tracking-widest hover:bg-white/20 transition-all"
               >
                 <Mail className="w-4 h-4" /> Email Us
@@ -236,14 +236,14 @@ const Contact = () => {
               {
                 icon: <Phone className="w-5 h-5" />,
                 label: "Call Us",
-                lines: ["+91 73977 89803", "+91 73977 89804"],
+                lines: ["+91 73977 89803", "+91 73977 89804", "+91 73977 89805"],
                 href: "tel:+917397789803",
               },
               {
                 icon: <Mail className="w-5 h-5" />,
                 label: "Email Us",
-                lines: ["precisionfarming152@gmail.com", "bd2@igogroups.com"],
-                href: "mailto:precisionfarming152@gmail.com",
+                lines: ["bd1@igogroups.com", "bd2@igogroups.com"],
+                href: "mailto:bd1@igogroups.com",
               },
               {
                 icon: <MapPin className="w-5 h-5" />,
@@ -254,7 +254,7 @@ const Contact = () => {
               {
                 icon: <Clock className="w-5 h-5" />,
                 label: "Business Hours",
-                lines: ["Mon – Sat: 9:00 AM – 6:00 PM", "Sunday: By Appointment"],
+                lines: ["Mon – Sat: 10:00 AM – 7:30 PM", "Sunday: By Appointment"],
                 href: null,
               },
             ].map((card, i) => (
@@ -476,7 +476,7 @@ const Contact = () => {
                 </div>
                 <h3 className="text-2xl font-serif text-white mb-2">Chat on WhatsApp</h3>
                 <p className="text-white/70 text-sm font-light leading-relaxed mb-6">
-                  Get a response in minutes. Our team is available Mon–Sat, 9AM–6PM.
+                  Get a response in minutes. Our team is available Mon–Sat, 10AM–7:30PM.
                 </p>
                 <a
                   href={waLink}
@@ -494,7 +494,7 @@ const Contact = () => {
                   <Phone className="w-6 h-6 text-agri-gold-500" />
                 </div>
                 <h3 className="text-xl font-serif text-white mb-1">Call Directly</h3>
-                <p className="text-white/40 text-xs font-light mb-5">Mon – Sat, 9:00 AM – 6:00 PM IST</p>
+                <p className="text-white/40 text-xs font-light mb-5">Mon – Sat, 10:00 AM – 7:30 PM IST</p>
                 <a
                   href="tel:+917397789803"
                   className="text-2xl font-bold text-white hover:text-agri-gold-500 transition-colors block mb-2"
@@ -503,9 +503,15 @@ const Contact = () => {
                 </a>
                 <a
                   href="tel:+917397789804"
-                  className="text-base text-white/40 hover:text-white/70 transition-colors block"
+                  className="text-base text-white/40 hover:text-white/70 transition-colors block mb-2"
                 >
                   +91 73977 89804
+                </a>
+                <a
+                  href="tel:+917397789805"
+                  className="text-base text-white/40 hover:text-white/70 transition-colors block"
+                >
+                  +91 73977 89805
                 </a>
               </div>
 

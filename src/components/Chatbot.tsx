@@ -100,7 +100,7 @@ const KNOWLEDGE: KB[] = [
   // Contact
   {
     keywords: ["contact", "phone", "call", "reach", "number", "address", "talk", "speak"],
-    answer: `📞 **Contact IGO Agritech Farms:**\n\n📱 Phone: **+91 73977 89803**\n📧 Email: precisionfarming152@gmail.com\n📍 HQ: No 17, Kovalan Street, Uthandi Kanathur, Chennai 600119\n🕐 Hours: Mon–Sat, 9 AM – 6 PM\n\nOr tap **WhatsApp** below for instant chat!`,
+    answer: `📞 **Contact IGO Agritech Farms:**\n\n📱 Phone: **+91 73977 89803**\n📧 Email: bd1@igogroups.com\n📍 HQ: No 17, Kovalan Street, Uthandi Kanathur, Chennai 600119\n🕐 Hours: Mon–Sat, 10 AM – 7:30 PM\n\nOr tap **WhatsApp** below for instant chat!`,
   },
   // WhatsApp
   {
@@ -110,7 +110,7 @@ const KNOWLEDGE: KB[] = [
   // Location / Office
   {
     keywords: ["location", "office", "where", "chennai", "mysore", "visit", "headquarters", "hq"],
-    answer: `📍 **IGO Offices:**\n\n🏢 **Chennai HQ:**\nNo 17, Kovalan Street, Uthandi Kanathur,\nChennai – 600119, Tamil Nadu\n\n🎓 **Mysore Training Centre:**\nM.G. Road, Lakshmipuram,\nMysore – 570004, Karnataka\n\nBoth offices open Mon–Sat, 9 AM – 6 PM`,
+    answer: `📍 **IGO Offices:**\n\n🏢 **Chennai HQ:**\nNo 17, Kovalan Street, Uthandi Kanathur,\nChennai – 600119, Tamil Nadu\n\n🎓 **Mysore Training Centre:**\nM.G. Road, Lakshmipuram,\nMysore – 570004, Karnataka\n\nBoth offices open Mon–Sat, 10 AM – 7:30 PM`,
   },
   // Training / Courses
   {
@@ -244,7 +244,7 @@ function getBotReply(input: string): string {
       return kb.answer;
     }
   }
-  return `Thank you for your message! 🌿 Our team will be happy to help.\n\nFor immediate assistance:\n📞 Call **+91 73977 89803**\n📲 WhatsApp us using the button below\n📧 Email: precisionfarming152@gmail.com\n\nYou can also try asking about our **services**, **projects**, or **subsidies**.`;
+  return `Thank you for your message! 🌿 Our team will be happy to help.\n\nFor immediate assistance:\n📞 Call **+91 73977 89803**\n📲 WhatsApp us using the button below\n📧 Email: bd1@igogroups.com\n\nYou can also try asking about our **services**, **projects**, or **subsidies**.`;
 }
 
 // ─── Render markdown-style bold ──────────────────────────────────────────────
