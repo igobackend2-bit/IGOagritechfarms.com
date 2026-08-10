@@ -202,16 +202,16 @@ const SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
     description: "Discover the best agriculture projects in India with IGO Agritech Farms. We offer polyhouse, hydroponics, vertical farming, open cultivation, livestock, and turnkey agri engineering solutions.",
   },
   "/projects/aquaculture": {
-    title: "Aquaculture Projects in India | Fish Farming Company | IGO Agritech Farms",
-    description: "Explore aquaculture projects in India with IGO Agritech Farms. We provide fish farming solutions, pond construction, farm setup, expert consulting, and end-to-end aquaculture project development.",
+    title: "Aquaculture Farming Projects in India | Fish Farming | IGO Agritech Farms",
+    description: "Start your aquaculture farming project in India with IGO Agritech Farms. Expert fish farming solutions, pond setup, farm management and complete project support.",
   },
   "/projects/livestock": {
-    title: "Livestock Farming Projects in India | Goat, Dairy & Poultry | IGO Agritech Farms",
-    description: "Explore livestock farming projects in India with IGO Agritech Farms. We provide goat, dairy, and poultry farming solutions, turnkey project execution, and expert farm management services.",
+    title: "Livestock Farming Projects in India | IGO Agritech Farms",
+    description: "Explore commercial livestock farming opportunities with IGO Agritech. Get complete farm setup and expert support for goat, dairy, poultry and sheep farming.",
   },
   "/projects/engineering": {
-    title: "Top Agricultural Engineering Projects in India | IGO Agritech Farms",
-    description: "Top Agricultural Engineering Projects in India by IGO Agritech Farms. Explore polyhouse, hydroponics, open cultivation, vertical farming, goat farming, and complete agri engineering solutions.",
+    title: "Agricultural Engineering Projects in India | IGO Agritech Farms",
+    description: "Explore agricultural engineering projects by IGO Agritech Farms, including farm infrastructure, water management, solar solutions and farm development across India.",
   },
   "/projects/agri/polyhouse/naturally-ventilated": {
     title: "Naturally Ventilated Polyhouse Company in India | IGO",
@@ -276,6 +276,234 @@ const SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
   "/projects/agri/open-field": {
     title: "Best Open Cultivation Company in India | IGO Agritech Farms",
     description: "Start a successful open cultivation project with IGO Agritech Farms. We provide complete farm setup, crop planning, maintenance, and technical support across India.",
+  },
+  "/projects/agri/open-field/dragon-fruit": {
+    title: "Dragon Fruit Farming Project in India | IGO Agritech Farms",
+    description: "Build a commercial Dragon Fruit Farming Project in India with IGO Agritech Farms. Get expert planning, farm development and complete cultivation support.",
+  },
+  "/projects/agri/open-field/guava": {
+    title: "Guava Farming Project in India | Guava Cultivation | IGO Agritech",
+    description: "Start a commercial guava farming project in India with IGO Agritech. Get expert support for guava cultivation, farm setup, irrigation and management.",
+  },
+  "/projects/agri/open-field/mango": {
+    title: "Mango Farming Project in India | Mango Cultivation | IGO Agritech",
+    description: "Explore mango farming projects in India with IGO Agritech Farms. Get expert support for mango cultivation, farm setup, irrigation, maintenance & harvesting.",
+  },
+  "/projects/agri/open-field/papaya": {
+    title: "Papaya Farming Project in India | Papaya Cultivation | IGO Agritech",
+    description: "Start a commercial papaya farming project in India with IGO Agritech Farms. Get expert support for cultivation, irrigation, farm setup, maintenance, harvesting and market linkage..",
+  },
+  "/projects/agri/open-field/fig": {
+    title: "Fig Farming in India | Open Field Fig Cultivation | IGO Agritech",
+    description: "Explore commercial fig farming projects in India with IGO Agritech Farms. Get expert support for fig cultivation, farm setup, maintenance and harvesting.",
+  },
+  "/projects/agri/open-field/blueberry": {
+    title: "Blueberry Farming Project in India | Blueberry Cultivation | IGO Agritech",
+    description: "Explore blueberry farming projects in India with IGO Agritech. Get expert support for blueberry cultivation, farm setup, crop management, and harvesting.",
+  },
+  "/projects/agri/vegetable": {
+    title: "Cucumber Farming Project in India | Cucumber Cultivation | IGO AgritechDescription: Start a cucumber farming project in India with IGO Agritech. Get expert support for farm setup, cultivation, irrigation, crop management and harvesting.",
+    description: "Start a cucumber farming project in India with IGO Agritech. Get expert support for farm setup, cultivation, irrigation, crop management and harvesting.",
+  },
+  "/projects/agri/vegetable/capsicum": {
+    title: "Capsicum Farming in India | Polyhouse Capsicum Farming | IGOAgritech",
+    description: "Build a modern capsicum farm with IGO Agritech Farms. Get end-to-end support for polyhouse setup, irrigation, cultivation, maintenance, and harvesting.",
+  },
+  "/projects/agri/vegetable/tomato": {
+    title: "Tomato Farming Project in India | IGO Agritech Farms",
+    description: "IGO Agritech Farms offers commercial tomato farming projects in India with expert support for farm development, cultivation, crop care, harvesting and management.",
+  },
+  "/projects/agri/vegetable/chilli": {
+    title: "Tomato Farming Project in India | IGO Agritech Farms",
+    description: "IGO Agritech Farms provides end-to-end chilli farming project solutions in India, including farm development, irrigation, cultivation, crop care and harvesting.",
+  },
+  "/projects/agri/vegetable/muskmelon": {
+    title: "Muskmelon Farming & Cultivation Project | IGO Agritech Farms",
+    description: "Looking for muskmelon farming solutions in India? IGO Agritech Farms offers professional cultivation, project setup, crop management and technical support.",
+  },
+  "/projects/agri/vegetable/watermelon": {
+    title: "Watermelon Farming Project in India | IGO Agritech Farms",
+    description: "Planning watermelon cultivation in India? IGO Agritech Farms offers end-to-end support for farm setup, crop planning, cultivation, maintenance and harvesting.",
+  },
+  "/projects/agri/medicinal": {
+    title: "Medicinal Plants Farming Project in India | IGO Agritech Farms",
+    description: "IGO Agritech Farms provides medicinal plants farming project solutions in India with expert guidance, cultivation support and complete farm development.",
+  },
+  "/projects/agri/medicinal/aloe-vera": {
+    title: "Aloe Vera Cultivation Project in India | IGO Agritech Farms",
+    description: "Grow Aloe Vera commercially with IGO Agritech Farms. Explore professional cultivation projects, farm setup, technical support, and expert guidance in India.",
+  },
+  "/projects/agri/medicinal/moringa": {
+    title: "Moringa Plantation & Farm Setup in India | IGO Agritech Farms",
+    description: "Plan your moringa farming project with IGO Agritech Farms. We provide professional plantation setup, cultivation solutions, and farm development services.",
+  },
+  "/projects/agri/medicinal/ginger": {
+    title: "Ginger Cultivation & Farm Setup in India | IGO Agritech Farms",
+    description: "Start your ginger cultivation project with IGO Agritech Farms. Get expert farm setup, crop planning, technical guidance and end-to-end farming support in India.",
+  },
+  "/projects/agri/medicinal/turmeric": {
+    title: "Turmeric Farming Project in India | IGO Agritech Farms",
+    description: "Looking for turmeric farming projects in India? IGO Agritech Farms offers expert guidance, project setup, crop cultivation, and complete farming support.",
+  },
+  "/projects/agri/medicinal/tapioca": {
+    title: "Tapioca Cultivation Project in India | IGO Agritech Farms",
+    description: "Explore tapioca cultivation projects in India with IGO Agritech Farms. Get expert guidance, modern farming solutions, project setup, and complete support.",
+  },
+  "/projects/agri/floriculture": {
+    title: "Floriculture Farming Projects in India | IGO Agritech Farms",
+    description: "Grow high-quality flowers with professional floriculture farming solutions from IGO Agritech Farms, including planning, cultivation and end-to-end project support.",
+  },
+  "/projects/agri/floriculture/rose": {
+    title: "Rose Farming Project in India | IGO Agritech Farms",
+    description: "Explore commercial rose farming projects in India with IGO Agritech Farms. Get expert support for farm setup, cultivation, irrigation, maintenance, and harvesting.",
+  },
+  "/projects/agri/floriculture/jasmine": {
+    title: "Jasmine Farming & Cultivation in India | IGO Agritech Farms",
+    description: "Learn about jasmine farming and cultivation in India with IGO Agritech Farms. Explore professional farm setup, crop management and harvesting solutions.",
+  },
+  "/projects/agri/floriculture/marigold": {
+    title: "Marigold Farming Project in India | IGO Agritech Farms",
+    description: "Discover profitable marigold cultivation with IGO Agritech Farms. We provide complete support for farm planning, setup, crop management, and successful harvesting.",
+  },
+  "/projects/agri/floriculture/exotic": {
+    title: "Exotic Floriculture Projects & Farming Solutions | IGO Agritech Farms",
+    description: "Discover exotic floriculture farming solutions with IGO Agritech Farms. From project planning and setup to cultivation and farm management support.",
+  },
+  "/projects/agri/mushroom": {
+    title: "Mushroom Farming Setup & Cultivation Project | IGO Agritech Farms",
+    description: "Build a successful mushroom cultivation project with IGO Agritech Farms. Get complete mushroom farming setup, technical guidance and end-to-end project support.",
+  },
+  "/projects/agri/mushroom/oyster": {
+    title: "Oyster Mushroom Cultivation Project | IGO Agritech Farms",
+    description: "Start your oyster mushroom cultivation project with IGO Agritech Farms. Get expert guidance, modern farming setup, project execution and support in India.",
+  },
+  "/projects/agri/mushroom/button": {
+    title: "Button Mushroom Farming Projects in India | IGO Agritech Farms",
+    description: "Explore button mushroom farming projects in India with IGO Agritech Farms. Get expert support for setup, cultivation, farm management, and production.",
+  },
+  "/projects/agri/mushroom/commercial": {
+    title: "Commercial Mushroom Farming Project in India | IGO Agritech Farms",
+    description: "Explore commercial mushroom farming projects in India with IGO Agritech Farms. Get expert support for farm setup, cultivation, production and management.",
+  },
+  "/projects/agri/urban": {
+    title: "Urban Farming Projects & Precision Farming Solutions | IGO Agritech Farms",
+    description: "IGO Agritech Farms delivers modern urban farming projects with precision agriculture technology, expert project execution and sustainable farming solutions.",
+  },
+  "/projects/agri/urban/rooftop": {
+    title: "Rooftop Farming Projects in India | IGO Agritech Farms",
+    description: "Transform your terrace into a productive urban farm with IGO Agritech Farms. Discover professional rooftop farming solutions designed for modern spaces.",
+  },
+  "/projects/agri/urban/terrace": {
+    title: "Terrace Farming & Rooftop Farming Projects in India | IGO Agritech",
+    description: "Transform your rooftop with terrace farming projects in India. IGO Agritech offers complete rooftop farming setup, expert guidance and sustainable urban farming solutions.",
+  },
+  "/projects/agri/urban/kitchen": {
+    title: "Kitchen Garden Setup Services in India | IGO Agritech Farms",
+    description: "Create a fresh and sustainable kitchen garden with IGO Agritech Farms. Get expert kitchen garden setup services, planning and complete support across India.",
+  },
+  "/projects/agri/urban/microgreens": {
+    title: "Microgreens Farming Business in India | IGO Agritech Farms",
+    description: "Grow fresh microgreens commercially with IGO Agritech Farms. Get end-to-end microgreens farming setup, expert guidance and business support across India.",
+  },
+  "/projects/agri/nursery": {
+    title: "Nursery Farming Projects in India | IGO Agritech Farms",
+    description: "Looking for nursery farming projects in India? IGO Agritech Farms delivers professional nursery setup and complete agricultural project solutions.",
+  },
+  "/projects/agri/nursery/commercial": {
+    title: "Commercial Nursery Project & Setup Services | IGO Agritech Farms",
+    description: "Start your commercial nursery project with IGO Agritech Farms. Get expert nursery setup, plant production solutions, technical guidance and complete support.",
+  },
+  "/projects/agri/nursery/seedling": {
+    title: "Quality Seedling Nursery in India | IGO Agritech Farms",
+    description: "Get healthy, high-quality agricultural seedlings from IGO Agritech Farms. Expert nursery solutions for reliable plant growth and successful cultivation.",
+  },
+  "/projects/agri/nursery/tissue-culture": {
+    title: "Tissue Culture Plants & Nursery Projects | IGO Agritech Farms",
+    description: "Discover tissue culture plants and professional nursery projects from IGO Agritech Farms. Advanced solutions for healthy plants and sustainable farming.",
+  },
+  "/projects/joint-venture": {
+    title: "Joint Venture Farming Projects in India | IGO Agritech Farms",
+    description: "Explore Joint Venture Farming Projects in India with IGO Agritech Farms. Get professional farm management, modern farming solutions and end-to-end support.",
+  },
+  "/projects/aquaculture/fish": {
+    title: "Aquaculture & Fish Farming Projects in India | IGO Agritech Farms",
+    description: "Discover commercial aquaculture and fish farming projects with IGO Agritech Farms. Get expert assistance from project planning to successful farm operations.",
+  },
+  "/projects/aquaculture/biofloc": {
+    title: "Biofloc Fish Farming Projects in India | IGO Agritech Farms",
+    description: "Build your biofloc fish farming project with IGO Agritech Farms. Get end-to-end support for planning, setup, technical guidance and farm operations.",
+  },
+  "/projects/aquaculture/shrimp": {
+    title: "Shrimp Farming Project & Aquaculture Solutions | IGO Agritech Farms",
+    description: "IGO Agritech Farms provides professional shrimp farming project solutions in India with aquaculture planning, setup, management, and technical assistance.",
+  },
+  "/projects/aquaculture/crab": {
+    title: "Crab Farming Project | Aquaculture Setup in India | IGO Agritech",
+    description: "Build a commercial crab farming project with IGO Agritech Farms. Explore professional aquaculture setup, farm planning, technical support and project execution.",
+  },
+  "/projects/aquaculture/crab/mud-crab": {
+    title: "Mud Crab Aquaculture Farming Project | IGO Agritech Farms",
+    description: "Start a Mud Crab Aquaculture Farming Project with IGO Agritech Farms. Get expert guidance, farm setup, technical support and complete project solutions.",
+  },
+  "/projects/aquaculture/integrated": {
+    title: "Integrated Aquaculture Farming Projects in India | IGO Agritech Farms",
+    description: "Build a profitable integrated aquaculture farming project with IGO Agritech Farms. Complete solutions for fish farming, infrastructure and farm management.",
+  },
+  "/projects/aquaculture/integrated/aquaponics": {
+    title: "Aquaponics Farming Solutions in India | IGO Agritech Farms",
+    description: "Explore aquaponics farming solutions in India with IGO Agritech Farms. Get expert guidance, complete farm setup, technical support and project solutions.",
+  },
+  "/projects/aquaculture/integrated/fish-crop": {
+    title: "Fish-Crop Integrated Farming in India | Aquaculture | IGO Agritech",
+    description: "Start a Fish-Crop Integrated Farming project with IGO Agritech. Expert aquaculture setup, farm planning and integrated solutions for productive farming in India.",
+  },
+  "/projects/livestock/goat": {
+    title: "Goat Farming Project in India | Commercial Goat Farm Setup | IGO",
+    description: "Start a commercial goat farming project in India with IGO Agritech Farms. Get expert farm setup, breed planning, shed design, feeding and complete project support",
+  },
+  "/projects/livestock/sheep": {
+    title: "Sheep Farming Project & Farm Setup Services | IGO Agritech Farms",
+    description: "Start your sheep farming project with IGO Agritech Farms. Get expert farm setup, livestock planning, infrastructure development, and complete sheep farming support in India.",
+  },
+  "/projects/livestock/dairy": {
+    title: "Dairy Farming Projects & Farm Setup Solutions | IGO Agritech Farms",
+    description: "Start your dairy farming project with IGO Agritech Farms. Get complete dairy farm setup, modern infrastructure, expert guidance, and end-to-end farming solutions.",
+  },
+  "/projects/livestock/poultry": {
+    title: "Poultry Farming Project in India | IGO Agritech Farms",
+    description: "Build a modern poultry farm with IGO Agritech Farms. Explore professional poultry farming project setup, planning, technical guidance, and ongoing support in India.",
+  },
+  "/projects/livestock/integrated": {
+    title: "Livestock Farming Projects & Solutions | IGO Agritech Farms",
+    description: "Explore livestock farming projects and complete farm solutions with IGO Agritech Farms, including planning, setup, management, and expert support across India.",
+  },
+  "/projects/engineering/infrastructure": {
+    title: "Farm Infrastructure & Engineering Projects | IGO Agritech Farms",
+    description: "Explore farm infrastructure and engineering solutions from IGO Agritech Farms, including cold storage, packhouses, farm buildings, irrigation and livestock sheds.",
+  },
+  "/projects/engineering/water": {
+    title: "Agricultural Water Management Solutions | IGO Agritech Farms",
+    description: "Explore agricultural water management solutions from IGO Agritech Farms, including irrigation systems, water storage, farm ponds and efficient water solutions across India.",
+  },
+  "/projects/engineering/solar": {
+    title: "Solar Dryer Projects & Solutions in India | IGO Agritech Farms",
+    description: "IGO Agritech Farms provides reliable solar project solutions for agriculture, helping farms adopt clean energy, improve efficiency and reduce energy costs.",
+  },
+  "/projects/engineering/development": {
+    title: "Farm Development & Engineering Projects | IGO Agritech Farms",
+    description: "Explore farm development and engineering projects by IGO Agritech Farms, offering farm planning, infrastructure, irrigation, automation and complete project solutions",
+  },
+  "/projects/engineering/development/surveying": {
+    title: "Land Surveying Services for Farm Development | IGO Agritech Farms",
+    description: "Get professional land surveying services for farm development with IGO Agritech Farms. Expert site assessment, land measurement, planning and agri-engineering support across India.",
+  },
+  "/projects/engineering/development/topographic": {
+    title: "Topographic Survey & Land Mapping Services | IGO Agritech Farms",
+    description: "Get accurate topographic survey services for farmland and agricultural projects. IGO Agritech Farms supports site analysis, planning and land development.",
+  },
+  "/projects/engineering/development/leveling": {
+    title: "Farm Land Leveling Services in India | IGO Agritech Farms",
+    description: "Get professional farm land leveling services with IGO Agritech Farms. Expert land development, site preparation and leveling solutions for agricultural projects across India.",
   },
 };
 
