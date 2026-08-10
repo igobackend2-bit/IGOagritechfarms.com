@@ -302,7 +302,7 @@ const SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
     description: "Explore blueberry farming projects in India with IGO Agritech. Get expert support for blueberry cultivation, farm setup, crop management, and harvesting.",
   },
   "/projects/agri/vegetable": {
-    title: "Cucumber Farming Project in India | Cucumber Cultivation | IGO AgritechDescription: Start a cucumber farming project in India with IGO Agritech. Get expert support for farm setup, cultivation, irrigation, crop management and harvesting.",
+    title: "Cucumber Farming Project in India | Cucumber Cultivation | IGO Agritech",
     description: "Start a cucumber farming project in India with IGO Agritech. Get expert support for farm setup, cultivation, irrigation, crop management and harvesting.",
   },
   "/projects/agri/vegetable/capsicum": {
