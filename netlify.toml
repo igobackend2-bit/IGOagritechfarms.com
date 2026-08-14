@@ -1,9 +1,18 @@
 [build]
-  command = "npm run build"
+  command = "npm run build && npm run prerender"
   publish = "dist"
 
 [build.environment]
   SECRETS_SCAN_OMIT_KEYS = "VITE_SUPABASE_PROJECT_ID,VITE_SUPABASE_PUBLISHABLE_KEY,VITE_SUPABASE_URL"
+
+# Netlify already force-redirects HTTP -> HTTPS and terminates TLS
+# automatically for every site (not configurable off), so no redirect rule
+# is needed here. This header just tells browsers to always use HTTPS for
+# this domain from now on, even before the first request completes.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
 
 # Cache JS/CSS assets forever (content-hashed filenames)
 [[headers]]
@@ -38,8 +47,12 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
-# SPA fallback — send all routes to index.html so React Router handles them
+# SPA fallback — unmatched URLs (i.e. not one of the prerendered static
+# routes) get the neutral pre-render CSR shell (200.html), not index.html
+# (which prerender.mjs overwrites with the homepage's own rendered content).
+# React Router then takes over client-side and renders the real NotFound
+# page. See scripts/prerender.mjs for why index.html can't be reused here.
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/200.html"
   status = 200

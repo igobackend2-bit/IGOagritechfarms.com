@@ -29,9 +29,11 @@ const DIST_DIR = path.resolve("dist");
 const PORT = 4173;
 
 // Every route the marketing team needs correct tags for in raw HTML.
-// Static top-level pages + all 77 project pages from SEO_OVERRIDES in
-// src/pages/ProjectRouter.tsx. Admin/ads/legacy/dynamic-id routes are
-// intentionally excluded (not public-facing SEO targets).
+// Static top-level pages + all project pages from SEO_OVERRIDES in
+// src/pages/ProjectRouter.tsx + all service/product category and
+// subcategory pages from navLinks in src/data/siteData.ts.
+// Admin/ads/legacy/dynamic-id routes are intentionally excluded
+// (not public-facing SEO targets).
 const ROUTES = [
   "/",
   "/about",
@@ -124,6 +126,88 @@ const ROUTES = [
   "/projects/engineering/development/surveying",
   "/projects/engineering/development/topographic",
   "/projects/engineering/development/leveling",
+  // Service category + subcategory pages (from navLinks in src/data/siteData.ts).
+  // These were previously missing from prerender, meaning JS-less crawlers
+  // saw an empty shell for every /services/* page below the top-level index.
+  "/services/farm-planning",
+  "/services/farm-planning/farm-business-planning",
+  "/services/farm-planning/agri-investment-consulting",
+  "/services/farm-planning/crop-selection-consulting",
+  "/services/farm-planning/farm-layout-design",
+  "/services/farm-planning/aquaculture-consulting",
+  "/services/farm-planning/land-surveying",
+  "/services/farming-project-setup",
+  "/services/farming-project-setup/polyhouse-installation",
+  "/services/farming-project-setup/hydroponic-setup",
+  "/services/farming-project-setup/vertical-farming-setup",
+  "/services/farming-project-setup/fish-farming-setup",
+  "/services/farming-project-setup/biofloc-installation",
+  "/services/farming-project-setup/aquaculture-pond-construction",
+  "/services/farming-project-setup/aquaponics-setup",
+  "/services/farming-project-setup/goat-farm-setup",
+  "/services/farming-project-setup/dairy-farm-setup",
+  "/services/farming-project-setup/sheep-farm-setup",
+  "/services/farming-project-setup/poultry-farm-setup",
+  "/services/farming-project-setup/gis-mapping",
+  "/services/farm-infrastructure",
+  "/services/farm-infrastructure/cold-storage-construction",
+  "/services/farm-infrastructure/packhouse-construction",
+  "/services/farm-infrastructure/farm-building-design",
+  "/services/farm-infrastructure/drip-irrigation-installation",
+  "/services/farm-infrastructure/sprinkler-irrigation-systems",
+  "/services/farm-infrastructure/water-pump-systems",
+  "/services/farm-infrastructure/land-leveling",
+  "/services/maintenance-support",
+  "/services/maintenance-support/livestock-shed-construction",
+  "/services/maintenance-support/polyhouse-amc",
+  "/services/maintenance-support/hydroponic-system-amc",
+  "/services/maintenance-support/farm-equipment-maintenance",
+  // Product category + subcategory pages (from navLinks in src/data/siteData.ts).
+  // Same gap as services above — previously entirely un-prerendered.
+  "/products/agri-inputs",
+  "/products/agri-inputs/veg-seeds",
+  "/products/agri-inputs/fruit-seeds",
+  "/products/agri-inputs/leafy-seeds",
+  "/products/agri-inputs/media",
+  "/products/agri-inputs/nutrition",
+  "/products/agri-inputs/protection",
+  "/products/agri-inputs/pgrs",
+  "/products/agri-inputs/mulching",
+  "/products/structure",
+  "/products/structure/frames",
+  "/products/structure/covering",
+  "/products/structure/nets",
+  "/products/structure/ventilation",
+  "/products/structure/misting",
+  "/products/structure/plumbing",
+  "/products/automation",
+  "/products/automation/dosing",
+  "/products/automation/controllers",
+  "/products/automation/motors",
+  "/products/automation/electrical",
+  "/products/horticulture",
+  "/products/horticulture/vegetables",
+  "/products/horticulture/flowers",
+  "/products/horticulture/fruits",
+  "/products/horticulture/herbs",
+  "/products/digital",
+  "/products/digital/hardware",
+  "/products/digital/software",
+  "/products/digital/services",
+  "/products/specialized",
+  "/products/specialized/post-harvest",
+  "/products/specialized/aquaculture",
+  "/products/specialized/livestock",
+  // Blog posts (static content from blogPosts in src/data/siteData.ts —
+  // not Supabase-backed, so the full list is known at build time).
+  "/blog/igo-agrimart-solutions",
+  "/blog/dr-john-yesudhas-icon-of-india",
+  "/blog/independence-day-2023",
+  "/blog/jnn-institute-industrial-visit",
+  "/blog/best-innovative-startup-2022",
+  "/blog/campus-drive-200-students",
+  "/blog/agriculture-subsidies-india",
+  "/blog/press-media-honours-dr-john",
 ];
 
 const MIME = {
@@ -168,6 +252,22 @@ async function main() {
   if (!existsSync(DIST_DIR)) {
     console.error("dist/ not found — run `npm run build` before `npm run prerender`.");
     process.exit(1);
+  }
+
+  // Save a copy of the plain (pre-prerender) CSR shell as 200.html BEFORE
+  // the loop below overwrites dist/index.html with the homepage's fully
+  // rendered content. Genuinely nonexistent URLs (typos, broken links,
+  // anything not in ROUTES) fall back to this neutral shell via the
+  // hosting configs (netlify.toml / vercel.json / nginx.conf all point
+  // their SPA fallback at /200.html, not /index.html) — otherwise every
+  // bad URL would silently serve a full duplicate copy of the homepage to
+  // any crawler that doesn't execute JavaScript, with no noindex signal.
+  const indexPath = path.join(DIST_DIR, "index.html");
+  const shellPath = path.join(DIST_DIR, "200.html");
+  if (existsSync(indexPath) && !existsSync(shellPath)) {
+    const shell = await readFile(indexPath);
+    await writeFile(shellPath, shell);
+    console.log("[prerender] saved pre-render CSR shell as 200.html (SPA fallback target)");
   }
 
   const server = serveStatic();

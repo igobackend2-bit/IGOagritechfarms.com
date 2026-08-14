@@ -76,7 +76,7 @@
   <url><loc>https://www.igoagritechfarms.in/projects/engineering</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- ── Projects — Agri Subcategories ── -->
-  <url><loc>https://www.igoagritechfarms.in/projects/agri/polyhouse</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.igoagritechfarms.in/projects/agri/protected</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.igoagritechfarms.in/projects/agri/hydroponic</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.igoagritechfarms.in/projects/agri/vertical</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.igoagritechfarms.in/projects/agri/open-field</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -87,12 +87,12 @@
   <url><loc>https://www.igoagritechfarms.in/projects/agri/urban</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.igoagritechfarms.in/projects/agri/nursery</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
-  <!-- ── Projects — Polyhouse Farming ── -->
-  <url><loc>https://www.igoagritechfarms.in/projects/agri/polyhouse/naturally-ventilated</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.igoagritechfarms.in/projects/agri/polyhouse/climate-controlled</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.igoagritechfarms.in/projects/agri/polyhouse/polycarbonate</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.igoagritechfarms.in/projects/agri/polyhouse/shade-net</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.igoagritechfarms.in/projects/agri/polyhouse/mist-chamber</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <!-- ── Projects — Protected Farming ── -->
+  <url><loc>https://www.igoagritechfarms.in/projects/agri/protected/naturally-ventilated</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.igoagritechfarms.in/projects/agri/protected/climate-controlled</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.igoagritechfarms.in/projects/agri/protected/polycarbonate</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.igoagritechfarms.in/projects/agri/protected/shade-net</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.igoagritechfarms.in/projects/agri/protected/mist-chamber</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
   <!-- ── Projects — Hydroponic ── -->
   <url><loc>https://www.igoagritechfarms.in/projects/agri/hydroponic/nft</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
