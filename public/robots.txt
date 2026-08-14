@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /cgi-bin/
 
-Sitemap: https://www.igoagritechfarms.in/sitemap.xml
+Sitemap: https://www.igoagritechfarms.com/sitemap.xml
