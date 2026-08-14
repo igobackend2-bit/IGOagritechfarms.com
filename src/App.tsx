@@ -9,7 +9,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { AuthProvider } from "@/hooks/useAuth";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Chatbot from "@/components/Chatbot";
+const Chatbot = lazy(() => import("@/components/Chatbot"));
 // Lazy-loaded pages for better code splitting
 const Index = lazy(() => import("./pages/Index"));
 const About = lazy(() => import("./pages/About"));
@@ -97,7 +97,11 @@ const SiteLayout = ({ children }: { children: React.ReactNode }) => {
         <main id="main-content" className="min-h-screen relative z-10">{children}</main>
       </ErrorBoundary>
       {!isAdmin && <Footer />}
-      {!isAdmin && <Chatbot />}
+      {!isAdmin && (
+        <Suspense fallback={null}>
+          <Chatbot />
+        </Suspense>
+      )}
     </>
   );
 };
