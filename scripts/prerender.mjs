@@ -29,9 +29,11 @@ const DIST_DIR = path.resolve("dist");
 const PORT = 4173;
 
 // Every route the marketing team needs correct tags for in raw HTML.
-// Static top-level pages + all 77 project pages from SEO_OVERRIDES in
-// src/pages/ProjectRouter.tsx. Admin/ads/legacy/dynamic-id routes are
-// intentionally excluded (not public-facing SEO targets).
+// Static top-level pages + all project pages from SEO_OVERRIDES in
+// src/pages/ProjectRouter.tsx + all service/product category and
+// subcategory pages from navLinks in src/data/siteData.ts.
+// Admin/ads/legacy/dynamic-id routes are intentionally excluded
+// (not public-facing SEO targets).
 const ROUTES = [
   "/",
   "/about",
@@ -47,15 +49,20 @@ const ROUTES = [
   "/igo-groups",
   "/privacy",
   "/terms",
-  "/projects/agri/polyhouse",
-  "/projects/aquaculture",
-  "/projects/livestock",
-  "/projects/engineering",
-  "/projects/agri/polyhouse/naturally-ventilated",
-  "/projects/agri/polyhouse/climate-controlled",
-  "/projects/agri/polyhouse/polycarbonate",
-  "/projects/agri/polyhouse/shade-net",
-  "/projects/agri/polyhouse/mist-chamber",
+  // Legacy standalone project pages (own components, not ProjectRouter)
+  "/projects/joint-venture",
+  "/projects/mushroom",
+  "/projects/hydroponic",
+  "/projects/polyhouse",
+  // Agri Farming Projects (category page itself was previously missing —
+  // same class of bug as the other "/services"/"/products" parents)
+  "/projects/agri",
+  "/projects/agri/protected",
+  "/projects/agri/protected/naturally-ventilated",
+  "/projects/agri/protected/climate-controlled",
+  "/projects/agri/protected/polycarbonate",
+  "/projects/agri/protected/shade-net",
+  "/projects/agri/protected/mist-chamber",
   "/projects/agri/hydroponic",
   "/projects/agri/hydroponic/nft",
   "/projects/agri/hydroponic/dwc",
@@ -74,6 +81,7 @@ const ROUTES = [
   "/projects/agri/open-field/fig",
   "/projects/agri/open-field/blueberry",
   "/projects/agri/vegetable",
+  "/projects/agri/vegetable/cucumber",
   "/projects/agri/vegetable/capsicum",
   "/projects/agri/vegetable/tomato",
   "/projects/agri/vegetable/chilli",
@@ -103,27 +111,143 @@ const ROUTES = [
   "/projects/agri/nursery/commercial",
   "/projects/agri/nursery/seedling",
   "/projects/agri/nursery/tissue-culture",
-  "/projects/joint-venture",
+  // Aquaculture Farming Projects
+  "/projects/aquaculture",
   "/projects/aquaculture/fish",
+  "/projects/aquaculture/fish/traditional",
+  "/projects/aquaculture/fish/intensive",
+  "/projects/aquaculture/fish/cage",
   "/projects/aquaculture/biofloc",
+  "/projects/aquaculture/biofloc/fish",
+  "/projects/aquaculture/biofloc/shrimp",
   "/projects/aquaculture/shrimp",
+  "/projects/aquaculture/shrimp/vannamei",
+  "/projects/aquaculture/shrimp/prawn",
   "/projects/aquaculture/crab",
   "/projects/aquaculture/crab/mud-crab",
   "/projects/aquaculture/integrated",
   "/projects/aquaculture/integrated/aquaponics",
   "/projects/aquaculture/integrated/fish-crop",
+  // Livestock Farming Projects
+  "/projects/livestock",
   "/projects/livestock/goat",
+  "/projects/livestock/goat/commercial",
+  "/projects/livestock/goat/integrated",
   "/projects/livestock/sheep",
+  "/projects/livestock/sheep/commercial",
   "/projects/livestock/dairy",
+  "/projects/livestock/dairy/setup",
+  "/projects/livestock/dairy/automated",
   "/projects/livestock/poultry",
+  "/projects/livestock/poultry/broiler",
+  "/projects/livestock/poultry/layer",
   "/projects/livestock/integrated",
+  "/projects/livestock/integrated/goat-fish",
+  "/projects/livestock/integrated/dairy-crop",
+  // Farm Engineering Projects
+  "/projects/engineering",
   "/projects/engineering/infrastructure",
+  "/projects/engineering/infrastructure/cold-storage",
+  "/projects/engineering/infrastructure/pack-house",
+  "/projects/engineering/infrastructure/buildings",
+  "/projects/engineering/infrastructure/roads",
   "/projects/engineering/water",
+  "/projects/engineering/water/rainwater",
+  "/projects/engineering/water/pond-liner",
+  "/projects/engineering/water/irrigation",
+  "/projects/engineering/water/borewell",
   "/projects/engineering/solar",
+  "/projects/engineering/solar/crop-dryer",
+  "/projects/engineering/solar/heater",
+  "/projects/engineering/solar/fencing",
+  "/projects/engineering/solar/lighting",
   "/projects/engineering/development",
   "/projects/engineering/development/surveying",
   "/projects/engineering/development/topographic",
+  "/projects/engineering/development/contour",
   "/projects/engineering/development/leveling",
+  // Service category + subcategory pages (from navLinks in src/data/siteData.ts).
+  // These were previously missing from prerender, meaning JS-less crawlers
+  // saw an empty shell for every /services/* page below the top-level index.
+  "/services/farm-planning",
+  "/services/farm-planning/farm-business-planning",
+  "/services/farm-planning/agri-investment-consulting",
+  "/services/farm-planning/crop-selection-consulting",
+  "/services/farm-planning/farm-layout-design",
+  "/services/farm-planning/aquaculture-consulting",
+  "/services/farm-planning/land-surveying",
+  "/services/farming-project-setup",
+  "/services/farming-project-setup/polyhouse-installation",
+  "/services/farming-project-setup/hydroponic-setup",
+  "/services/farming-project-setup/vertical-farming-setup",
+  "/services/farming-project-setup/fish-farming-setup",
+  "/services/farming-project-setup/biofloc-installation",
+  "/services/farming-project-setup/aquaculture-pond-construction",
+  "/services/farming-project-setup/aquaponics-setup",
+  "/services/farming-project-setup/goat-farm-setup",
+  "/services/farming-project-setup/dairy-farm-setup",
+  "/services/farming-project-setup/sheep-farm-setup",
+  "/services/farming-project-setup/poultry-farm-setup",
+  "/services/farming-project-setup/gis-mapping",
+  "/services/farm-infrastructure",
+  "/services/farm-infrastructure/cold-storage-construction",
+  "/services/farm-infrastructure/packhouse-construction",
+  "/services/farm-infrastructure/farm-building-design",
+  "/services/farm-infrastructure/drip-irrigation-installation",
+  "/services/farm-infrastructure/sprinkler-irrigation-systems",
+  "/services/farm-infrastructure/water-pump-systems",
+  "/services/farm-infrastructure/land-leveling",
+  "/services/maintenance-support",
+  "/services/maintenance-support/livestock-shed-construction",
+  "/services/maintenance-support/polyhouse-amc",
+  "/services/maintenance-support/hydroponic-system-amc",
+  "/services/maintenance-support/farm-equipment-maintenance",
+  // Product category + subcategory pages (from navLinks in src/data/siteData.ts).
+  // Same gap as services above — previously entirely un-prerendered.
+  "/products/agri-inputs",
+  "/products/agri-inputs/veg-seeds",
+  "/products/agri-inputs/fruit-seeds",
+  "/products/agri-inputs/leafy-seeds",
+  "/products/agri-inputs/media",
+  "/products/agri-inputs/nutrition",
+  "/products/agri-inputs/protection",
+  "/products/agri-inputs/pgrs",
+  "/products/agri-inputs/mulching",
+  "/products/structure",
+  "/products/structure/frames",
+  "/products/structure/covering",
+  "/products/structure/nets",
+  "/products/structure/ventilation",
+  "/products/structure/misting",
+  "/products/structure/plumbing",
+  "/products/automation",
+  "/products/automation/dosing",
+  "/products/automation/controllers",
+  "/products/automation/motors",
+  "/products/automation/electrical",
+  "/products/horticulture",
+  "/products/horticulture/vegetables",
+  "/products/horticulture/flowers",
+  "/products/horticulture/fruits",
+  "/products/horticulture/herbs",
+  "/products/digital",
+  "/products/digital/hardware",
+  "/products/digital/software",
+  "/products/digital/services",
+  "/products/specialized",
+  "/products/specialized/post-harvest",
+  "/products/specialized/aquaculture",
+  "/products/specialized/livestock",
+  // Blog posts (static content from blogPosts in src/data/siteData.ts —
+  // not Supabase-backed, so the full list is known at build time).
+  "/blog/igo-agrimart-solutions",
+  "/blog/dr-john-yesudhas-icon-of-india",
+  "/blog/independence-day-2023",
+  "/blog/jnn-institute-industrial-visit",
+  "/blog/best-innovative-startup-2022",
+  "/blog/campus-drive-200-students",
+  "/blog/agriculture-subsidies-india",
+  "/blog/press-media-honours-dr-john",
 ];
 
 const MIME = {
@@ -168,6 +292,22 @@ async function main() {
   if (!existsSync(DIST_DIR)) {
     console.error("dist/ not found — run `npm run build` before `npm run prerender`.");
     process.exit(1);
+  }
+
+  // Save a copy of the plain (pre-prerender) CSR shell as 200.html BEFORE
+  // the loop below overwrites dist/index.html with the homepage's fully
+  // rendered content. Genuinely nonexistent URLs (typos, broken links,
+  // anything not in ROUTES) fall back to this neutral shell via the
+  // hosting configs (netlify.toml / vercel.json / nginx.conf all point
+  // their SPA fallback at /200.html, not /index.html) — otherwise every
+  // bad URL would silently serve a full duplicate copy of the homepage to
+  // any crawler that doesn't execute JavaScript, with no noindex signal.
+  const indexPath = path.join(DIST_DIR, "index.html");
+  const shellPath = path.join(DIST_DIR, "200.html");
+  if (existsSync(indexPath) && !existsSync(shellPath)) {
+    const shell = await readFile(indexPath);
+    await writeFile(shellPath, shell);
+    console.log("[prerender] saved pre-render CSR shell as 200.html (SPA fallback target)");
   }
 
   const server = serveStatic();

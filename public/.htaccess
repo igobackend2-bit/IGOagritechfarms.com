@@ -1,8 +1,35 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  # Canonical scheme + host: force HTTPS and the www subdomain together in
+  # a single redirect (avoids a separate hop for each). Canonical form is
+  # https://www.igoagritechfarms.com — matches the canonical/OG tags in
+  # index.html and BASE_URL in src/components/SEO.tsx.
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^igoagritechfarms\.com$ [NC]
+  RewriteRule ^(.*)$ https://www.igoagritechfarms.com/$1 [R=301,L]
+
+  # Canonical trailing slash: strip a trailing slash from any non-root path
+  # (root "/" is left untouched — it needs its slash).
+  RewriteCond %{REQUEST_URI} ^/(.+)/$
+  RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+  # Unmatched URLs fall back to the neutral pre-render CSR shell (200.html),
+  # not index.html — the build's prerender step (scripts/prerender.mjs)
+  # overwrites index.html with the homepage's own fully rendered content,
+  # so reusing it here would serve a full duplicate copy of the homepage
+  # for every broken/nonexistent URL. React Router takes over client-side
+  # from 200.html and renders the real NotFound page.
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
+  RewriteRule . /200.html [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Tell browsers to always use HTTPS for this domain from now on, even
+  # before the first request completes (belt-and-braces alongside the
+  # redirect rule above).
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 </IfModule>
