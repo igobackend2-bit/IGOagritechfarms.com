@@ -98,7 +98,7 @@ export const CTA_PRESETS = [
 ];
 
 // ─── Default seed posters (shown on first load before any uploads) ───────────
-const SEED_KEY = "igo_offers_seeded_v16";
+const SEED_KEY = "igo_offers_seeded_v18";
 
 const DEFAULT_OFFERS: OfferPoster[] = [
   {
@@ -119,35 +119,35 @@ const DEFAULT_OFFERS: OfferPoster[] = [
   },
   {
     id: "seed_2",
-    title: "Independence Day Special Offer",
-    subtitle: "Franchise + Joint Venture (JV) Project Offer — build your agricultural business with complete professional support.",
-    badge: "INDEPENDENCE DAY OFFER",
+    title: "Onam Celebration Special Offer",
+    subtitle: "Franchise + Vertical Farming Project Offer — build your agricultural business with the strength of IGO's professional expertise and complete project support.",
+    badge: "ONAM CELEBRATION",
     ctaLabel: "Register Your Project",
     ctaLink: "/contact",
-    image: "/assets/hero-banners/active/independence-day-banner-1.png",
+    image: "/assets/hero-banners/active/banner-2-onam.png",
     bgColor: "#1a5c1a",
     isActive: true,
     displayOrder: 1,
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
     expiryDate: null,
-    note: "Independence Day Main Banner",
+    note: "Onam Celebration Main Banner",
   },
   {
     id: "seed_3",
-    title: "80th Independence Day Special Offer",
-    subtitle: "Freedom to Grow. Freedom to Earn. Exclusive Joint Venture + Franchise combo — limited-time Independence Day benefits.",
-    badge: "SPECIAL OFFER",
+    title: "Raksha Bandhan Bundle Offer",
+    subtitle: "IGO Franchise + JV Project Offer — gift a project, grow a future together. Choose an eligible Franchise + JV bundle and get a 10% Raksha Bandhan special discount.",
+    badge: "RAKSHA BANDHAN",
     ctaLabel: "Contact Us",
     ctaLink: "/contact",
-    image: "/assets/hero-banners/active/independence-day-banner-2.png",
+    image: "/assets/hero-banners/active/banner-3-rakhi.png",
     bgColor: "#1a5c1a",
     isActive: true,
     displayOrder: 2,
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
     expiryDate: null,
-    note: "Independence Day Offer Poster",
+    note: "Raksha Bandhan Offer Poster",
   },
 ];
 

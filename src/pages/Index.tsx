@@ -13,8 +13,8 @@ import { toast } from "sonner";
 
 // Changeable slides — add, remove, or reorder freely
 const CHANGEABLE_SLIDES = [
-  { src: "/assets/hero-banners/active/banner-2.png.png", label: "Onam Celebration Offer", alt: "Onam Celebration Special Offer — Franchise and Vertical Farming Project Offer from IGO Agritech Farms", isPoster: true },
-  { src: "/assets/hero-banners/active/banner-3.png.png", label: "Onam Celebration Offer", alt: "Onam Celebration Special Offer — Franchise and Joint Venture Project Offer from IGO Agritech Farms", isPoster: true },
+  { src: "/assets/hero-banners/active/banner-2-onam.png", label: "Onam Celebration Offer", alt: "Onam Celebration Special Offer — Franchise and Vertical Farming Project Offer from IGO Agritech Farms", isPoster: true },
+  { src: "/assets/hero-banners/active/banner-3-rakhi.png", label: "Raksha Bandhan Bundle Offer", alt: "Raksha Bandhan Bundle Offer — IGO Franchise and JV Project Offer from IGO Agritech Farms", isPoster: true },
 ];
 
 // PERMANENT first slide — Now restored to IGO Peoples as Slide 1
