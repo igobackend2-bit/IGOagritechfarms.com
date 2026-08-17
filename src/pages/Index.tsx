@@ -13,8 +13,8 @@ import { toast } from "sonner";
 
 // Changeable slides — add, remove, or reorder freely
 const CHANGEABLE_SLIDES = [
-  { src: "/assets/hero-banners/active/independence-day-banner-1.png", label: "Independence Day Offer", alt: "Independence Day Special Offer — Franchise and Joint Venture Project Offer from IGO Agritech Farms", isPoster: true },
-  { src: "/assets/hero-banners/active/independence-day-banner-2.png", label: "Independence Day Offer", alt: "80th Independence Day Special Offer — Freedom to Grow, Freedom to Earn with IGO Agritech Farms", isPoster: true },
+  { src: "/assets/hero-banners/active/banner-2.png.png", label: "Onam Celebration Offer", alt: "Onam Celebration Special Offer — Franchise and Vertical Farming Project Offer from IGO Agritech Farms", isPoster: true },
+  { src: "/assets/hero-banners/active/banner-3.png.png", label: "Onam Celebration Offer", alt: "Onam Celebration Special Offer — Franchise and Joint Venture Project Offer from IGO Agritech Farms", isPoster: true },
 ];
 
 // PERMANENT first slide — Now restored to IGO Peoples as Slide 1
@@ -97,10 +97,39 @@ const HeroSection = () => {
     return () => window.removeEventListener("resize", update);
   }, []);
 
+  // Compute an EXPLICIT pixel height for the hero, always matching the
+  // current image's own natural aspect ratio at full page width. This
+  // guarantees the banner is never cropped and never shows black/blurred
+  // bars, on any screen shape.
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [sectionH, setSectionH] = useState<number | undefined>(undefined);
+  useEffect(() => {
+    const recompute = () => {
+      // Height always matches the image's own natural aspect ratio at
+      // full page width (no viewport cap). This guarantees zero cropping
+      // and zero black/blurred bars on every screen shape, since the box
+      // and the image always share the exact same proportions. On very
+      // short/wide browser windows this can mean a small scroll to see
+      // the bottom of the banner — a much smaller trade-off than cropping
+      // the logos/text or showing bars.
+      const width = sectionRef.current?.clientWidth || window.innerWidth;
+      setSectionH(Math.max(1, width / ratio));
+    };
+    recompute();
+    window.addEventListener("resize", recompute);
+    return () => window.removeEventListener("resize", recompute);
+  }, [ratio, navH]);
+
   return (
     <section
+      ref={sectionRef}
       className="relative w-full overflow-hidden bg-black text-white"
-      style={{ marginTop: navH, aspectRatio: ratio, transition: "aspect-ratio 0.4s ease" }}
+      style={{
+        marginTop: navH,
+        aspectRatio: ratio,
+        height: sectionH ? `${sectionH}px` : undefined,
+        transition: "height 0.4s ease, aspect-ratio 0.4s ease",
+      }}
     >
       <div className="relative w-full h-full">
         {dynamicSlides.map((s, i) => (
@@ -117,7 +146,10 @@ const HeroSection = () => {
             }}
             className="absolute inset-0 w-full h-full flex items-center justify-center"
           >
-            {/* Background Image - contain for posters (never crop baked-in text), cover for photo slides */}
+            {/* Background Image - the section height always matches this
+                image's own natural aspect ratio (see sectionH above), so
+                the box and the image are always the exact same shape:
+                zero cropping and zero black bars on every screen. */}
             <img
               ref={(el) => (imgRefs.current[i] = el)}
               src={s.src}
