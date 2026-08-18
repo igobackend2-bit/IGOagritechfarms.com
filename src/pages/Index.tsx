@@ -18,7 +18,7 @@ const CHANGEABLE_SLIDES = [
 ];
 
 // PERMANENT first slide — Now restored to IGO Peoples as Slide 1
-const PERMANENT_SLIDE = { src: "/assets/demo-poster/main-banner.png", label: "IGO Group", alt: "Professional and Skilled Engineering Workforce at IGO Group", isPoster: true };
+const PERMANENT_SLIDE = { src: "/assets/demo-poster/main-banner-2.png", label: "IGO Group", alt: "Professional and Skilled Engineering Workforce at IGO Group", isPoster: true };
 
 const HERO_SLIDES = [PERMANENT_SLIDE, ...CHANGEABLE_SLIDES];
 

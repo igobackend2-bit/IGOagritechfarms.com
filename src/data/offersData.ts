@@ -98,7 +98,7 @@ export const CTA_PRESETS = [
 ];
 
 // ─── Default seed posters (shown on first load before any uploads) ───────────
-const SEED_KEY = "igo_offers_seeded_v18";
+const SEED_KEY = "igo_offers_seeded_v19";
 
 const DEFAULT_OFFERS: OfferPoster[] = [
   {
@@ -108,7 +108,7 @@ const DEFAULT_OFFERS: OfferPoster[] = [
     badge: "IGO GROUP",
     ctaLabel: "View Projects",
     ctaLink: "/projects",
-    image: "/assets/demo-poster/main-banner.png",
+    image: "/assets/demo-poster/main-banner-2.png",
     bgColor: "#1a5c1a",
     isActive: true,
     displayOrder: 0,
