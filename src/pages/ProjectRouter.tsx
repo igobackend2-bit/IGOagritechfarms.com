@@ -197,7 +197,7 @@ const SUBCATEGORY_DESC: Record<string, string> = {
 // title/description in CategoryView / SubcategoryView / DetailView below.
 // Source: "IGO Meta Title and Description.docx" (client-provided copy).
 const SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
-  "/projects/agri/polyhouse": {
+  "/projects/agri": {
     title: "Best Agriculture Projects in India | IGO Agritech Farms",
     description: "Discover the best agriculture projects in India with IGO Agritech Farms. We offer polyhouse, hydroponics, vertical farming, open cultivation, livestock, and turnkey agri engineering solutions.",
   },
@@ -213,23 +213,23 @@ const SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
     title: "Agricultural Engineering Projects in India | IGO Agritech Farms",
     description: "Explore agricultural engineering projects by IGO Agritech Farms, including farm infrastructure, water management, solar solutions and farm development across India.",
   },
-  "/projects/agri/polyhouse/naturally-ventilated": {
+  "/projects/agri/protected/naturally-ventilated": {
     title: "Naturally Ventilated Polyhouse Company in India | IGO",
     description: "Looking for naturally ventilated polyhouse solutions? IGO Agritech Farms provides turnkey polyhouse construction, precision farming, and complete project execution across India",
   },
-  "/projects/agri/polyhouse/climate-controlled": {
+  "/projects/agri/protected/climate-controlled": {
     title: "Climate Controlled Farming Projects in India | IGO Agritech Farms",
     description: "Explore climate-controlled farming projects by IGO Agritech Farms. We design and build advanced protected cultivation, greenhouse, and precision farming solutions across India.",
   },
-  "/projects/agri/polyhouse/polycarbonate": {
+  "/projects/agri/protected/polycarbonate": {
     title: "Polycarbonate Polyhouse Solutions & Installation | IGO Agritech Farms",
     description: "IGO Agritech Farms specializes in polycarbonate polyhouse solutions, installation, and precision farming services to improve crop quality, yield, and farm productivity",
   },
-  "/projects/agri/polyhouse/shade-net": {
+  "/projects/agri/protected/shade-net": {
     title: "Polycarbonate Polyhouse Solutions & Installation | IGO Agritech Farms",
     description: "IGO Agritech Farms specializes in polycarbonate polyhouse solutions, installation, and precision farming services to improve crop quality, yield, and farm productivity.",
   },
-  "/projects/agri/polyhouse/mist-chamber": {
+  "/projects/agri/protected/mist-chamber": {
     title: "Mist Chamber Polyhouse | Plant Nursery Mist Chamber Solutions | IGO Agritech Farms",
     description: "IGO Agritech Farms offers advanced mist chamber polyhouse solutions for plant propagation, nursery development, and healthy seedling production with expert turnkey installation.",
   },
