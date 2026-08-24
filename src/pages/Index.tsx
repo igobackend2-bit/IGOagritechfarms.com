@@ -161,6 +161,10 @@ const HeroSection = () => {
               src={s.src}
               alt={s.alt}
               onLoad={(e) => { if (i === current) applyRatioFromImg(e.currentTarget); }}
+              // The visible slide is almost always the page's Largest
+              // Contentful Paint element, so tell the browser to fetch it
+              // first; the other (currently hidden) slides can wait.
+              fetchPriority={i === current ? "high" : "low"}
               className={`absolute inset-0 w-full h-full ${s.isPoster ? "object-contain" : "object-cover"}`}
               style={{ filter: s.isPoster ? "none" : "brightness(0.6)" }}
             />
