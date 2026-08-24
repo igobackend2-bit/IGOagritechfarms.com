@@ -98,7 +98,7 @@ export const CTA_PRESETS = [
 ];
 
 // ─── Default seed posters (shown on first load before any uploads) ───────────
-const SEED_KEY = "igo_offers_seeded_v19";
+const SEED_KEY = "igo_offers_seeded_v20";
 
 const DEFAULT_OFFERS: OfferPoster[] = [
   {
@@ -108,7 +108,7 @@ const DEFAULT_OFFERS: OfferPoster[] = [
     badge: "IGO GROUP",
     ctaLabel: "View Projects",
     ctaLink: "/projects",
-    image: "/assets/demo-poster/main-banner-2.png",
+    image: "/assets/demo-poster/main-banner-2.webp",
     bgColor: "#1a5c1a",
     isActive: true,
     displayOrder: 0,
@@ -124,7 +124,7 @@ const DEFAULT_OFFERS: OfferPoster[] = [
     badge: "ONAM CELEBRATION",
     ctaLabel: "Register Your Project",
     ctaLink: "/contact",
-    image: "/assets/hero-banners/active/banner-2-onam.png",
+    image: "/assets/hero-banners/active/banner-2-onam.webp",
     bgColor: "#1a5c1a",
     isActive: true,
     displayOrder: 1,
@@ -140,7 +140,7 @@ const DEFAULT_OFFERS: OfferPoster[] = [
     badge: "RAKSHA BANDHAN",
     ctaLabel: "Contact Us",
     ctaLink: "/contact",
-    image: "/assets/hero-banners/active/banner-3-rakhi.png",
+    image: "/assets/hero-banners/active/banner-3-rakhi.webp",
     bgColor: "#1a5c1a",
     isActive: true,
     displayOrder: 2,

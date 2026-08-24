@@ -13,22 +13,22 @@ import { toast } from "sonner";
 
 // Changeable slides — add, remove, or reorder freely
 const CHANGEABLE_SLIDES = [
-  { src: "/assets/hero-banners/active/banner-2-onam.png", label: "Onam Celebration Offer", alt: "Onam Celebration Special Offer — Franchise and Vertical Farming Project Offer from IGO Agritech Farms", isPoster: true },
-  { src: "/assets/hero-banners/active/banner-3-rakhi.png", label: "Raksha Bandhan Bundle Offer", alt: "Raksha Bandhan Bundle Offer — IGO Franchise and JV Project Offer from IGO Agritech Farms", isPoster: true },
+  { src: "/assets/hero-banners/active/banner-2-onam.webp", label: "Onam Celebration Offer", alt: "Onam Celebration Special Offer — Franchise and Vertical Farming Project Offer from IGO Agritech Farms", isPoster: true },
+  { src: "/assets/hero-banners/active/banner-3-rakhi.webp", label: "Raksha Bandhan Bundle Offer", alt: "Raksha Bandhan Bundle Offer — IGO Franchise and JV Project Offer from IGO Agritech Farms", isPoster: true },
 ];
 
 // PERMANENT first slide — Now restored to IGO Peoples as Slide 1
-const PERMANENT_SLIDE = { src: "/assets/demo-poster/main-banner-2.png", label: "IGO Group", alt: "Professional and Skilled Engineering Workforce at IGO Group", isPoster: true };
+const PERMANENT_SLIDE = { src: "/assets/demo-poster/main-banner-2.webp", label: "IGO Group", alt: "Professional and Skilled Engineering Workforce at IGO Group", isPoster: true };
 
 const HERO_SLIDES = [PERMANENT_SLIDE, ...CHANGEABLE_SLIDES];
 
 // CEO photo carousel images
 const CEO_PHOTOS = [
   { src: "/assets/ceo-page-image/about-copy.webp", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
-  { src: "/assets/ceo-page-image/award2-jpg.jpeg", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
-  { src: "/assets/ceo-page-image/award3-jpg.jpeg", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
-  { src: "/assets/ceo-page-image/award4-jpg.jpeg", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
-  { src: "/assets/ceo-page-image/most-trustwd-agri-brand-in-india-2026.jpg", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
+  { src: "/assets/ceo-page-image/award2-jpg.webp", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
+  { src: "/assets/ceo-page-image/award3-jpg.webp", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
+  { src: "/assets/ceo-page-image/award4-jpg.webp", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
+  { src: "/assets/ceo-page-image/most-trustwd-agri-brand-in-india-2026.webp", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
   { src: "/assets/ceo-page-image/ceo-photo-6.webp", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
 ];
 
