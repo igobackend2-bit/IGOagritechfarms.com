@@ -13,22 +13,22 @@ import { toast } from "sonner";
 
 // Changeable slides — add, remove, or reorder freely
 const CHANGEABLE_SLIDES = [
-  { src: "/assets/hero-banners/active/independence-day-banner-1.png", label: "Independence Day Offer", alt: "Independence Day Special Offer — Franchise and Joint Venture Project Offer from IGO Agritech Farms", isPoster: true },
-  { src: "/assets/hero-banners/active/independence-day-banner-2.png", label: "Independence Day Offer", alt: "80th Independence Day Special Offer — Freedom to Grow, Freedom to Earn with IGO Agritech Farms", isPoster: true },
+  { src: "/assets/hero-banners/active/banner-2-onam.webp", label: "Onam Celebration Offer", alt: "Onam Celebration Special Offer — Franchise and Vertical Farming Project Offer from IGO Agritech Farms", isPoster: true },
+  { src: "/assets/hero-banners/active/banner-3-rakhi.webp", label: "Raksha Bandhan Bundle Offer", alt: "Raksha Bandhan Bundle Offer — IGO Franchise and JV Project Offer from IGO Agritech Farms", isPoster: true },
 ];
 
 // PERMANENT first slide — Now restored to IGO Peoples as Slide 1
-const PERMANENT_SLIDE = { src: "/assets/demo-poster/main-banner.png", label: "IGO Group", alt: "Professional and Skilled Engineering Workforce at IGO Group", isPoster: true };
+const PERMANENT_SLIDE = { src: "/assets/demo-poster/main-banner-2.webp", label: "IGO Group", alt: "Professional and Skilled Engineering Workforce at IGO Group", isPoster: true };
 
 const HERO_SLIDES = [PERMANENT_SLIDE, ...CHANGEABLE_SLIDES];
 
 // CEO photo carousel images
 const CEO_PHOTOS = [
   { src: "/assets/ceo-page-image/about-copy.webp", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
-  { src: "/assets/ceo-page-image/award2-jpg.jpeg", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
-  { src: "/assets/ceo-page-image/award3-jpg.jpeg", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
-  { src: "/assets/ceo-page-image/award4-jpg.jpeg", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
-  { src: "/assets/ceo-page-image/most-trustwd-agri-brand-in-india-2026.jpg", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
+  { src: "/assets/ceo-page-image/award2-jpg.webp", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
+  { src: "/assets/ceo-page-image/award3-jpg.webp", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
+  { src: "/assets/ceo-page-image/award4-jpg.webp", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
+  { src: "/assets/ceo-page-image/most-trustwd-agri-brand-in-india-2026.webp", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
   { src: "/assets/ceo-page-image/ceo-photo-6.webp", alt: "Award-winning leadership and executive excellence in the agricultural sector" },
 ];
 
@@ -44,8 +44,14 @@ const fader: Variants = {
 const HeroSection = () => {
   const [current, setCurrent] = useState(0);
 
-  // Dynamically load active offers from data
+  // Dynamically load active offers from data. initDefaultOffers() must run
+  // first: a returning visitor's browser may still have an older offers
+  // snapshot saved locally from before an image update, and without
+  // re-seeding here first, this carousel would keep showing that outdated
+  // saved snapshot (and its outdated image files) indefinitely, since this
+  // memo only computes once and never re-checks.
   const dynamicSlides = useMemo(() => {
+    initDefaultOffers();
     const offers = getActiveOffers();
     if (offers.length === 0) return HERO_SLIDES;
 
@@ -97,10 +103,39 @@ const HeroSection = () => {
     return () => window.removeEventListener("resize", update);
   }, []);
 
+  // Compute an EXPLICIT pixel height for the hero, always matching the
+  // current image's own natural aspect ratio at full page width. This
+  // guarantees the banner is never cropped and never shows black/blurred
+  // bars, on any screen shape.
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [sectionH, setSectionH] = useState<number | undefined>(undefined);
+  useEffect(() => {
+    const recompute = () => {
+      // Height always matches the image's own natural aspect ratio at
+      // full page width (no viewport cap). This guarantees zero cropping
+      // and zero black/blurred bars on every screen shape, since the box
+      // and the image always share the exact same proportions. On very
+      // short/wide browser windows this can mean a small scroll to see
+      // the bottom of the banner — a much smaller trade-off than cropping
+      // the logos/text or showing bars.
+      const width = sectionRef.current?.clientWidth || window.innerWidth;
+      setSectionH(Math.max(1, width / ratio));
+    };
+    recompute();
+    window.addEventListener("resize", recompute);
+    return () => window.removeEventListener("resize", recompute);
+  }, [ratio, navH]);
+
   return (
     <section
+      ref={sectionRef}
       className="relative w-full overflow-hidden bg-black text-white"
-      style={{ marginTop: navH, aspectRatio: ratio, transition: "aspect-ratio 0.4s ease" }}
+      style={{
+        marginTop: navH,
+        aspectRatio: ratio,
+        height: sectionH ? `${sectionH}px` : undefined,
+        transition: "height 0.4s ease, aspect-ratio 0.4s ease",
+      }}
     >
       <div className="relative w-full h-full">
         {dynamicSlides.map((s, i) => (
@@ -117,12 +152,19 @@ const HeroSection = () => {
             }}
             className="absolute inset-0 w-full h-full flex items-center justify-center"
           >
-            {/* Background Image - contain for posters (never crop baked-in text), cover for photo slides */}
+            {/* Background Image - the section height always matches this
+                image's own natural aspect ratio (see sectionH above), so
+                the box and the image are always the exact same shape:
+                zero cropping and zero black bars on every screen. */}
             <img
               ref={(el) => (imgRefs.current[i] = el)}
               src={s.src}
               alt={s.alt}
               onLoad={(e) => { if (i === current) applyRatioFromImg(e.currentTarget); }}
+              // The visible slide is almost always the page's Largest
+              // Contentful Paint element, so tell the browser to fetch it
+              // first; the other (currently hidden) slides can wait.
+              fetchPriority={i === current ? "high" : "low"}
               className={`absolute inset-0 w-full h-full ${s.isPoster ? "object-contain" : "object-cover"}`}
               style={{ filter: s.isPoster ? "none" : "brightness(0.6)" }}
             />
@@ -172,12 +214,14 @@ const HeroSection = () => {
       <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 z-30 flex justify-between px-6 pointer-events-none">
         <button
           onClick={() => setCurrent((prev) => (prev - 1 + dynamicSlides.length) % dynamicSlides.length)}
+          aria-label="Previous slide"
           className="w-14 h-14 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all pointer-events-auto group"
         >
           <ChevronLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform" />
         </button>
         <button
           onClick={() => setCurrent((prev) => (prev + 1) % dynamicSlides.length)}
+          aria-label="Next slide"
           className="w-14 h-14 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all pointer-events-auto group"
         >
           <ChevronRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
@@ -190,6 +234,7 @@ const HeroSection = () => {
           <button
             key={i}
             onClick={() => setCurrent(i)}
+            aria-label={`Go to slide ${i + 1}`}
             className="group py-4"
           >
             <div className={`h-1.5 rounded-full transition-all duration-500 ${i === current ? "w-12 bg-primary shadow-[0_0_20px_rgba(var(--primary),0.5)]" : "w-3 bg-white/30 group-hover:bg-white/60"}`} />
@@ -647,7 +692,7 @@ const FeatureSection = () => {
                 whileHover={{ y: -5 }}
                 className="group relative bg-white rounded-[2rem] p-6 sm:p-8 md:p-10 min-h-[480px] sm:min-h-[500px] md:min-h-[550px] flex flex-col border border-black/5 hover:border-agri-gold-500/20 transition-all hover:shadow-[0_40px_80px_rgba(0,0,0,0.06)] cursor-pointer overflow-hidden"
               >
-                <Link to={s.href} className="absolute inset-0 z-20" />
+                <Link to={s.href} aria-label={s.label} className="absolute inset-0 z-20" />
 
                 {/* Title & Index Header */}
                 <div className="flex justify-between items-start mb-8">
@@ -751,7 +796,7 @@ const ProductEcosystem = () => {
               className="flex-shrink-0 relative overflow-hidden bg-slate-100 border border-black/5 shadow-sm hover:shadow-2xl transition-all duration-700 rounded-[2.5rem] cursor-pointer group"
               style={{ width: `${CARD_W}px`, height: "520px" }}
             >
-              <Link to={(cat as any).href} className="absolute inset-0 z-20" />
+              <Link to={(cat as any).href} aria-label={cat.label} className="absolute inset-0 z-20" />
               <img
                 src={(cat as any).cardImage || (cat.icon && typeof cat.icon === "string" ? cat.icon : "/assets/compressed/projects/main-page/agri-farming-project.jpg")}
                 alt={cat.label}
