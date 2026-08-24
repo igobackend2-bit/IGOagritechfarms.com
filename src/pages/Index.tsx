@@ -44,8 +44,14 @@ const fader: Variants = {
 const HeroSection = () => {
   const [current, setCurrent] = useState(0);
 
-  // Dynamically load active offers from data
+  // Dynamically load active offers from data. initDefaultOffers() must run
+  // first: a returning visitor's browser may still have an older offers
+  // snapshot saved locally from before an image update, and without
+  // re-seeding here first, this carousel would keep showing that outdated
+  // saved snapshot (and its outdated image files) indefinitely, since this
+  // memo only computes once and never re-checks.
   const dynamicSlides = useMemo(() => {
+    initDefaultOffers();
     const offers = getActiveOffers();
     if (offers.length === 0) return HERO_SLIDES;
 
