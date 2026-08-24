@@ -996,7 +996,7 @@ export const navLinks = [
         label: "Polyhouse Structure",
         href: "/products/structure",
         icon: Hammer,
-        cardImage: "/assets/product-images/new main image for product/polyhouse structure .jpg",
+        cardImage: "/assets/product-images/new main image for product/polyhouse structure .webp",
         children: [
           { label: "Structural Frames & Parts", href: "/products/structure/frames", icon: Construction },
           { label: "Greenhouse Covering", href: "/products/structure/covering", icon: Tent },
@@ -1010,7 +1010,7 @@ export const navLinks = [
         label: "Control & Automation",
         href: "/products/automation",
         icon: Cpu,
-        cardImage: "/assets/product-images/new main image for product/automation and cotroller .jpg",
+        cardImage: "/assets/product-images/new main image for product/automation and cotroller .webp",
         children: [
           { label: "Dosing & Fertigation", href: "/products/automation/dosing", icon: Settings2 },
           { label: "Environmental Controllers", href: "/products/automation/controllers", icon: Thermometer },
@@ -1022,7 +1022,7 @@ export const navLinks = [
         label: "Horticulture Catalog",
         href: "/products/horticulture",
         icon: Flower,
-        cardImage: "/assets/product-images/new main image for product/horticulture catlog .png",
+        cardImage: "/assets/product-images/new main image for product/horticulture catlog .webp",
         children: [
           { label: "Vegetable Crops", href: "/products/horticulture/vegetables", icon: Apple },
           { label: "Flower Crops", href: "/products/horticulture/flowers", icon: Sun },
@@ -1034,7 +1034,7 @@ export const navLinks = [
         label: "Digital Agri & IoT",
         href: "/products/digital",
         icon: Activity,
-        cardImage: "/assets/product-images/new main image for product/digital agri and iot .jpg",
+        cardImage: "/assets/product-images/new main image for product/digital agri and iot .webp",
         children: [
           { label: "IoT Hardware & Nodes", href: "/products/digital/hardware", icon: Cpu },
           { label: "Software & Dashboards", href: "/products/digital/software", icon: Monitor },
@@ -1045,7 +1045,7 @@ export const navLinks = [
         label: "Post-Harvest & Legacy",
         href: "/products/specialized",
         icon: Package,
-        cardImage: "/assets/product-images/new main image for product/post harvest and legacy .jpg",
+        cardImage: "/assets/product-images/new main image for product/post harvest and legacy .webp",
         children: [
           { label: "Harvesting & Cold Chain", href: "/products/specialized/post-harvest", icon: ThermometerSnowflake },
           { label: "Aquaculture Solutions", href: "/products/specialized/aquaculture", icon: Droplets },
