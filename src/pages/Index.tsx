@@ -214,12 +214,14 @@ const HeroSection = () => {
       <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 z-30 flex justify-between px-6 pointer-events-none">
         <button
           onClick={() => setCurrent((prev) => (prev - 1 + dynamicSlides.length) % dynamicSlides.length)}
+          aria-label="Previous slide"
           className="w-14 h-14 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all pointer-events-auto group"
         >
           <ChevronLeft className="w-6 h-6 group-hover:-translate-x-1 transition-transform" />
         </button>
         <button
           onClick={() => setCurrent((prev) => (prev + 1) % dynamicSlides.length)}
+          aria-label="Next slide"
           className="w-14 h-14 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all pointer-events-auto group"
         >
           <ChevronRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
@@ -232,6 +234,7 @@ const HeroSection = () => {
           <button
             key={i}
             onClick={() => setCurrent(i)}
+            aria-label={`Go to slide ${i + 1}`}
             className="group py-4"
           >
             <div className={`h-1.5 rounded-full transition-all duration-500 ${i === current ? "w-12 bg-primary shadow-[0_0_20px_rgba(var(--primary),0.5)]" : "w-3 bg-white/30 group-hover:bg-white/60"}`} />
@@ -689,7 +692,7 @@ const FeatureSection = () => {
                 whileHover={{ y: -5 }}
                 className="group relative bg-white rounded-[2rem] p-6 sm:p-8 md:p-10 min-h-[480px] sm:min-h-[500px] md:min-h-[550px] flex flex-col border border-black/5 hover:border-agri-gold-500/20 transition-all hover:shadow-[0_40px_80px_rgba(0,0,0,0.06)] cursor-pointer overflow-hidden"
               >
-                <Link to={s.href} className="absolute inset-0 z-20" />
+                <Link to={s.href} aria-label={s.label} className="absolute inset-0 z-20" />
 
                 {/* Title & Index Header */}
                 <div className="flex justify-between items-start mb-8">
@@ -793,7 +796,7 @@ const ProductEcosystem = () => {
               className="flex-shrink-0 relative overflow-hidden bg-slate-100 border border-black/5 shadow-sm hover:shadow-2xl transition-all duration-700 rounded-[2.5rem] cursor-pointer group"
               style={{ width: `${CARD_W}px`, height: "520px" }}
             >
-              <Link to={(cat as any).href} className="absolute inset-0 z-20" />
+              <Link to={(cat as any).href} aria-label={cat.label} className="absolute inset-0 z-20" />
               <img
                 src={(cat as any).cardImage || (cat.icon && typeof cat.icon === "string" ? cat.icon : "/assets/compressed/projects/main-page/agri-farming-project.jpg")}
                 alt={cat.label}
