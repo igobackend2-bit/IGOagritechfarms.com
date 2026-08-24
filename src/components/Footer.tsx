@@ -72,9 +72,9 @@ const Footer = () => (
 
         {/* Col 2 — Spacer on small, Our Services on large */}
         <div className="space-y-5">
-          <h4 className="text-white font-bold text-sm uppercase tracking-[0.25em] pb-3 border-b border-white/10">
+          <h3 className="text-white font-bold text-sm uppercase tracking-[0.25em] pb-3 border-b border-white/10">
             Our Services
-          </h4>
+          </h3>
           <ul className="space-y-3">
             {serviceLinks.map((link) => (
               <li key={link.href}>
@@ -92,9 +92,9 @@ const Footer = () => (
 
         {/* Col 3 — Contact Us */}
         <div className="space-y-5 lg:col-span-2">
-          <h4 className="text-white font-bold text-sm uppercase tracking-[0.25em] pb-3 border-b border-white/10">
+          <h3 className="text-white font-bold text-sm uppercase tracking-[0.25em] pb-3 border-b border-white/10">
             Contact Us
-          </h4>
+          </h3>
 
           <div className="grid sm:grid-cols-2 gap-8">
             {/* Address + Phone */}
@@ -171,13 +171,13 @@ const Footer = () => (
 
       {/* ── Bottom bar ── */}
       <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
-        <p className="text-white/40 text-[10px] font-bold uppercase tracking-widest">
+        <p className="text-white/70 text-[10px] font-bold uppercase tracking-widest">
           © {new Date().getFullYear()} {companyInfo.name}. All Rights Reserved.
         </p>
-        <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-white/40">
-          <Link to="/privacy" className="hover:text-white/70 transition-colors">Privacy Policy</Link>
-          <Link to="/terms" className="hover:text-white/70 transition-colors">Terms of Use</Link>
-          <Link to="/ads/login" className="hover:text-white/50 transition-colors">Advertising Portal</Link>
+        <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-white/70">
+          <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+          <Link to="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
+          <Link to="/ads/login" className="hover:text-white transition-colors">Advertising Portal</Link>
         </div>
       </div>
 
