@@ -156,7 +156,7 @@ const IndiaPresence = () => {
 
               <div className="relative w-full overflow-hidden bg-[#faf7f2]" style={{ paddingBottom: "54.49%" }}>
                 <img
-                  src="/assets/compressed/home-page-map-.jpg"
+                  src="/assets/compressed/home-page-map-.webp"
                   alt="IGO India Presence Map"
                   className="absolute inset-0 w-full h-full object-fill opacity-95 transition-transform duration-[2s] group-hover/map:scale-[1.05]"
                 />

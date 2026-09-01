@@ -445,7 +445,7 @@ const VisionSection = () => (
         viewport={{ once: true }}
         className="flex flex-col items-center gap-4 mb-20 text-center"
       >
-        <div className="flex items-center gap-4 text-agri-gold-500 font-bold text-xs uppercase tracking-[0.3em]">
+        <div className="flex items-center gap-4 text-agri-gold-700 font-bold text-xs uppercase tracking-[0.3em]">
           <div className="w-10 h-[1px] bg-agri-gold-500" />
           Our Vision &amp; Mission
           <div className="w-10 h-[1px] bg-agri-gold-500" />
@@ -475,11 +475,11 @@ const VisionSection = () => (
           <div className="absolute -bottom-10 -left-10 w-48 h-48 rounded-full bg-agri-gold-500/10 pointer-events-none" />
 
           <div className="relative z-10">
-            <span className="inline-block text-[10px] font-black uppercase tracking-[0.3em] text-agri-gold-500 bg-agri-gold-500/10 border border-agri-gold-500/30 px-4 py-1.5 rounded-full mb-8">
+            <span className="inline-block text-[10px] font-black uppercase tracking-[0.3em] text-agri-gold-700 bg-agri-gold-500/10 border border-agri-gold-500/30 px-4 py-1.5 rounded-full mb-8">
               Our Vision
             </span>
-            {/* large quote mark */}
-            <div className="text-agri-gold-500/20 text-[9rem] font-serif leading-none select-none -mb-8 -mt-4">&ldquo;</div>
+            {/* large quote mark (decorative) */}
+            <div aria-hidden="true" className="text-agri-gold-500/20 text-[9rem] font-serif leading-none select-none -mb-8 -mt-4">&ldquo;</div>
             <p className="text-white text-2xl md:text-3xl font-black leading-snug tracking-tight">
               To become India&rsquo;s most trusted and innovative agri-tech brand, transforming every available space into sustainable and high-yield farming ecosystems.
             </p>
@@ -487,7 +487,7 @@ const VisionSection = () => (
 
           <div className="relative z-10 mt-10 flex items-center gap-3">
             <div className="w-8 h-[2px] bg-agri-gold-500" />
-            <span className="text-white/40 text-xs font-bold uppercase tracking-widest">IGO Agritech Farms</span>
+            <span className="text-white/70 text-xs font-bold uppercase tracking-widest">IGO Agritech Farms</span>
           </div>
         </motion.div>
 
@@ -541,7 +541,7 @@ const VisionSection = () => (
               <h3 className="text-lg font-black text-agri-earth-900 group-hover:text-white transition-colors duration-500 leading-tight">
                 {pillar.title}
               </h3>
-              <p className="text-sm text-black/50 group-hover:text-white/70 leading-relaxed transition-colors duration-500">
+              <p className="text-sm text-black/70 group-hover:text-white/70 leading-relaxed transition-colors duration-500">
                 {pillar.desc}
               </p>
             </motion.div>
@@ -600,7 +600,7 @@ const ProjectGallerySection = () => {
           viewport={{ once: true }}
           className="flex flex-col items-center gap-4 mb-20 text-center"
         >
-          <div className="flex items-center gap-4 text-agri-gold-500 font-bold text-[10px] sm:text-xs uppercase tracking-[0.3em]">
+          <div className="flex items-center gap-4 text-agri-gold-700 font-bold text-[10px] sm:text-xs uppercase tracking-[0.3em]">
             <div className="w-6 sm:w-10 h-[1px] bg-agri-gold-500" />
             Featured Projects
             <div className="w-6 sm:w-10 h-[1px] bg-agri-gold-500" />
@@ -625,7 +625,7 @@ const ProjectGallerySection = () => {
               onClick={() => navigate(p.href)}
               className={`group relative ${p.bg} ${p.hoverBg} rounded-[2rem] p-6 sm:p-8 min-h-[360px] sm:min-h-[420px] md:min-h-[480px] flex flex-col border border-black/5 hover:border-primary/20 transition-all hover:shadow-[0_20px_40px_rgba(0,0,0,0.05)] cursor-pointer overflow-hidden`}
             >
-              <div className="text-xl font-bold text-black/20 mb-6 tracking-widest">{p.id}</div>
+              <div aria-hidden="true" className="text-xl font-bold text-black/20 mb-6 tracking-widest">{p.id}</div>
               <div className="max-w-[80%] relative z-10">
                 <h3 className="text-2xl font-black text-black leading-tight mb-4 group-hover:text-primary transition-colors">
                   {p.title}
@@ -667,7 +667,7 @@ const FeatureSection = () => {
     <section className="py-20 md:py-32 bg-agri-earth-100 overflow-hidden selection:bg-agri-green-50 selection:text-agri-green-800 content-defer">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex flex-col items-center text-center mb-24">
-          <div className="flex items-center gap-4 text-agri-gold-500 font-bold text-[10px] sm:text-xs uppercase tracking-[0.3em] mb-6">
+          <div className="flex items-center gap-4 text-agri-gold-700 font-bold text-[10px] sm:text-xs uppercase tracking-[0.3em] mb-6">
             <div className="w-8 sm:w-12 h-[1px] bg-agri-gold-500" />
             OUR EXPERTISE
             <div className="w-8 sm:w-12 h-[1px] bg-agri-gold-500" />
@@ -699,11 +699,11 @@ const FeatureSection = () => {
                   <div className="w-12 h-12 rounded-2xl bg-agri-green-800/5 flex items-center justify-center group-hover:bg-agri-gold-500/10 transition-colors">
                     <Icon className="w-5 h-5 text-agri-green-800 group-hover:text-agri-gold-500 transition-colors" />
                   </div>
-                  <div className="text-xl font-bold text-black/20 tracking-widest">0{i + 1}</div>
+                  <div aria-hidden="true" className="text-xl font-bold text-black/20 tracking-widest">0{i + 1}</div>
                 </div>
 
                 <div className="relative z-10 flex-1">
-                  <h2 className="text-2xl font-black text-agri-gold-500 mb-6 leading-tight group-hover:text-agri-green-800 transition-colors duration-300 min-h-[5rem]">
+                  <h2 className="text-2xl font-black text-agri-gold-700 mb-6 leading-tight group-hover:text-agri-green-800 transition-colors duration-300 min-h-[5rem]">
                     {s.label}
                   </h2>
 
@@ -804,13 +804,13 @@ const ProductEcosystem = () => {
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
               />
               <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10">
-                <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-white/50 mb-2 block">
+                <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-white/80 mb-2 block">
                   Product Sector {(i % productLinks.length) + 1}
                 </span>
                 <h3 className="text-2xl font-black text-white mb-4 leading-tight group-hover:translate-x-2 transition-transform duration-500 drop-shadow-lg">
                   {cat.label}
                 </h3>
-                <div className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-widest text-agri-gold-500 opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">
+                <div className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-widest text-agri-gold-700 opacity-0 group-hover:opacity-100 transition-all transform translate-y-4 group-hover:translate-y-0">
                   View Catalog <ArrowRight className="w-4 h-4" />
                 </div>
               </div>
@@ -841,7 +841,7 @@ const EngineeringDNA = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center mb-24">
-          <div className="flex items-center justify-center gap-4 text-agri-gold-500 font-bold text-[10px] uppercase tracking-[0.4em] mb-8">
+          <div className="flex items-center justify-center gap-4 text-agri-gold-700 font-bold text-[10px] uppercase tracking-[0.4em] mb-8">
             <div className="w-12 h-px bg-agri-gold-500/30" />
             THE IGO ADVANTAGE
             <div className="w-12 h-px bg-agri-gold-500/30" />
@@ -868,7 +868,7 @@ const EngineeringDNA = () => {
                 <p.icon className="w-8 h-8 text-agri-green-800 group-hover:text-agri-gold-500 transition-colors" />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-agri-earth-900 group-hover:text-agri-green-800 transition-colors">{p.title}</h3>
-              <p className="text-sm text-black/45 leading-relaxed transition-colors group-hover:text-black/60">{p.desc}</p>
+              <p className="text-sm text-black/70 leading-relaxed transition-colors group-hover:text-black/85">{p.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -1028,11 +1028,11 @@ const BrandsSection = () => {
           >
             <div className="flex items-center justify-center gap-4 mb-6">
               <div className="h-px w-12 bg-agri-gold-500/40" />
-              <span className="text-agri-gold-500 font-bold text-[10px] uppercase tracking-[0.4em]">The Sovereign Ecosystem</span>
+              <span className="text-agri-gold-700 font-bold text-[10px] uppercase tracking-[0.4em]">The Sovereign Ecosystem</span>
               <div className="h-px w-12 bg-agri-gold-500/40" />
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-7xl font-serif text-agri-earth-900 mb-8 leading-[1.1]">
-              The <span className="italic text-agri-gold-500">26 Verticals</span> of IGO.
+              The <span className="italic text-agri-gold-700">26 Verticals</span> of IGO.
             </h2>
             <p className="text-black/50 text-lg font-light leading-relaxed max-w-xl mx-auto">
               A sovereign agricultural ecosystem covering Engineering, Production, Trade, and Consumer Lifestyle.
@@ -1048,7 +1048,7 @@ const BrandsSection = () => {
             >
               <ChevronLeft className="w-5 h-5 text-black/40 group-hover:text-black transition-colors" />
             </button>
-            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/30">Explore all 26 verticals</span>
+            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/70">Explore all 26 verticals</span>
             <button
               onClick={() => scrollManual('next')}
               aria-label="Next brands"
@@ -1097,7 +1097,7 @@ const BrandsSection = () => {
                     <div className="w-12 h-12 rounded-full border border-black/10 flex items-center justify-center bg-slate-100">
                       <Box className="w-6 h-6 text-black/20" />
                     </div>
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-black/30 text-center">Development <br /> In Progress</span>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-black/70 text-center">Development <br /> In Progress</span>
                   </div>
                 )}
                 {!b.logo && (
@@ -1106,11 +1106,11 @@ const BrandsSection = () => {
                   </div>
                 )}
               </div>
-              <div className="text-[10px] font-bold uppercase tracking-[0.3em] text-agri-gold-500 mb-3">{b.tag}</div>
+              <div className="text-[10px] font-bold uppercase tracking-[0.3em] text-agri-gold-700 mb-3">{b.tag}</div>
               <h3 className="text-lg font-bold text-agri-earth-900 mb-4 group-hover:text-agri-gold-500 transition-colors uppercase tracking-tight">{b.name}</h3>
-              <p className="text-[12px] text-black/40 group-hover:text-black/60 leading-relaxed mb-6 flex-1 line-clamp-3 font-light">{b.desc}</p>
+              <p className="text-[12px] text-black/70 group-hover:text-black/85 leading-relaxed mb-6 flex-1 line-clamp-3 font-light">{b.desc}</p>
               <div className="pt-4 border-t border-black/5 flex items-center justify-between">
-                <span className={`text-[9px] font-bold uppercase tracking-widest ${b.logo ? 'text-agri-gold-500' : 'text-black/20'}`}>
+                <span className={`text-[9px] font-bold uppercase tracking-widest ${b.logo ? 'text-agri-gold-700' : 'text-black/60'}`}>
                   {b.logo ? 'Active Division' : 'Strategic Tier'}
                 </span>
                 <ArrowRight className="w-4 h-4 text-black/20 group-hover:text-agri-gold-500 transition-all group-hover:translate-x-1" />
@@ -1224,9 +1224,9 @@ const FaqContactSection = () => {
           {/* ── Left: FAQ ── */}
           <div>
             <div className="mb-10">
-              <span className="text-agri-gold-500 font-bold text-[10px] uppercase tracking-[0.4em]">Got Questions?</span>
+              <span className="text-agri-gold-700 font-bold text-[10px] uppercase tracking-[0.4em]">Got Questions?</span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-agri-earth-900 mt-4 leading-[1.1]">
-                Frequently Asked <span className="italic text-agri-gold-500">Questions</span>
+                Frequently Asked <span className="italic text-agri-gold-700">Questions</span>
               </h2>
             </div>
             <div className="space-y-4">
@@ -1279,9 +1279,9 @@ const FaqContactSection = () => {
           {/* ── Right: Contact form ── */}
           <div>
             <div className="mb-10">
-              <span className="text-agri-gold-500 font-bold text-[10px] uppercase tracking-[0.4em]">Start Your Project</span>
+              <span className="text-agri-gold-700 font-bold text-[10px] uppercase tracking-[0.4em]">Start Your Project</span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-agri-earth-900 mt-4 leading-[1.1]">
-                Get in <span className="italic text-agri-gold-500">Touch</span>
+                Get in <span className="italic text-agri-gold-700">Touch</span>
               </h2>
             </div>
 
@@ -1312,7 +1312,7 @@ const FaqContactSection = () => {
               <form onSubmit={handleSubmit} className="bg-white rounded-[2.5rem] p-8 md:p-10 shadow-sm border border-black/5 space-y-6">
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div className="space-y-2">
-                    <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/40">Name *</label>
+                    <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/70">Name *</label>
                     <input
                       type="text" required
                       value={formData.name}
@@ -1322,7 +1322,7 @@ const FaqContactSection = () => {
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/40">Contact Number *</label>
+                    <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/70">Contact Number *</label>
                     <input
                       type="tel" required
                       value={formData.phone}
@@ -1335,11 +1335,12 @@ const FaqContactSection = () => {
 
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div className="space-y-2">
-                    <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/40">Project</label>
+                    <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/70">Project</label>
                     <div className="relative">
                       <select
                         value={formData.project}
                         onChange={(e) => setFormData({ ...formData, project: e.target.value })}
+                        aria-label="Project"
                         className="w-full bg-agri-earth-50 border border-black/8 rounded-2xl px-5 py-4 text-sm text-black focus:ring-2 focus:ring-agri-green-800/15 focus:border-agri-green-800/30 outline-none transition-all appearance-none cursor-pointer"
                       >
                         <option value="">Select a project</option>
@@ -1351,11 +1352,12 @@ const FaqContactSection = () => {
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/40">Service</label>
+                    <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/70">Service</label>
                     <div className="relative">
                       <select
                         value={formData.service}
                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                        aria-label="Service"
                         className="w-full bg-agri-earth-50 border border-black/8 rounded-2xl px-5 py-4 text-sm text-black focus:ring-2 focus:ring-agri-green-800/15 focus:border-agri-green-800/30 outline-none transition-all appearance-none cursor-pointer"
                       >
                         <option value="">Select a service</option>
@@ -1369,8 +1371,8 @@ const FaqContactSection = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/40">
-                    Email <span className="normal-case font-normal text-black/30">(optional)</span>
+                  <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/70">
+                    Email <span className="normal-case font-normal text-black/60">(optional)</span>
                   </label>
                   <input
                     type="email"
@@ -1382,7 +1384,7 @@ const FaqContactSection = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/40">Message *</label>
+                  <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/70">Message *</label>
                   <textarea
                     rows={4} required
                     value={formData.message}

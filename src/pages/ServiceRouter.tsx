@@ -13,6 +13,48 @@ const fader: Variants = {
 
 const LOCAL_FALLBACK = "/assets/compressed/home-page-image-.jpg";
 
+// Client-supplied SEO title/description overrides, keyed by page path.
+// When a path has an entry here, it takes priority over the auto-generated
+// title/description below. Source: "IGO Meta Title and Description" docx (client-provided copy).
+const SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
+  "/services/farm-planning": {
+    title: "Farm Planning Services in India | IGO Agritech Farms",
+    description: "Expert farm planning services in India by IGO Agritech Farms. Get professional crop selection, farm layout design, precision farming and complete agricultural consulting solutions.",
+  },
+  "/services/farm-planning/farm-business-planning": {
+    title: "Farm Business Planning Services in India | IGO Agritech Farms",
+    description: "Expert farm business planning services in India by IGO Agritech Farms. Get professional guidance on crop selection, farm planning, precision farming, project setup and sustainable agricultural business development.",
+  },
+  "/services/farm-planning/agri-investment-consulting": {
+    title: "Agriculture Investment Consulting in India | IGO Agritech Farms",
+    description: "Expert agriculture investment consulting in India by IGO Agritech Farms. Get professional guidance for farm planning, project feasibility, crop selection and modern farming projects.",
+  },
+  "/services/farm-planning/crop-selection-consulting": {
+    title: "Crop Selection Consulting in India | IGO Agritech Farms",
+    description: "Expert crop selection consulting in India by IGO Agritech Farms. Choose the right crops based on soil, climate, market demand and farm goals for better productivity.",
+  },
+  "/services/farm-planning/farm-layout-design": {
+    title: "Farm Layout Design Services in India | IGO Agritech Farms",
+    description: "Professional farm layout design services in India by IGO Agritech Farms. Get expert farm planning, efficient land utilization, irrigation planning and customized agricultural farm designs for better productivity.",
+  },
+  "/services/farm-planning/aquaculture-consulting": {
+    title: "Aquaculture Consulting Services in India | IGO Agritech Farms",
+    description: "Expert aquaculture consulting services in India for fish farm planning, setup and management. Get professional guidance from IGO Agritech Farms.",
+  },
+  "/services/farm-planning/land-surveying": {
+    title: "Land Surveying Services for Agriculture in India | IGO Agritech",
+    description: "Professional land surveying services for agriculture and farm planning in India. Get accurate land assessment, farm layout planning and expert support from IGO Agritech Farms.",
+  },
+  "/services/farming-project-setup": {
+    title: "Farming Project Setup in India | IGO Agritech Farms",
+    description: "Professional farming project setup in India for polyhouse, hydroponics, vertical farming and fish farming. Get expert planning and turnkey farm solutions from IGO Agritech Farms.",
+  },
+  "/services/farming-project-setup/polyhouse-installation": {
+    title: "Polyhouse Installation in India | IGO Agritech Farms",
+    description: "Get expert polyhouse installation in India with IGO Agritech Farms. Complete polyhouse design, construction, irrigation and turnkey project setup.",
+  },
+};
+
 const getServiceCategory = (categorySlug: string) => {
   const services = navLinks.find(l => l.label === "Services")?.children || [];
   return services.find((s: any) => s.href === `/services/${categorySlug}`) as any | undefined;
@@ -42,8 +84,8 @@ const CategoryView: React.FC<{ categorySlug: string }> = ({ categorySlug }) => {
   return (
     <div className="bg-agri-earth-15 min-h-screen selection:bg-agri-green-50 selection:text-agri-green-800">
       <SEO
-        title={`${cat.label} Services`}
-        description={`Professional ${cat.label} services by IGO Agritech Farms. Expert agricultural engineering and consulting with ${cat.children?.length || 0} specialised services across India.`}
+        title={SEO_OVERRIDES[`/services/${categorySlug}`]?.title || `${cat.label} Services`}
+        description={SEO_OVERRIDES[`/services/${categorySlug}`]?.description || `Professional ${cat.label} services by IGO Agritech Farms. Expert agricultural engineering and consulting with ${cat.children?.length || 0} specialised services across India.`}
         keywords={`${cat.label}, agricultural services, IGO Agritech Farms, farming services India`}
         url={`/services/${categorySlug}`}
         image={cat.cardImage || undefined}
@@ -205,8 +247,8 @@ const DetailView: React.FC<{ categorySlug: string; serviceSlug: string }> = ({ c
   return (
     <div className="bg-white min-h-screen selection:bg-agri-green-50 selection:text-agri-green-800 pt-32">
       <SEO
-        title={service.label}
-        description={`IGO Agritech Farms delivers professional ${service.label} with industrial-grade expertise. Turnkey implementation, site survey, training, and AMC support across India.`}
+        title={SEO_OVERRIDES[`/services/${categorySlug}/${serviceSlug}`]?.title || service.label}
+        description={SEO_OVERRIDES[`/services/${categorySlug}/${serviceSlug}`]?.description || `IGO Agritech Farms delivers professional ${service.label} with industrial-grade expertise. Turnkey implementation, site survey, training, and AMC support across India.`}
         keywords={`${service.label}, ${cat.label}, agricultural service India, IGO Agritech Farms`}
         url={`/services/${categorySlug}/${serviceSlug}`}
         image={serviceImage.startsWith("/") ? serviceImage : undefined}

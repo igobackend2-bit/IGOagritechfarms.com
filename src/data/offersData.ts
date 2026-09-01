@@ -98,7 +98,7 @@ export const CTA_PRESETS = [
 ];
 
 // ─── Default seed posters (shown on first load before any uploads) ───────────
-const SEED_KEY = "igo_offers_seeded_v16";
+const SEED_KEY = "igo_offers_seeded_v21";
 
 const DEFAULT_OFFERS: OfferPoster[] = [
   {
@@ -108,7 +108,7 @@ const DEFAULT_OFFERS: OfferPoster[] = [
     badge: "IGO GROUP",
     ctaLabel: "View Projects",
     ctaLink: "/projects",
-    image: "/assets/demo-poster/main-banner.png",
+    image: "/assets/demo-poster/main-banner-2.webp",
     bgColor: "#1a5c1a",
     isActive: true,
     displayOrder: 0,
@@ -119,35 +119,35 @@ const DEFAULT_OFFERS: OfferPoster[] = [
   },
   {
     id: "seed_2",
-    title: "Independence Day Special Offer",
-    subtitle: "Franchise + Joint Venture (JV) Project Offer — build your agricultural business with complete professional support.",
-    badge: "INDEPENDENCE DAY OFFER",
-    ctaLabel: "Register Your Project",
-    ctaLink: "/contact",
-    image: "/assets/hero-banners/active/independence-day-banner-1.png",
+    title: "",
+    subtitle: "",
+    badge: "IGO GROUP",
+    ctaLabel: "View Our Services",
+    ctaLink: "/services",
+    image: "/assets/hero-banners/active/banner-2-igo-techfarms.webp",
     bgColor: "#1a5c1a",
     isActive: true,
     displayOrder: 1,
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
     expiryDate: null,
-    note: "Independence Day Main Banner",
+    note: "Engineering Sustainable Farms — Company Overview Banner",
   },
   {
     id: "seed_3",
-    title: "80th Independence Day Special Offer",
-    subtitle: "Freedom to Grow. Freedom to Earn. Exclusive Joint Venture + Franchise combo — limited-time Independence Day benefits.",
-    badge: "SPECIAL OFFER",
+    title: "",
+    subtitle: "",
+    badge: "SEASONAL",
     ctaLabel: "Contact Us",
     ctaLink: "/contact",
-    image: "/assets/hero-banners/active/independence-day-banner-2.png",
+    image: "/assets/hero-banners/active/banner-3-world-coconut-day.webp",
     bgColor: "#1a5c1a",
     isActive: true,
     displayOrder: 2,
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
     expiryDate: null,
-    note: "Independence Day Offer Poster",
+    note: "World Coconut Day — 2nd September 2026 Banner",
   },
 ];
 

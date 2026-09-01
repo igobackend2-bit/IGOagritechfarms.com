@@ -461,6 +461,67 @@ export const blogPosts = [
 <blockquote>"Making farming profitable is not just a business goal — it is a social mission. Every structured, technology-driven farming project we create changes lives in ways that go far beyond the harvest." — Dr. John Yesudhas</blockquote>
 
 <p>IGO Agritech Farms is proud to have Dr. John Yesudhas at the helm, guiding the organization with integrity, innovation, and an unshakeable commitment to India's agricultural future. We thank the Tamil Nadu Press & Media Reporters Union for this meaningful recognition and look forward to achieving even greater milestones in the years ahead.</p>`
+  },
+  {
+    id: "dr-john-yesudhas-leading-tech-farming-scientist",
+    title: "Dr. John Yesudhas Honoured as “India's Leading Tech Farming Scientist”",
+    excerpt: "At the World Business Conclave 2026, Dr. John Yesudhas, Founder and CEO of IGO Group, was honoured with the prestigious title of “India's Leading Tech Farming Scientist” for his contribution to technology-driven agriculture in India.",
+    date: "August 30, 2026",
+    image: "/assets/blog/b10-1.webp",
+    author: "IGO News",
+    category: "Awards & Recognition",
+    content: `<p>The World Business Conclave marked a proud and memorable moment for IGO Group as Dr. John Yesudhas, Founder and CEO of IGO Group, was honoured with the prestigious title of “India's Leading Tech Farming Scientist.”</p>
+
+<p>This award recognises his valuable contribution to the development and promotion of technology-driven agriculture in India. For many years, Dr. John Yesudhas has worked towards introducing modern farming methods that help improve productivity, conserve resources and create better business opportunities in the agricultural sector.</p>
+
+<img src="/assets/blog/b10-1.webp" alt="IGO Group leadership receiving the India's Leading Tech Farming Scientist award at the World Business Conclave 2026" style="width:100%;border-radius:1.5rem;margin:2rem 0;" />
+
+<h2>A Vision Built on Technology and Agriculture</h2>
+<p>His journey reflects a strong belief that agriculture can grow faster when traditional farming knowledge is combined with modern technology, scientific planning and professional farm management. Under his leadership, IGO has worked across several areas, including polyhouse farming, hydroponics, vertical farming, open cultivation, floriculture, aquaculture, rooftop farming, farm engineering and complete agricultural project execution.</p>
+
+<h2>Sharing Knowledge Beyond the Farm</h2>
+<p>Beyond developing farming projects, Dr. John Yesudhas has consistently focused on sharing knowledge with farmers, students, entrepreneurs and aspiring farmpreneurs. Through industry presentations, training programmes, business forums and educational interactions, he continues to encourage people to view agriculture as a modern, organised and opportunity-driven sector.</p>
+
+<p>His work has helped bring greater attention to protected cultivation, smart farming systems, controlled-environment agriculture and efficient use of land and water. By making these technologies easier to understand and implement, he has supported individuals who wish to enter agriculture with professional guidance and a clear project plan.</p>
+
+<h2>A Well-Deserved Recognition</h2>
+<p>Receiving the “India's Leading Tech Farming Scientist” award at the World Business Conclave is a significant recognition of his vision, leadership and continued efforts to transform the agricultural industry through technology. It also celebrates his commitment to building a stronger connection between agricultural science, practical farm execution and business development.</p>
+
+<p>This achievement is not only a personal honour for Dr. John Yesudhas but also a proud milestone for every member of the IGO family. It further strengthens his mission to create more farmpreneurs, generate employment opportunities and take innovative farming solutions to different parts of India.</p>
+
+<p>With this recognition, Dr. John Yesudhas continues his journey towards making technology-led farming more accessible, productive and beneficial for the next generation of agricultural entrepreneurs.</p>`
+  },
+  {
+    id: "igo-leading-agritech-brand",
+    title: "IGO Recognised as “India's Leading Agritech Brand”",
+    excerpt: "IGO added another important achievement to its journey by receiving the prestigious “India's Leading Agritech Brand” award at the World Business Conclave 2026, celebrating its contribution to modern, technology-based farming across India.",
+    date: "August 30, 2026",
+    image: "/assets/blog/b11-1.webp",
+    author: "IGO News",
+    category: "Awards & Recognition",
+    content: `<p>IGO added another important achievement to its journey by receiving the prestigious “India's Leading Agritech Brand” award at the World Business Conclave. This national recognition celebrates IGO's contribution to modern agriculture and its continued efforts to provide reliable, technology-based farming solutions across India.</p>
+
+<p>From its early journey to its present-day operations, IGO has remained focused on making agriculture more organised, productive and accessible. The company supports farmers, landowners, entrepreneurs, institutions and aspiring farmpreneurs through professional planning, project execution and ongoing technical guidance.</p>
+
+<img src="/assets/blog/b11-1.webp" alt="IGO Group leadership receiving the India's Leading Agritech Brand award at the World Business Conclave 2026" style="width:100%;border-radius:1.5rem;margin:2rem 0;" />
+
+<h2>A Broad Portfolio of Agricultural Services</h2>
+<p>IGO's services cover a wide range of agricultural sectors, including polyhouse farming, hydroponics, vertical farming, open-field cultivation, floriculture, aquaculture, goat farming, rooftop farming, landscaping, irrigation development and complete farm engineering. Its broad service portfolio enables clients to receive support based on their land, location, budget, crop selection and business objectives.</p>
+
+<h2>End-to-End Project Support</h2>
+<p>The company's approach extends beyond basic farm installation. IGO provides assistance across different stages of a project, including site assessment, farm planning, infrastructure development, irrigation setup, crop cultivation, fertigation, maintenance, harvesting and market linkage. This end-to-end support is designed to help clients manage agricultural projects with better planning and professional guidance.</p>
+
+<h2>A Recognition Earned Together</h2>
+<p>The “India's Leading Agritech Brand” award reflects the collective dedication of IGO's technical teams, farm professionals, project managers, field employees, marketing teams and support departments. Their combined efforts have enabled the brand to work across multiple modern farming categories and serve agricultural projects in different regions of the country.</p>
+
+<p>This recognition also highlights IGO's commitment to introducing practical agricultural technologies that can address important industry challenges. Through protected cultivation, water-efficient farming systems and professionally managed projects, the company aims to improve resource utilisation while supporting better crop production.</p>
+
+<p>IGO believes that the future of agriculture lies in the combination of technology, skilled manpower, scientific crop management and strong business support. By connecting these elements, the brand continues to encourage more young people, professionals and entrepreneurs to explore opportunities within the agricultural sector.</p>
+
+<h2>A Proud Milestone</h2>
+<p>Receiving this award at the World Business Conclave is a proud milestone for IGO and an encouraging acknowledgement of the trust placed in the brand by its clients, partners and farming community. It motivates the company to continue expanding its services, improving its farming solutions and creating a meaningful impact across India.</p>
+
+<p>As IGO moves forward, it remains committed to its larger mission of building farmpreneurs, creating employment opportunities and supporting the growth of a modern agricultural ecosystem. The recognition as “India's Leading Agritech Brand” strengthens the company's determination to lead with innovation, professional execution and a clear vision for the future of Indian agriculture.</p>`
   }
 ];
 
@@ -996,7 +1057,7 @@ export const navLinks = [
         label: "Polyhouse Structure",
         href: "/products/structure",
         icon: Hammer,
-        cardImage: "/assets/product-images/new main image for product/polyhouse structure .jpg",
+        cardImage: "/assets/product-images/new main image for product/polyhouse structure .webp",
         children: [
           { label: "Structural Frames & Parts", href: "/products/structure/frames", icon: Construction },
           { label: "Greenhouse Covering", href: "/products/structure/covering", icon: Tent },
@@ -1010,7 +1071,7 @@ export const navLinks = [
         label: "Control & Automation",
         href: "/products/automation",
         icon: Cpu,
-        cardImage: "/assets/product-images/new main image for product/automation and cotroller .jpg",
+        cardImage: "/assets/product-images/new main image for product/automation and cotroller .webp",
         children: [
           { label: "Dosing & Fertigation", href: "/products/automation/dosing", icon: Settings2 },
           { label: "Environmental Controllers", href: "/products/automation/controllers", icon: Thermometer },
@@ -1022,7 +1083,7 @@ export const navLinks = [
         label: "Horticulture Catalog",
         href: "/products/horticulture",
         icon: Flower,
-        cardImage: "/assets/product-images/new main image for product/horticulture catlog .png",
+        cardImage: "/assets/product-images/new main image for product/horticulture catlog .webp",
         children: [
           { label: "Vegetable Crops", href: "/products/horticulture/vegetables", icon: Apple },
           { label: "Flower Crops", href: "/products/horticulture/flowers", icon: Sun },
@@ -1034,7 +1095,7 @@ export const navLinks = [
         label: "Digital Agri & IoT",
         href: "/products/digital",
         icon: Activity,
-        cardImage: "/assets/product-images/new main image for product/digital agri and iot .jpg",
+        cardImage: "/assets/product-images/new main image for product/digital agri and iot .webp",
         children: [
           { label: "IoT Hardware & Nodes", href: "/products/digital/hardware", icon: Cpu },
           { label: "Software & Dashboards", href: "/products/digital/software", icon: Monitor },
@@ -1045,7 +1106,7 @@ export const navLinks = [
         label: "Post-Harvest & Legacy",
         href: "/products/specialized",
         icon: Package,
-        cardImage: "/assets/product-images/new main image for product/post harvest and legacy .jpg",
+        cardImage: "/assets/product-images/new main image for product/post harvest and legacy .webp",
         children: [
           { label: "Harvesting & Cold Chain", href: "/products/specialized/post-harvest", icon: ThermometerSnowflake },
           { label: "Aquaculture Solutions", href: "/products/specialized/aquaculture", icon: Droplets },
@@ -1062,32 +1123,32 @@ export const navLinks = [
 ];
 
 export const igoBrands = [
-  { id: "igo-agritech-farms", name: "IGO Agritech Farms", logo: "/assets/brands/igo agritech farms .jpg", tag: "Core Business", desc: "India's leading Agri Engineering & Consulting brand — polyhouse, hydroponics, vertical farming, precision farming and livestock projects. Pan-India. MSME Award 2024." },
-  { id: "farmers-factory", name: "Farmers Factory", logo: "/assets/brands/farmers factory .jpg", tag: "Processing & Mfg", desc: "Farm to shop distribution brand. Bringing fresh farm produce directly to retail stores and consumers across India." },
-  { id: "valluvam", name: "Valluvam", logo: "/assets/brands/valluvam .jpg", tag: "Agri Consultancy", desc: "Branded grocery staples celebrating Tamil heritage. Quality everyday essentials — As Pure As Nature." },
-  { id: "protein-cuts", name: "Protein Cuts", logo: "/assets/brands/proten cuts .jpg", tag: "Farm-to-Table", desc: "Premium meat, fish, and eggs retail brand. Fresh protein products straight from IGO's own livestock farms." },
-  { id: "igo-agrimart", name: "IGO Agri Mart", logo: "/assets/brands/igo agri mart .jpg", tag: "Distribution", desc: "Farm inputs and distribution network connecting quality agricultural inputs directly to farmers across India." },
-  { id: "igo-nursery", name: "IGO Nursery", logo: "/assets/brands/igo nursery .jpg", tag: "Plant Propagation", desc: "Premium nursery and landscaping solutions — supplying quality plants, seeds and horticultural products pan-India." },
-  { id: "palm-cafe", name: "Palm Cafe", logo: "/assets/brands/palm cafe .jpg", tag: "F&B", desc: "The Healthy Food Joint — farm-to-table F&B brand creating 5,000 jobs for youth using IGO's own farm produce." },
-  { id: "igo-exports-imports", name: "IGO Exports & Imports", logo: "/assets/brands/tech farming export .jpg", tag: "Trade", desc: "International trade division connecting Indian agri products to global markets and bringing world-class inputs to India." },
-  { id: "igo-tech-farming-scientists", name: "IGO Tech Farming Scientist Foundation", logo: "/assets/brands/igo-foundation.jpeg", tag: "Foundation", desc: "Research and education foundation advancing agri-science and technology for the next generation of tech farming scientists." },
-  { id: "igo-mart", name: "IGO Mart", logo: "/assets/brands/igo mart .jpg", tag: "Retail", desc: "Supermarket chain offering quality products at accessible prices — part of IGO Group's consumer retail vision." },
-  { id: "igo-fintech", name: "IGO Fintech", logo: "/assets/brands/igo fintech .jpg", tag: "Fintech", desc: "Micro finance unit providing financial access and support to farmers and agricultural entrepreneurs across India." },
-  { id: "igo-farm-land-estates", name: "IGO Farm Land Estates", logo: "/assets/brands/3.jpg", tag: "Real Estate", desc: "Agricultural land and property development — creating investment opportunities in farmland across India." },
-  { id: "igo-wealth-management", name: "IGO Wealth Management Services", logo: "/assets/brands/25.jpg", tag: "Investment", desc: "JV investment project providing wealth management and financial planning services to IGO Group stakeholders." },
-  { id: "igo-franchise", name: "IGO Franchise", logo: "/assets/brands/18.jpg", tag: "Franchise", desc: "Franchise operations division expanding IGO Group brands across India through a structured franchise model." },
-  { id: "igo-farmgate-mandi", name: "IGO Farmgate Mandi", logo: "/assets/brands/igo farm gate mandi.jpg", tag: "Programme", desc: "Guaranteed buy-back programme for farmers — empowering agricultural entrepreneurs with assured market access." },
-  { id: "igo-crop-care", name: "IGO Crop Care", logo: "/assets/brands/21.jpg", tag: "Agri Input", desc: "Quality crop care solutions for optimum yield and sustainable farming practices across all crop types." },
-  { id: "igo-organic-pharmacy", name: "IGO Organic Pharmacy", logo: "/assets/brands/22.jpg", tag: "Healthcare", desc: "Future division developing organic pharmaceutical products from IGO's farm network — bridging agriculture and health." },
-  { id: "igo-natural-cosmetics", name: "IGO Natural Cosmetics", logo: "/assets/brands/4.jpg", tag: "Lifestyle", desc: "Future personal care brand using natural farm-sourced ingredients. Farm to skin — the next frontier for IGO Group." },
-  { id: "igo-farm-factories", name: "IGO Farm Factories", logo: "/assets/brands/19.jpg", tag: "Infrastructure", desc: "Industrial-scale farm facilities integrating processing, storage, and logistics for high-efficiency agri-chains." },
-  { id: "igo-agrimart-sub", name: "IGO AgriMart", logo: "/assets/brands/igo agri mart .jpg", tag: "Distribution", desc: "Specialized input supply centers for advanced farming technologies and sustainable inputs." },
-  { id: "india-green", name: "India Green", logo: "/assets/brands/1.jpg", tag: "Sustainability", desc: "Environmental conservation and green initiative division focused on carbon neutrality and sustainable agri-ecosystems." },
-  { id: "india-green-organics", name: "India Green Organics", desc: "Certified organic production and distribution arm ensuring chemical-free food for a healthier India.", logo: "/assets/brands/5.jpg", tag: "Organic" },
-  { id: "igo-farm-loans-subsidy", name: "IGO Farm Loans, Subsidy & Grants", logo: "/assets/brands/16.jpg", tag: "Finance", desc: "Expert guidance and financial facilitation for farmers to access government agricultural subsidies and low-interest loans." },
-  { id: "igo-farm-automation", name: "IGO Farm Automation", logo: "/assets/brands/2.jpg", tag: "Technology", desc: "Smart farm hardware and software solutions—IoT, sensors, and automated climate control for precision agriculture." },
-  { id: "igo-training-courses", name: "IGO Training Courses", logo: "/assets/brands/13.jpg", tag: "Education", desc: "Skill development and masterclasses for modern farming techniques, certified by industry experts." },
-  { id: "igo-green-energy", name: "IGO Green Energy", logo: "/assets/brands/9.jpg", tag: "Energy", desc: "Renewable energy solutions for farms, including solar water pumps and solar agri-grid integration." },
+  { id: "igo-agritech-farms", name: "IGO Agritech Farms", logo: "/assets/brands/igo agritech farms .webp", tag: "Core Business", desc: "India's leading Agri Engineering & Consulting brand — polyhouse, hydroponics, vertical farming, precision farming and livestock projects. Pan-India. MSME Award 2024." },
+  { id: "farmers-factory", name: "Farmers Factory", logo: "/assets/brands/farmers factory .webp", tag: "Processing & Mfg", desc: "Farm to shop distribution brand. Bringing fresh farm produce directly to retail stores and consumers across India." },
+  { id: "valluvam", name: "Valluvam", logo: "/assets/brands/valluvam .webp", tag: "Agri Consultancy", desc: "Branded grocery staples celebrating Tamil heritage. Quality everyday essentials — As Pure As Nature." },
+  { id: "protein-cuts", name: "Protein Cuts", logo: "/assets/brands/proten cuts .webp", tag: "Farm-to-Table", desc: "Premium meat, fish, and eggs retail brand. Fresh protein products straight from IGO's own livestock farms." },
+  { id: "igo-agrimart", name: "IGO Agri Mart", logo: "/assets/brands/igo agri mart .webp", tag: "Distribution", desc: "Farm inputs and distribution network connecting quality agricultural inputs directly to farmers across India." },
+  { id: "igo-nursery", name: "IGO Nursery", logo: "/assets/brands/igo nursery .webp", tag: "Plant Propagation", desc: "Premium nursery and landscaping solutions — supplying quality plants, seeds and horticultural products pan-India." },
+  { id: "palm-cafe", name: "Palm Cafe", logo: "/assets/brands/palm cafe .webp", tag: "F&B", desc: "The Healthy Food Joint — farm-to-table F&B brand creating 5,000 jobs for youth using IGO's own farm produce." },
+  { id: "igo-exports-imports", name: "IGO Exports & Imports", logo: "/assets/brands/tech farming export .webp", tag: "Trade", desc: "International trade division connecting Indian agri products to global markets and bringing world-class inputs to India." },
+  { id: "igo-tech-farming-scientists", name: "IGO Tech Farming Scientist Foundation", logo: "/assets/brands/igo-foundation.webp", tag: "Foundation", desc: "Research and education foundation advancing agri-science and technology for the next generation of tech farming scientists." },
+  { id: "igo-mart", name: "IGO Mart", logo: "/assets/brands/igo mart .webp", tag: "Retail", desc: "Supermarket chain offering quality products at accessible prices — part of IGO Group's consumer retail vision." },
+  { id: "igo-fintech", name: "IGO Fintech", logo: "/assets/brands/igo fintech .webp", tag: "Fintech", desc: "Micro finance unit providing financial access and support to farmers and agricultural entrepreneurs across India." },
+  { id: "igo-farm-land-estates", name: "IGO Farm Land Estates", logo: "/assets/brands/3.webp", tag: "Real Estate", desc: "Agricultural land and property development — creating investment opportunities in farmland across India." },
+  { id: "igo-wealth-management", name: "IGO Wealth Management Services", logo: "/assets/brands/25.webp", tag: "Investment", desc: "JV investment project providing wealth management and financial planning services to IGO Group stakeholders." },
+  { id: "igo-franchise", name: "IGO Franchise", logo: "/assets/brands/18.webp", tag: "Franchise", desc: "Franchise operations division expanding IGO Group brands across India through a structured franchise model." },
+  { id: "igo-farmgate-mandi", name: "IGO Farmgate Mandi", logo: "/assets/brands/igo farm gate mandi.webp", tag: "Programme", desc: "Guaranteed buy-back programme for farmers — empowering agricultural entrepreneurs with assured market access." },
+  { id: "igo-crop-care", name: "IGO Crop Care", logo: "/assets/brands/21.webp", tag: "Agri Input", desc: "Quality crop care solutions for optimum yield and sustainable farming practices across all crop types." },
+  { id: "igo-organic-pharmacy", name: "IGO Organic Pharmacy", logo: "/assets/brands/22.webp", tag: "Healthcare", desc: "Future division developing organic pharmaceutical products from IGO's farm network — bridging agriculture and health." },
+  { id: "igo-natural-cosmetics", name: "IGO Natural Cosmetics", logo: "/assets/brands/4.webp", tag: "Lifestyle", desc: "Future personal care brand using natural farm-sourced ingredients. Farm to skin — the next frontier for IGO Group." },
+  { id: "igo-farm-factories", name: "IGO Farm Factories", logo: "/assets/brands/19.webp", tag: "Infrastructure", desc: "Industrial-scale farm facilities integrating processing, storage, and logistics for high-efficiency agri-chains." },
+  { id: "igo-agrimart-sub", name: "IGO AgriMart", logo: "/assets/brands/igo agri mart .webp", tag: "Distribution", desc: "Specialized input supply centers for advanced farming technologies and sustainable inputs." },
+  { id: "india-green", name: "India Green", logo: "/assets/brands/1.webp", tag: "Sustainability", desc: "Environmental conservation and green initiative division focused on carbon neutrality and sustainable agri-ecosystems." },
+  { id: "india-green-organics", name: "India Green Organics", desc: "Certified organic production and distribution arm ensuring chemical-free food for a healthier India.", logo: "/assets/brands/5.webp", tag: "Organic" },
+  { id: "igo-farm-loans-subsidy", name: "IGO Farm Loans, Subsidy & Grants", logo: "/assets/brands/16.webp", tag: "Finance", desc: "Expert guidance and financial facilitation for farmers to access government agricultural subsidies and low-interest loans." },
+  { id: "igo-farm-automation", name: "IGO Farm Automation", logo: "/assets/brands/2.webp", tag: "Technology", desc: "Smart farm hardware and software solutions—IoT, sensors, and automated climate control for precision agriculture." },
+  { id: "igo-training-courses", name: "IGO Training Courses", logo: "/assets/brands/13.webp", tag: "Education", desc: "Skill development and masterclasses for modern farming techniques, certified by industry experts." },
+  { id: "igo-green-energy", name: "IGO Green Energy", logo: "/assets/brands/9.webp", tag: "Energy", desc: "Renewable energy solutions for farms, including solar water pumps and solar agri-grid integration." },
 ];
 
 export const indiaPresence = {
