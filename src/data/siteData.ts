@@ -467,14 +467,14 @@ export const blogPosts = [
     title: "Dr. John Yesudhas Honoured as “India's Leading Tech Farming Scientist”",
     excerpt: "At the World Business Conclave 2026, Dr. John Yesudhas, Founder and CEO of IGO Group, was honoured with the prestigious title of “India's Leading Tech Farming Scientist” for his contribution to technology-driven agriculture in India.",
     date: "August 30, 2026",
-    image: "/assets/blog/b10-1.webp",
+    image: "/assets/blog/b12-1.webp",
     author: "IGO News",
     category: "Awards & Recognition",
     content: `<p>The World Business Conclave marked a proud and memorable moment for IGO Group as Dr. John Yesudhas, Founder and CEO of IGO Group, was honoured with the prestigious title of “India's Leading Tech Farming Scientist.”</p>
 
 <p>This award recognises his valuable contribution to the development and promotion of technology-driven agriculture in India. For many years, Dr. John Yesudhas has worked towards introducing modern farming methods that help improve productivity, conserve resources and create better business opportunities in the agricultural sector.</p>
 
-<img src="/assets/blog/b10-1.webp" alt="IGO Group leadership receiving the India's Leading Tech Farming Scientist award at the World Business Conclave 2026" style="width:100%;border-radius:1.5rem;margin:2rem 0;" />
+<img src="/assets/blog/b10-1.webp" alt="Trophy for India's Leading Tech Farming Scientist awarded to Dr. John Yesudhas at the World Business Conclave 2026" style="width:100%;border-radius:1.5rem;margin:2rem 0;" />
 
 <h2>A Vision Built on Technology and Agriculture</h2>
 <p>His journey reflects a strong belief that agriculture can grow faster when traditional farming knowledge is combined with modern technology, scientific planning and professional farm management. Under his leadership, IGO has worked across several areas, including polyhouse farming, hydroponics, vertical farming, open cultivation, floriculture, aquaculture, rooftop farming, farm engineering and complete agricultural project execution.</p>
@@ -496,14 +496,14 @@ export const blogPosts = [
     title: "IGO Recognised as “India's Leading Agritech Brand”",
     excerpt: "IGO added another important achievement to its journey by receiving the prestigious “India's Leading Agritech Brand” award at the World Business Conclave 2026, celebrating its contribution to modern, technology-based farming across India.",
     date: "August 30, 2026",
-    image: "/assets/blog/b11-1.webp",
+    image: "/assets/blog/b12-1.webp",
     author: "IGO News",
     category: "Awards & Recognition",
     content: `<p>IGO added another important achievement to its journey by receiving the prestigious “India's Leading Agritech Brand” award at the World Business Conclave. This national recognition celebrates IGO's contribution to modern agriculture and its continued efforts to provide reliable, technology-based farming solutions across India.</p>
 
 <p>From its early journey to its present-day operations, IGO has remained focused on making agriculture more organised, productive and accessible. The company supports farmers, landowners, entrepreneurs, institutions and aspiring farmpreneurs through professional planning, project execution and ongoing technical guidance.</p>
 
-<img src="/assets/blog/b11-1.webp" alt="IGO Group leadership receiving the India's Leading Agritech Brand award at the World Business Conclave 2026" style="width:100%;border-radius:1.5rem;margin:2rem 0;" />
+<img src="/assets/blog/b11-1.webp" alt="Trophy for India's Leading Agritech Brand awarded to IGO Group at the World Business Conclave 2026" style="width:100%;border-radius:1.5rem;margin:2rem 0;" />
 
 <h2>A Broad Portfolio of Agricultural Services</h2>
 <p>IGO's services cover a wide range of agricultural sectors, including polyhouse farming, hydroponics, vertical farming, open-field cultivation, floriculture, aquaculture, goat farming, rooftop farming, landscaping, irrigation development and complete farm engineering. Its broad service portfolio enables clients to receive support based on their land, location, budget, crop selection and business objectives.</p>

@@ -98,7 +98,7 @@ export const CTA_PRESETS = [
 ];
 
 // ─── Default seed posters (shown on first load before any uploads) ───────────
-const SEED_KEY = "igo_offers_seeded_v21";
+const SEED_KEY = "igo_offers_seeded_v22";
 
 const DEFAULT_OFFERS: OfferPoster[] = [
   {
@@ -121,33 +121,33 @@ const DEFAULT_OFFERS: OfferPoster[] = [
     id: "seed_2",
     title: "",
     subtitle: "",
-    badge: "IGO GROUP",
-    ctaLabel: "View Our Services",
-    ctaLink: "/services",
-    image: "/assets/hero-banners/active/banner-2-igo-techfarms.webp",
+    badge: "FESTIVE OFFER",
+    ctaLabel: "Claim Festive Offer",
+    ctaLink: "/contact",
+    image: "/assets/hero-banners/active/banner-2-janmashtami.webp",
     bgColor: "#1a5c1a",
     isActive: true,
     displayOrder: 1,
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
     expiryDate: null,
-    note: "Engineering Sustainable Farms — Company Overview Banner",
+    note: "Janmashtami Festive Offer — Complimentary Holiday Coupon Banner",
   },
   {
     id: "seed_3",
     title: "",
     subtitle: "",
-    badge: "SEASONAL",
-    ctaLabel: "Contact Us",
+    badge: "FESTIVE OFFER",
+    ctaLabel: "Claim Festive Offer",
     ctaLink: "/contact",
-    image: "/assets/hero-banners/active/banner-3-world-coconut-day.webp",
+    image: "/assets/hero-banners/active/banner-3-janmashtami.webp",
     bgColor: "#1a5c1a",
     isActive: true,
     displayOrder: 2,
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
     expiryDate: null,
-    note: "World Coconut Day — 2nd September 2026 Banner",
+    note: "Janmashtami Festive Offer — Complimentary Holiday Coupon Banner (Night Variant)",
   },
 ];
 
