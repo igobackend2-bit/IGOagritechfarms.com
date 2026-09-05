@@ -785,9 +785,9 @@ export const navLinks = [
             icon: Handshake,
             cardImage: "/assets/compressed/projects/joint-venture-handshake.webp",
             children: [
-              { label: "Quarter Acre Project", href: "/projects/joint-venture" },
-              { label: "Half Acre Project", href: "/projects/joint-venture" },
-              { label: "One Acre Project", href: "/projects/joint-venture" },
+              { label: "Quarter Acre Project", href: "/projects/joint-venture/quarter-acre" },
+              { label: "Half Acre Project", href: "/projects/joint-venture/half-acre" },
+              { label: "One Acre Project", href: "/projects/joint-venture/one-acre" },
             ]
           }
         ]

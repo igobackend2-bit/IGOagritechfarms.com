@@ -16,6 +16,7 @@ const About = lazy(() => import("./pages/About"));
 const Projects = lazy(() => import("./pages/Projects"));
 const ProjectRouter = lazy(() => import("./pages/ProjectRouter"));
 const JointVenture = lazy(() => import("./pages/JointVenture"));
+const JointVentureDetail = lazy(() => import("./pages/JointVentureDetail"));
 const MushroomFarming = lazy(() => import("./pages/MushroomFarming"));
 const HydroponicFarming = lazy(() => import("./pages/HydroponicFarming"));
 const PolyhouseFarming = lazy(() => import("./pages/PolyhouseFarming"));
@@ -124,6 +125,7 @@ const AppRoutes = () => {
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/joint-venture" element={<JointVenture />} />
+          <Route path="/projects/joint-venture/:size" element={<JointVentureDetail />} />
           <Route path="/projects/mushroom" element={<MushroomFarming />} />
           <Route path="/projects/hydroponic" element={<HydroponicFarming />} />
           <Route path="/projects/polyhouse" element={<PolyhouseFarming />} />

@@ -51,6 +51,9 @@ const ROUTES = [
   "/terms",
   // Legacy standalone project pages (own components, not ProjectRouter)
   "/projects/joint-venture",
+  "/projects/joint-venture/quarter-acre",
+  "/projects/joint-venture/half-acre",
+  "/projects/joint-venture/one-acre",
   "/projects/mushroom",
   "/projects/hydroponic",
   "/projects/polyhouse",
