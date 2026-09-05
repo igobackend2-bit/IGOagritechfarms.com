@@ -5,6 +5,8 @@ import { ArrowLeft, ArrowRight, Shield, TrendingUp, CheckCircle2, MessageCircle,
 import { navLinks } from "@/data/siteData";
 import SEO from "@/components/SEO";
 import OptimizedImage from "@/components/ui/OptimizedImage";
+import ProjectArticleSection from "@/components/ProjectArticleSection";
+import { PROJECT_ARTICLES } from "@/data/projectArticles";
 
 const fader: Variants = {
   hidden: { opacity: 0, y: 30 },
@@ -2975,6 +2977,8 @@ const DetailView: React.FC<{ category: string; subcategory: string; feature: str
           </div>
         </section>
       )}
+
+      <ProjectArticleSection text={PROJECT_ARTICLES[`/projects/${category}/${subcategory}/${feature}`]} />
 
       {/* ── Final CTA ── */}
       <section className="py-32 bg-agri-earth-50 border-t border-agri-green-800/10">
