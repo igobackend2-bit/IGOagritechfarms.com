@@ -22,6 +22,18 @@ const FAQ = () => {
         description="Find answers to common questions about IGO Agritech Farms' services, polyhouse construction, hydroponics setup, agri consulting, pricing, and project timelines."
         keywords="agri FAQ, polyhouse FAQ, hydroponics questions, agri consulting FAQ, IGO Agritech questions, farming setup cost India"
         url="/faq"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: faq.answer,
+            },
+          })),
+        }}
       />
       {/* Hero Section */}
       <section className="py-32 relative overflow-hidden border-b border-black/[0.03]">
