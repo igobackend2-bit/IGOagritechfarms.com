@@ -1119,6 +1119,7 @@ export const navLinks = [
   { label: "Careers", href: "/careers", icon: "💼" },
   { label: "Contact", href: "/contact", icon: "📞" },
   { label: "About", href: "/about", icon: "🏢" },
+  { label: "FAQ", href: "/faq", icon: "❓" },
   { label: "IGO Academy", href: "/courses", icon: "🎓" },
 ];
 

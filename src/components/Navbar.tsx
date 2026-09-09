@@ -33,7 +33,7 @@ const MegaMenu = ({ link }: { link: any }) => {
       exit="exit"
       className="absolute top-full left-0 right-0 pt-4 cursor-default"
     >
-      <div className="bg-white border border-black/10 shadow-[0_40px_80px_rgba(0,0,0,0.1)] rounded-[2.5rem] overflow-hidden flex max-h-[80vh] w-full max-w-7xl mx-auto backdrop-blur-xl bg-white/98">
+      <div className="bg-white border border-black/10 shadow-[0_40px_80px_rgba(0,0,0,0.1)] rounded-[2.5rem] overflow-hidden flex max-h-[calc(100vh-200px)] w-full max-w-7xl mx-auto backdrop-blur-xl bg-white/98">
         {/* Level 2: Sectors Sidebar */}
         <div className="w-full max-w-[280px] xl:max-w-[380px] bg-slate-50 border-r border-black/[0.05] p-4 xl:p-6 flex flex-col gap-2 shrink-0 overflow-y-auto">
           <div className="text-[10px] uppercase tracking-[0.2em] font-bold text-black/30 mb-4 px-4 mt-2">Sectors</div>
@@ -362,12 +362,12 @@ const Navbar = () => {
     <nav aria-label="Main navigation" className={`fixed top-7 lg:top-8 left-0 right-0 z-50 transition-all duration-500 ${navClasses}`}>
       <div className="container mx-auto px-4 lg:px-5 xl:px-6 flex items-center justify-between h-[88px] lg:h-[104px] xl:h-[120px] max-w-full overflow-visible">
         <Link to="/" className="flex items-center gap-2 lg:gap-3 group z-50 shrink-0">
-          <img src={companyInfo.logo} alt="IGO Agritech Farms Official Company Logo" loading="eager" className={`h-[80px] lg:h-[96px] xl:h-[112px] w-auto group-hover:scale-105 transition-transform mix-blend-multiply contrast-125 brightness-105 ${logoInvertClass}`} />
-          <span className={`text-lg lg:text-2xl xl:text-3xl font-black tracking-tight uppercase font-display whitespace-nowrap ${textColorClass}`}>IGO <span className="text-primary">Agritech</span></span>
+          <img src={companyInfo.logo} alt="IGO Agritech Farms Official Company Logo" loading="eager" className={`h-[64px] lg:h-[72px] xl:h-[88px] 2xl:h-[104px] w-auto group-hover:scale-105 transition-transform mix-blend-multiply contrast-125 brightness-105 ${logoInvertClass}`} />
+          <span className={`text-lg lg:hidden xl:inline xl:text-xl 2xl:text-2xl font-black tracking-tight uppercase font-display whitespace-nowrap ${textColorClass}`}>IGO <span className="text-primary">Agritech</span></span>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-1.5 xl:gap-4 2xl:gap-6 ml-2 xl:ml-6 2xl:ml-10 min-w-0 flex-1 justify-end">
+        <div className="hidden lg:flex items-center gap-2 xl:gap-3 2xl:gap-5 ml-2 xl:ml-4 2xl:ml-8 min-w-0 flex-1 justify-end">
           <LayoutGroup>
             {enrichedNav.map((link) => {
               const isMega = link.label === "Projects" || link.label === "Services" || link.label === "Products";
@@ -380,7 +380,7 @@ const Navbar = () => {
                   <Link
                     to={link.href}
                     onClick={(e) => handleToggleDropdown(e, link.label, !!link.children)}
-                    className={`text-[11px] lg:text-[12px] xl:text-sm font-semibold whitespace-nowrap ${linkColorClass} hover:text-primary transition-all py-2 flex items-center gap-0.5 xl:gap-1 group`}
+                    className={`text-[11px] lg:text-[12px] xl:text-[13px] 2xl:text-sm font-semibold whitespace-nowrap ${linkColorClass} hover:text-primary transition-all py-2 flex items-center gap-0.5 xl:gap-1 group`}
                   >
                     {link.label}
                     {link.children && <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${openDropdown === link.label ? "rotate-180 text-primary" : "opacity-30 group-hover:opacity-100"}`} />}
@@ -420,7 +420,7 @@ const Navbar = () => {
 
           <Link
             to="/agri-startup-platform"
-            className="px-3 py-1.5 lg:px-3 lg:py-2 xl:px-5 xl:py-2.5 text-[9px] lg:text-[10px] xl:text-xs font-bold rounded-full transition-all uppercase tracking-wider xl:tracking-widest bg-black text-white shadow-lg shadow-black/10 whitespace-nowrap shrink-0 lg:max-w-[200px] xl:max-w-none"
+            className="px-3 py-1.5 lg:px-3 lg:py-2 xl:px-5 xl:py-2.5 text-[9px] lg:text-[10px] xl:text-xs font-bold rounded-full transition-all uppercase tracking-wider xl:tracking-widest bg-black text-white shadow-lg shadow-black/10 whitespace-nowrap shrink-0 ml-2 xl:ml-4 2xl:ml-6 lg:max-w-[200px] xl:max-w-none"
           >
             Agri Startup Platform
           </Link>

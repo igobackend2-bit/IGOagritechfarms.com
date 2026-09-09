@@ -36,7 +36,7 @@ const FAQ = () => {
         }}
       />
       {/* Hero Section */}
-      <section className="py-32 relative overflow-hidden border-b border-black/[0.03]">
+      <section className="py-20 lg:py-28 relative overflow-hidden border-b border-black/[0.03]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(26,66,49,0.05),transparent_60%)]" />
         <div className="container mx-auto px-6 max-w-5xl relative z-10 text-center">
           <motion.div 
@@ -50,7 +50,7 @@ const FAQ = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl sm:text-7xl md:text-9xl tracking-tighter mb-12"
+            className="text-4xl sm:text-6xl md:text-8xl tracking-tighter mb-10"
           >
             How can we <span className="text-primary italic font-serif">help?</span>
           </motion.h1>
@@ -74,8 +74,8 @@ const FAQ = () => {
       </section>
 
       {/* Main Content */}
-      <section className="py-32 container mx-auto px-6 max-w-5xl">
-        <div className="grid lg:grid-cols-[1fr_300px] gap-24">
+      <section className="py-20 lg:py-28 container mx-auto px-6 max-w-7xl">
+        <div className="grid lg:grid-cols-[1fr_320px] gap-10 lg:gap-16">
           <div>
             <div className="space-y-4">
               {filteredFaqs.map((faq, index) => (
@@ -137,7 +137,7 @@ const FAQ = () => {
                 <div className="w-16 h-16 rounded-3xl bg-primary/20 flex items-center justify-center mb-8">
                   <MessageCircle className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Still have questions?</h3>
+                <h3 className="text-2xl font-bold mb-4 text-white">Still have questions?</h3>
                 <p className="text-white/60 text-sm leading-relaxed mb-10">Our agricultural experts are ready to guide you through your next project.</p>
                 <a 
                   href="tel:+917397789803"
@@ -166,10 +166,10 @@ const FAQ = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-40 bg-black text-white rounded-t-[5rem]">
+      <section className="py-24 lg:py-32 bg-black text-white rounded-t-[3rem] lg:rounded-t-[5rem]">
         <div className="container mx-auto px-6 max-w-7xl text-center">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl sm:text-6xl md:text-8xl tracking-tighter mb-12">
+            <h2 className="text-3xl sm:text-5xl md:text-7xl tracking-tighter mb-12 text-white">
               Ready to grow with <span className="text-primary italic font-serif">precision?</span>
             </h2>
             <div className="flex flex-wrap justify-center gap-6">
