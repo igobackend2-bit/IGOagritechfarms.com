@@ -98,7 +98,7 @@ const HeroSection = () => {
       const w = window.innerWidth;
       // Full fixed header = ticker strip (h-7 lg:h-8 = 28/32px)
       //                    + navbar bar (h-[88px] lg:h-[104px] xl:h-[120px])
-      setNavH(w >= 1280 ? 152 : w >= 1024 ? 136 : 116);
+      setNavH(w >= 1536 ? 128 : w >= 1280 ? 120 : w >= 1024 ? 112 : 100);
     };
     update();
     window.addEventListener("resize", update);
