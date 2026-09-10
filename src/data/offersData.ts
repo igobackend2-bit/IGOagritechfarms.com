@@ -98,7 +98,7 @@ export const CTA_PRESETS = [
 ];
 
 // ─── Default seed posters (shown on first load before any uploads) ───────────
-const SEED_KEY = "igo_offers_seeded_v22";
+const SEED_KEY = "igo_offers_seeded_v23";
 
 const DEFAULT_OFFERS: OfferPoster[] = [
   {
@@ -124,14 +124,14 @@ const DEFAULT_OFFERS: OfferPoster[] = [
     badge: "FESTIVE OFFER",
     ctaLabel: "Claim Festive Offer",
     ctaLink: "/contact",
-    image: "/assets/hero-banners/active/banner-2-janmashtami.webp",
+    image: "/assets/hero-banners/active/banner-2-ganesh-chaturthi.webp",
     bgColor: "#1a5c1a",
     isActive: true,
     displayOrder: 1,
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
     expiryDate: null,
-    note: "Janmashtami Festive Offer — Complimentary Holiday Coupon Banner",
+    note: "Ganesh Chaturthi Festive Offer — Complimentary Holiday Coupon Banner",
   },
   {
     id: "seed_3",
@@ -140,14 +140,14 @@ const DEFAULT_OFFERS: OfferPoster[] = [
     badge: "FESTIVE OFFER",
     ctaLabel: "Claim Festive Offer",
     ctaLink: "/contact",
-    image: "/assets/hero-banners/active/banner-3-janmashtami.webp",
+    image: "/assets/hero-banners/active/banner-3-ganesh-chaturthi.webp",
     bgColor: "#1a5c1a",
     isActive: true,
     displayOrder: 2,
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
     expiryDate: null,
-    note: "Janmashtami Festive Offer — Complimentary Holiday Coupon Banner (Night Variant)",
+    note: "Ganesh Chaturthi Festive Offer — Complimentary Holiday Coupon Banner (Daylight Variant)",
   },
 ];
 
