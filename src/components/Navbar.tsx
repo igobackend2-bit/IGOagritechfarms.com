@@ -363,7 +363,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 lg:px-5 xl:px-6 flex items-center justify-between h-[72px] lg:h-[80px] xl:h-[88px] 2xl:h-[96px] max-w-full overflow-visible">
         <Link to="/" className="flex items-center gap-2 lg:gap-3 group z-50 shrink-0">
           <img src={companyInfo.logo} alt="IGO Agritech Farms Official Company Logo" loading="eager" className={`h-[48px] lg:h-[56px] xl:h-[64px] 2xl:h-[72px] w-auto group-hover:scale-105 transition-transform mix-blend-multiply contrast-125 brightness-105 ${logoInvertClass}`} />
-          <span className={`text-lg lg:hidden xl:inline xl:text-xl 2xl:text-2xl font-black tracking-tight uppercase font-display whitespace-nowrap ${textColorClass}`}>IGO <span className="text-primary">Agritech</span></span>
+          <span className={`text-lg lg:hidden xl:inline xl:text-xl 2xl:text-2xl font-black tracking-tight uppercase font-display whitespace-nowrap ${textColorClass}`}>IGO Agri <span className="text-primary">Techfarms</span></span>
         </Link>
 
         {/* Desktop Navigation */}
