@@ -98,7 +98,7 @@ export const CTA_PRESETS = [
 ];
 
 // ─── Default seed posters (shown on first load before any uploads) ───────────
-const SEED_KEY = "igo_offers_seeded_v23";
+const SEED_KEY = "igo_offers_seeded_v24";
 
 const DEFAULT_OFFERS: OfferPoster[] = [
   {
@@ -121,33 +121,49 @@ const DEFAULT_OFFERS: OfferPoster[] = [
     id: "seed_2",
     title: "",
     subtitle: "",
-    badge: "FESTIVE OFFER",
-    ctaLabel: "Claim Festive Offer",
-    ctaLink: "/contact",
-    image: "/assets/hero-banners/active/banner-2-ganesh-chaturthi.webp",
+    badge: "JV PROJECTS",
+    ctaLabel: "Explore JV Projects",
+    ctaLink: "/projects/joint-venture/quarter-acre",
+    image: "/assets/hero-banners/active/banner-2-quarter-acre-jv.webp",
     bgColor: "#1a5c1a",
     isActive: true,
     displayOrder: 1,
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
     expiryDate: null,
-    note: "Ganesh Chaturthi Festive Offer — Complimentary Holiday Coupon Banner",
+    note: "Quarter Acre JV Projects Banner",
   },
   {
     id: "seed_3",
     title: "",
     subtitle: "",
-    badge: "FESTIVE OFFER",
-    ctaLabel: "Claim Festive Offer",
-    ctaLink: "/contact",
-    image: "/assets/hero-banners/active/banner-3-ganesh-chaturthi.webp",
+    badge: "POLYHOUSE",
+    ctaLabel: "Explore Polyhouse Projects",
+    ctaLink: "/projects/polyhouse",
+    image: "/assets/hero-banners/active/banner-3-polyhouse.webp",
     bgColor: "#1a5c1a",
     isActive: true,
     displayOrder: 2,
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
     expiryDate: null,
-    note: "Ganesh Chaturthi Festive Offer — Complimentary Holiday Coupon Banner (Daylight Variant)",
+    note: "Polyhouse Projects Banner",
+  },
+  {
+    id: "seed_4",
+    title: "",
+    subtitle: "",
+    badge: "HYDROPONIC",
+    ctaLabel: "Explore Hydroponic Projects",
+    ctaLink: "/projects/hydroponic",
+    image: "/assets/hero-banners/active/banner-4-hydroponic.webp",
+    bgColor: "#1a5c1a",
+    isActive: true,
+    displayOrder: 3,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+    expiryDate: null,
+    note: "Hydroponic Projects Banner",
   },
 ];
 
