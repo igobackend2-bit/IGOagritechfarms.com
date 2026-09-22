@@ -15,12 +15,12 @@ const KNOWLEDGE: KB[] = [
   // About company
   {
     keywords: ["about", "who are you", "what is igo", "company", "overview", "tell me about"],
-    answer: `**IGO Agritech Farms** is India's Leading Agri Engineering & Consulting Brand 🌿\n\n• **15,000+** projects completed across India\n• **10+ years** of experience (since 2009)\n• **28 states** & UTs covered\n• **2,000+** expert team members\n• **75+** awards & recognitions\n\nFounded by Dr. John Yesudhas, we specialize in Agri Farming, Aquaculture, Livestock, and Farm Engineering.`,
+    answer: `**IGO Agritech Farms** is India's Leading Agri Engineering & Consulting Brand 🌿\n\n• **15,000+** projects completed across India\n• **10+ years** of experience (since 2009)\n• **28 states** & UTs covered\n• **2,000+** expert team members\n• **75+** awards & recognitions\n\nLed by Dr. John Yesudhas, we specialize in Agri Farming, Aquaculture, Livestock, and Farm Engineering.`,
   },
   // Founder
   {
     keywords: ["founder", "ceo", "john", "yesudhas", "dr john", "director"],
-    answer: `**Dr. John Yesudhas** is the Founder & CEO of IGO Agritech Farms 🏆\n\nHe has been recognized as:\n• *Icon of India for Positive Change*\n• India's Best Innovative Agritech Entrepreneur\n• Tech Farming Expert\n\nHis mission: empower every farmer with precision technology and sustainable engineering.`,
+    answer: `**Dr. John Yesudhas** is the CEO of IGO Agritech Farms 🏆\n\nHe has been recognized as:\n• *Icon of India for Positive Change*\n• India's Best Innovative Agritech Entrepreneur\n• Tech Farming Expert\n\nHis mission: empower every farmer with precision technology and sustainable engineering.`,
   },
   // Awards
   {

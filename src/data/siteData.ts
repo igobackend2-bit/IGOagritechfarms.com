@@ -173,12 +173,12 @@ export const blogPosts = [
   {
     id: "dr-john-yesudhas-icon-of-india",
     title: "Celebrating Excellence in Agriculture: Dr. John Yesudhas Named Icon of India for Positive Change",
-    excerpt: "Dr. John Yesudhas, CEO and Founder of IGO Agritech Farms, has been selected as one of the Icons of India for his outstanding contributions to fostering positive change within the realm of Indian agriculture.",
+    excerpt: "Dr. John Yesudhas, CEO of IGO Agritech Farms, has been selected as one of the Icons of India for his outstanding contributions to fostering positive change within the realm of Indian agriculture.",
     date: "June 12, 2024",
     image: "/assets/blog/blog2.webp",
     author: "IGO News",
     category: "Awards & Recognition",
-    content: `<p>In a landmark recognition of dedication and innovation in Indian agriculture, Dr. John Yesudhas, the visionary CEO and Founder of IGO Agritech Farms, has been selected as one of the <strong>Icons of India for Positive Change</strong>. This prestigious honor celebrates individuals who have made extraordinary contributions to transforming sectors critical to India's growth and welfare.</p>
+    content: `<p>In a landmark recognition of dedication and innovation in Indian agriculture, Dr. John Yesudhas, the visionary CEO of IGO Agritech Farms, has been selected as one of the <strong>Icons of India for Positive Change</strong>. This prestigious honor celebrates individuals who have made extraordinary contributions to transforming sectors critical to India's growth and welfare.</p>
 
 <img src="/assets/blog/blog2.webp" alt="Dr. John Yesudhas - Icon of India" style="width:100%;border-radius:1.5rem;margin:2rem 0;" />
 
@@ -212,7 +212,7 @@ export const blogPosts = [
 <img src="/assets/blog/blog3.webp" alt="Independence Day Flag Hoisting at IGO" style="width:100%;border-radius:1.5rem;margin:2rem 0;" />
 
 <h2>A Patriotic Morning at IGO Agritechfarms</h2>
-<p>The morning began with a sense of patriotic fervor as the entire IGO team gathered together in the company premises. Dr. John Yesudhas, CEO and Founder of IGO Agritechfarms, proudly hoisted the national flag, marking the occasion with dignity and reverence. The ceremony was a moment of collective pride — a reminder of the sacrifices made by freedom fighters and the responsibility we carry to build a stronger, more prosperous India.</p>
+<p>The morning began with a sense of patriotic fervor as the entire IGO team gathered together in the company premises. Dr. John Yesudhas, CEO of IGO Agritechfarms, proudly hoisted the national flag, marking the occasion with dignity and reverence. The ceremony was a moment of collective pride — a reminder of the sacrifices made by freedom fighters and the responsibility we carry to build a stronger, more prosperous India.</p>
 
 <p>As part of the celebration, the organization recognized employees with awards for exceptional performance in their respective roles, reinforcing the company's core values of excellence, innovation, and teamwork. These recognitions served as a powerful reminder that individual dedication contributes to collective progress — both within IGO and across India's agricultural sector.</p>
 
@@ -418,7 +418,7 @@ export const blogPosts = [
   {
     id: "press-media-honours-dr-john",
     title: "Press & Media Reporters Union Honours Dr. John Yesudhas for Agritech Leadership",
-    excerpt: "The Tamil Nadu Press & Media Reporters Union honored Dr. John Yesudhas, Founder & CEO of IGO Group, for his visionary leadership in agricultural technology innovation and commitment to creating employment through agritech initiatives.",
+    excerpt: "The Tamil Nadu Press & Media Reporters Union honored Dr. John Yesudhas, CEO of IGO Group, for his visionary leadership in agricultural technology innovation and commitment to creating employment through agritech initiatives.",
     date: "December 14, 2024",
     image: "/assets/blog/b9-1.webp",
     author: "IGO News",
@@ -428,7 +428,7 @@ export const blogPosts = [
 <img src="/assets/blog/b9-1.webp" alt="Press & Media Reporters Union Honour" style="width:100%;border-radius:1.5rem;margin:2rem 0;" />
 
 <h2>Recognizing Visionary Leadership</h2>
-<p>Dr. John Yesudhas, <strong>Founder & CEO of IGO Group</strong> and recognized as a <em>Tech Farming Scientist</em>, was honored at the event for his outstanding contributions to modern agriculture and agritech development across India. The award particularly acknowledged his visionary leadership and commitment to making farming profitable, structured, and technology-driven — transforming the way Indian farming is perceived and practiced.</p>
+<p>Dr. John Yesudhas, <strong>CEO of IGO Group</strong> and recognized as a <em>Tech Farming Scientist</em>, was honored at the event for his outstanding contributions to modern agriculture and agritech development across India. The award particularly acknowledged his visionary leadership and commitment to making farming profitable, structured, and technology-driven — transforming the way Indian farming is perceived and practiced.</p>
 
 <img src="/assets/blog/b9-2.webp" alt="Dr. John Yesudhas Receiving Award" style="width:100%;border-radius:1.5rem;margin:2rem 0;" />
 
@@ -465,12 +465,12 @@ export const blogPosts = [
   {
     id: "dr-john-yesudhas-leading-tech-farming-scientist",
     title: "Dr. John Yesudhas Honoured as “India's Leading Tech Farming Scientist”",
-    excerpt: "At the World Business Conclave 2026, Dr. John Yesudhas, Founder and CEO of IGO Group, was honoured with the prestigious title of “India's Leading Tech Farming Scientist” for his contribution to technology-driven agriculture in India.",
+    excerpt: "At the World Business Conclave 2026, Dr. John Yesudhas, CEO of IGO Group, was honoured with the prestigious title of “India's Leading Tech Farming Scientist” for his contribution to technology-driven agriculture in India.",
     date: "August 30, 2026",
     image: "/assets/blog/b12-1.webp",
     author: "IGO News",
     category: "Awards & Recognition",
-    content: `<p>The World Business Conclave marked a proud and memorable moment for IGO Group as Dr. John Yesudhas, Founder and CEO of IGO Group, was honoured with the prestigious title of “India's Leading Tech Farming Scientist.”</p>
+    content: `<p>The World Business Conclave marked a proud and memorable moment for IGO Group as Dr. John Yesudhas, CEO of IGO Group, was honoured with the prestigious title of “India's Leading Tech Farming Scientist.”</p>
 
 <p>This award recognises his valuable contribution to the development and promotion of technology-driven agriculture in India. For many years, Dr. John Yesudhas has worked towards introducing modern farming methods that help improve productivity, conserve resources and create better business opportunities in the agricultural sector.</p>
 

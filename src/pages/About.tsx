@@ -255,7 +255,7 @@ const About = () => (
           {/* Caption — bottom right */}
           <div className="absolute bottom-6 right-6 text-right">
             <p className="text-white font-bold text-sm">Dr. John Yesudhas</p>
-            <p className="text-white/50 text-[10px] font-medium uppercase tracking-wider">Founder & CEO, IGO Agritech Farms</p>
+            <p className="text-white/50 text-[10px] font-medium uppercase tracking-wider">CEO, IGO Agritech Farms</p>
           </div>
         </motion.div>
 
@@ -375,7 +375,7 @@ const About = () => (
             viewport={{ once: true }}
             transition={{ duration: 1 }}
           >
-            <p className="text-agri-gold-500 font-bold text-[10px] uppercase tracking-[0.35em] mb-10">Founder's Voice</p>
+            <p className="text-agri-gold-500 font-bold text-[10px] uppercase tracking-[0.35em] mb-10">CEO's Voice</p>
 
             {/* Large quote mark */}
             <div className="text-agri-gold-500/20 font-serif text-[10rem] leading-none select-none mb-[-3rem]">"</div>
@@ -388,7 +388,7 @@ const About = () => (
 
             <div className="flex flex-col items-center gap-1">
               <p className="text-white font-bold text-lg">Dr. John Yesudhas</p>
-              <p className="text-white/40 text-sm font-medium uppercase tracking-wider">Founder & CEO — IGO Agritech Farms</p>
+              <p className="text-white/40 text-sm font-medium uppercase tracking-wider">CEO — IGO Agritech Farms</p>
               <div className="mt-4 flex flex-wrap justify-center gap-2">
                 {["Icon of India", "Tech Farming Expert", "MSME Award 2024"].map((badge) => (
                   <span key={badge} className="px-3 py-1 rounded-full bg-agri-gold-500/15 border border-agri-gold-500/25 text-agri-gold-500 text-[9px] font-bold uppercase tracking-widest">
