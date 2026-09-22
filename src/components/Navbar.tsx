@@ -329,7 +329,7 @@ const Navbar = () => {
   const navClasses = "bg-white shadow-sm";
 
   const textColorClass = "text-black";
-  const linkColorClass = "text-black/70";
+  const linkColorClass = "text-black";
   const logoInvertClass = "";
 
   return (
@@ -380,7 +380,7 @@ const Navbar = () => {
                   <Link
                     to={link.href}
                     onClick={(e) => handleToggleDropdown(e, link.label, !!link.children)}
-                    className={`text-[11px] lg:text-[12px] xl:text-[13px] 2xl:text-sm font-semibold whitespace-nowrap ${linkColorClass} hover:text-primary transition-all py-2 flex items-center gap-0.5 xl:gap-1 group`}
+                    className={`text-[11px] lg:text-[12px] xl:text-[13px] 2xl:text-sm font-bold whitespace-nowrap ${linkColorClass} hover:text-primary transition-all py-2 flex items-center gap-0.5 xl:gap-1 group`}
                   >
                     {link.label}
                     {link.children && <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${openDropdown === link.label ? "rotate-180 text-primary" : "opacity-30 group-hover:opacity-100"}`} />}
