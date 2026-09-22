@@ -113,7 +113,7 @@ const Blog = () => (
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
           {blogPosts.map((post, index) => (
-            <article key={post.id} className="premium-card overflow-hidden group">
+            <article key={post.id} className="premium-card overflow-hidden group h-full flex flex-col">
               <Link to={`/blog/${post.id}`}>
                 <div className="aspect-[16/10] overflow-hidden bg-gray-100 relative">
                   <BlogImage src={post.image} alt={post.title} priority={index < 3} />
@@ -122,7 +122,7 @@ const Blog = () => (
                   </div>
                 </div>
               </Link>
-              <div className="p-12">
+              <div className="p-12 flex flex-col flex-1">
                 <div className="flex items-center gap-4 mb-6 flex-wrap">
                   {post.category && (
                     <span className="px-4 py-1.5 rounded-full bg-primary/10 text-primary text-[10px] font-black uppercase tracking-[0.25em] border border-primary/20">
@@ -141,7 +141,7 @@ const Blog = () => (
                 </p>
                 <Link
                   to={`/blog/${post.id}`}
-                  className="inline-flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.4em] text-foreground group-hover:text-primary group-hover:gap-6 transition-all border-b-2 border-primary/10 pb-2 group-hover:border-primary"
+                  className="mt-auto inline-flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.4em] text-foreground group-hover:text-primary group-hover:gap-6 transition-all border-b-2 border-primary/10 pb-2 group-hover:border-primary self-start"
                 >
                   Read Full Article <ArrowRight className="w-5 h-5" />
                 </Link>
